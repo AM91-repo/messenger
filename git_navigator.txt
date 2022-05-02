@@ -1,0 +1,28 @@
+# git init  						     - инициализация репозитория
+# git remote add origin [ссылка репо]    - связка репозитория локального с хранилищем
+# git remote -v 					     - список подключенных репозиториев
+# git clone [git@..] [dir]				 - клонирование репозитория
+
+# git satus 			                 - текущее состояние репозитория
+# git log 								 - история репозитория
+# git log --oneline						 - история репозитория в компактном виде
+# git reflog							 - все операции совершенные в репозитории
+# git reset [hesh commit]				 - переключение на другой commit репозитория
+# git revert [hesh commit]				 - отменна действия указанного commit
+
+# git add [file] 					     - добавление файла, для включения в commit
+# git commit -m '[text commit]'		     - добовления commit
+# git commit -am '[text commit]'	     - добавление файла и добовления commit одновременно
+# git pull								 - загрузка commit в удаленный репозиторий
+# git push 								 - затягивание из репозитория
+
+# touch [dir]/.gitkeep 				     - команда для добавления пустой директории в репозиторий
+# touch .gitignore					     - создание файла с описанием правил игнорирования файлов
+# echo "[name file ignore]" > .gitignore - добовление правил игнорирования
+
+# git branch 							 - просмотр веток репозитория
+# git branch [name new branch] 			 - создание новой ветки от текущей ветки
+# git checkout [name branch]			 - перключение между ветками
+# git branch [name new branch] [name branch] - создание новой ветки от конкретной ветки
+# git checkout -b [name new branch]		 - создание новой ветки если такой нет и переключение на нее
+# git push -u origin [name new branch]   - загрузка новой ветки в удал. репозиторий
