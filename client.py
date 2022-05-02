@@ -1,11 +1,17 @@
 from email import message
 import json
+from multiprocessing.spawn import import_main_path
 import sys
 import socket
+import logging
+import logs.config_client_log
 import common.jim as jim
 
-from common.config import *
+from common.config import (USER, ACCOUNT_NAME, RESPONSE, ERROR, MAX_CONNECTIONS,
+                           LOGGER_CLIENT, DEFAULT_IP_ADDRESS, DEFAULT_PORT, USER_TEST)
 from common.utils import send_message, get_message
+
+LOGGER = logging.getLogger(LOGGER_CLIENT)
 
 
 def create_message(account_name):
@@ -32,7 +38,7 @@ def get_server_addr_port():
         address = DEFAULT_IP_ADDRESS
         port = DEFAULT_PORT
     except ValueError:
-        print('Порт должен быть указан в пределах от 1024 до 65535')
+        LOGGER.critical('The port must be specified in the range from 1024 to 65535')
         sys.exit(1)
     return address, port
 
@@ -42,15 +48,20 @@ def main():
 
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     transport.connect((server_address, server_port))
-    presence_message = create_message('Guest')
+    server_addr = transport.getsockname()
+    LOGGER.info(f'Server started at {server_addr[0]}:{server_addr[1]}')
+
+    presence_message = create_message(USER_TEST)
+    LOGGER.debug('Message created')
     send_message(transport, presence_message)
+    LOGGER.debug('The message has been sent')
     try:
         response = get_message(transport)
+        LOGGER.debug(f'Message received: {response}')
         hanlded_response = handle_response(response)
-        print(f'Ответ от сервера: {response}')
-        print(hanlded_response)
+        LOGGER.debug(f'Message: {hanlded_response}')
     except (ValueError, json.JSONDecodeError):
-        print('Ошибка декодирования сообщения')
+        LOGGER.error('Message decoding error')
 
 
 if __name__ == '__main__':

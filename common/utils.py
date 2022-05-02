@@ -1,7 +1,8 @@
 import json
 import argparse
 
-from common.config import ENCODING, MAX_PACKAGE_LENGTH, DEFAULT_IP_ADDRESS, DEFAULT_PORT
+from common.config import (ENCODING, MAX_PACKAGE_LENGTH, 
+                           DEFAULT_IP_ADDRESS, DEFAULT_PORT)
 
 
 def create_parser():
