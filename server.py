@@ -1,6 +1,4 @@
-import argparse
 import json
-import sys
 import socket
 from time import process_time_ns
 import common.jim as jim

@@ -31,3 +31,9 @@ def get_message(opened_socket):
             return response_dict
         raise ValueError
     raise ValueError
+
+
+if __name__ == '__main__':
+    parser = create_parser()
+    argv = parser.parse_args()
+    print(argv.addr, argv.port)

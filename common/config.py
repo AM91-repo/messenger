@@ -8,6 +8,7 @@ ENCODING = "utf-8"
 ACTION = "action"
 TIME = "time"
 USER = "user"
+TYPE = 'type'
 ACCOUNT_NAME = "account_name"
 
 PRESENCE = "presence"
