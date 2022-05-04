@@ -1,0 +1,63 @@
+2022-05-04 10:55:12,592 DEBUG decorators.py Function: get_server_addr_port(). Module: __main__. Calling from a function main(). 
+2022-05-04 10:55:12,592 INFO client.py Server started at 127.0.0.1:55944
+2022-05-04 10:55:12,592 DEBUG decorators.py Function: create_message(). Module: __main__. Calling from a function main(). 
+2022-05-04 10:55:12,592 DEBUG client.py Message created
+2022-05-04 10:55:12,593 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 10:55:12,593 DEBUG client.py The message has been sent
+2022-05-04 10:55:12,594 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 10:55:12,594 DEBUG client.py Message received: {'response': 200}
+2022-05-04 10:55:12,594 DEBUG decorators.py Function: handle_response(). Module: __main__. Calling from a function main(). 
+2022-05-04 10:55:12,594 DEBUG client.py Message: 200 : OK
+2022-05-04 11:10:00,755 DEBUG decorators.py Function: get_server_addr_port(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:10:00,756 INFO client.py Server started at 127.0.0.1:55946
+2022-05-04 11:10:00,756 DEBUG decorators.py Function: create_message(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:10:00,756 DEBUG client.py Message created
+2022-05-04 11:10:00,756 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:10:00,757 DEBUG client.py The message has been sent
+2022-05-04 11:10:00,758 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:10:00,758 DEBUG client.py Message received: {'response': 200}
+2022-05-04 11:10:00,758 DEBUG decorators.py Function: handle_response(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:10:00,758 DEBUG client.py Message: 200 : OK
+2022-05-04 11:10:24,640 DEBUG decorators.py Function: get_server_addr_port(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:10:24,641 INFO client.py Server started at 127.0.0.1:55948
+2022-05-04 11:10:24,641 DEBUG decorators.py Function: create_message(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:10:24,641 DEBUG client.py Message created
+2022-05-04 11:10:24,641 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:10:24,641 DEBUG client.py The message has been sent
+2022-05-04 11:10:24,642 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:10:24,642 DEBUG client.py Message received: {'response': 200}
+2022-05-04 11:10:24,642 DEBUG decorators.py Function: handle_response(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:10:24,642 DEBUG client.py Message: 200 : OK
+2022-05-04 11:10:36,016 DEBUG decorators.py Function: get_server_addr_port(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:10:50,384 CRITICAL client.py The port must be specified in the range from 1024 to 65535
+2022-05-04 11:16:40,148 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:16:40,149 INFO client.py Server started at 127.0.0.1:55954
+2022-05-04 11:16:40,150 DEBUG decorators.py Function: create_message(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:16:40,150 DEBUG client.py Message created
+2022-05-04 11:16:40,150 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:16:40,150 DEBUG client.py The message has been sent
+2022-05-04 11:16:40,151 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:16:40,151 DEBUG client.py Message received: {'response': 200}
+2022-05-04 11:16:40,151 DEBUG decorators.py Function: handle_response(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:16:40,152 DEBUG client.py Message: 200 : OK
+2022-05-04 11:16:42,431 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:16:42,432 INFO client.py Server started at 127.0.0.1:55956
+2022-05-04 11:16:42,432 DEBUG decorators.py Function: create_message(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:16:42,432 DEBUG client.py Message created
+2022-05-04 11:16:42,432 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:16:42,432 DEBUG client.py The message has been sent
+2022-05-04 11:16:42,433 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:16:42,433 DEBUG client.py Message received: {'response': 200}
+2022-05-04 11:16:42,434 DEBUG decorators.py Function: handle_response(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:16:42,434 DEBUG client.py Message: 200 : OK
+2022-05-04 11:16:51,750 CRITICAL utils.py The port must be specified in the range from 1024 to 65535
+2022-05-04 11:17:55,027 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:17:55,028 INFO client.py Server started at 127.0.0.1:55958
+2022-05-04 11:17:55,028 DEBUG decorators.py Function: create_message(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:17:55,029 DEBUG client.py Message created
+2022-05-04 11:17:55,029 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:17:55,029 DEBUG client.py The message has been sent
+2022-05-04 11:17:55,030 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-04 11:17:55,030 DEBUG client.py Message received: {'response': 200}
+2022-05-04 11:17:55,030 DEBUG decorators.py Function: handle_response(). Module: __main__. Calling from a function main(). 
+2022-05-04 11:17:55,030 DEBUG client.py Message: 200 : OK

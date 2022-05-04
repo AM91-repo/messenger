@@ -7,9 +7,10 @@ import logging
 import logs.config_client_log
 import common.jim as jim
 
+from common.decorators import log
 from common.config import (USER, ACCOUNT_NAME, RESPONSE, ERROR, MAX_CONNECTIONS,
                            LOGGER_CLIENT, DEFAULT_IP_ADDRESS, DEFAULT_PORT, USER_TEST)
-from common.utils import send_message, get_message
+from common.utils import send_message, get_message, create_parser
 
 LOGGER = logging.getLogger(LOGGER_CLIENT)
 
@@ -28,23 +29,8 @@ def handle_response(message):
     raise ValueError
 
 
-def get_server_addr_port():
-    try:
-        address = sys.argv[1]
-        port = int(sys.argv[2])
-        if not 65535 >= port >= 1024:
-            raise ValueError
-    except IndexError:
-        address = DEFAULT_IP_ADDRESS
-        port = DEFAULT_PORT
-    except ValueError:
-        LOGGER.critical('The port must be specified in the range from 1024 to 65535')
-        sys.exit(1)
-    return address, port
-
-
 def main():
-    server_address, server_port = get_server_addr_port()
+    server_address, server_port = create_parser(LOGGER)
 
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     transport.connect((server_address, server_port))
