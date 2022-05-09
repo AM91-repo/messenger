@@ -1,32 +1,65 @@
-from email import message
-from email.headerregistry import Address
-import sys
-import json
 import socket
 import select
 import logging
-from urllib import response
 import logs.config_server_log
 import common.jim as jim
 
 from common.decorators import log
-from common.config import (ACTION_PRESENCE, ACTION_MESSEGE, MAX_CONNECTIONS,
-                           LOGGER_SERVER, USER_TEST)
+from common.config import (ACTION, ACTION_PRESENCE, ACTION_MESSEGE,
+                           MAX_CONNECTIONS, LOGGER_SERVER, USER,
+                           ACCOUNT_NAME, ERROR, RECIPIENT, ACTION_EXIT)
 from common.utils import get_message, send_message, create_parser
 
 
 LOGGER = logging.getLogger(LOGGER_SERVER)
 
 
-def handle_message(message):
+def handle_message(message, client):
     LOGGER.debug(
         f'Processing of the message from the client has begun : {message}')
     if message.keys() == jim.PRESENCE.keys():
-        return jim.RESPONSE_200, ACTION_PRESENCE
+        return message
     elif message.keys() == jim.MESSAGE.keys():
-        return message, ACTION_MESSEGE
+        return message
+    elif message.keys() == jim.MESSAGE_EXIT.keys():
+        return message
     else:
-        return jim.RESPONSE_400, ACTION_PRESENCE
+        LOGGER.error('Invalid request received')
+        send_message(client, jim.RESPONSE_400)
+        raise Exception
+
+
+def add_name_client(message, names, client):
+    if message[USER][ACCOUNT_NAME] not in names.keys():
+        names[message[USER][ACCOUNT_NAME]] = client
+        LOGGER.debug(f'added username {message[USER][ACCOUNT_NAME]}')
+    else:
+        LOGGER.error(
+            f'The username is {names[message[USER][ACCOUNT_NAME]]} already taken.')
+        response = jim.RESPONSE_400
+        response[ERROR] = 'The username is already taken.'
+        send_message(client, response)
+        raise Exception
+
+
+def clear_names_clients(names, clients):
+    names_del = []
+    if names:
+        for k, v in names.items():
+            if v not in clients:
+                names_del.append(k)
+        for n in names_del:
+            del names[n]
+            LOGGER.info(f'Clear username {n}')
+
+
+def get_client_for_sending_message(recipient, names):
+    if recipient in names and names[recipient]:
+        return names[recipient]
+    else:
+        LOGGER.error(
+            f'The user {recipient} is not registered \
+            on the server, sending the message is not possible.')
 
 
 def get_server_socket(addr, port):
@@ -47,6 +80,8 @@ def main():
     transport = get_server_socket(address, port)
 
     clients = []
+    messages_list = []
+    names_clients = {}
 
     while True:
         try:
@@ -74,21 +109,35 @@ def main():
             for client_message in clients_messages:
                 try:
                     msg = get_message(client_message)
-                    message, action = handle_message(msg)
-                    if action == ACTION_PRESENCE:
-                        send_message(client_message, message)
-                    elif action == ACTION_MESSEGE:
-                        for waiting_client in waiting_clients:
-                            try:
-                                send_message(waiting_client, message)
-                            except:
-                                LOGGER.debug(
-                                    f'The connection with the client was lost')
-                                clients.remove(waiting_client)
-                except:
+                    message = handle_message(msg, client_message)
+                    if message[ACTION] == ACTION_PRESENCE:
+                        clear_names_clients(names_clients, clients)
+                        add_name_client(message, names_clients, client_message)
+                        send_message(client_message, jim.RESPONSE_200)
+                    elif message[ACTION] == ACTION_MESSEGE:
+                        messages_list.append(message)
+                    elif message[ACTION] == ACTION_EXIT:
+                        clients.remove(client_message)
+                        del names_clients[message[ACCOUNT_NAME]]
+                except Exception as error:
+                    print(error)
                     LOGGER.debug(
                         f'The connection with the client was lost')
                     clients.remove(client_message)
+            print(names_clients.keys())
+
+        for message in messages_list:
+            try:
+                pass
+                client = get_client_for_sending_message(
+                    message[RECIPIENT], names_clients)
+                send_message(client, message)
+            except:
+                LOGGER.debug(
+                    f'The connection with the client was lost')
+                clients.remove(client)
+                clear_names_clients(names_clients, clients)
+        messages_list.clear()
 
 
 if __name__ == '__main__':

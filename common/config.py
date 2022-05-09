@@ -17,9 +17,13 @@ TIME = "time"
 USER = "user"
 TYPE = "type"
 ACCOUNT_NAME = "account_name"
+SENDER = 'from'
+RECIPIENT = 'to'
+
 USER_TEST = "Guest"
 ACTION_PRESENCE = "presence"
 ACTION_MESSEGE = "msg"
+ACTION_EXIT = "exit"
 RESPONSE = "response"
 ERROR = "error"
 MESSAGE = "message"

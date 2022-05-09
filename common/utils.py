@@ -3,8 +3,8 @@ import json
 import sys
 import argparse
 from common.decorators import log
-from common.config import (CLIENT_MODE_LISTEN, ENCODING, MAX_PACKAGE_LENGTH,
-                           CLIENT_MODE_LISTEN, DEFAULT_IP_ADDRESS, DEFAULT_PORT)
+from common.config import (USER_TEST, ENCODING, MAX_PACKAGE_LENGTH,
+                           DEFAULT_IP_ADDRESS, DEFAULT_PORT)
 
 
 @log
@@ -12,8 +12,8 @@ def create_parser(logger):
     parser = argparse.ArgumentParser()
     parser_group = parser.add_argument_group(title='Parameters')
 
-    parser_group.add_argument('-m', '--mode',
-                              default=CLIENT_MODE_LISTEN, help='TCP port')
+    parser_group.add_argument('-n', '--name',
+                              default=USER_TEST, help='TCP port')
 
     if sys.argv[0] == 'server.py':
         parser_group.add_argument('-a', '--addr',
@@ -32,14 +32,14 @@ def create_parser(logger):
     namespace = parser.parse_args()
     listen_address = namespace.addr
     listen_port = namespace.port
-    mode = namespace.mode
+    name = namespace.name
 
     if not 1023 < listen_port < 65536:
         logger.critical(
             'The port must be specified in the range from 1024 to 65535')
         sys.exit(1)
 
-    return listen_address, listen_port, mode
+    return listen_address, listen_port, name
 
 
 @log
