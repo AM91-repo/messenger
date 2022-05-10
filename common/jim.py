@@ -40,3 +40,5 @@ RESPONSE_400 = {
     "response": 400,
     "error": 'Bad Request'
 }
+RESPONSE_404 = {
+    "response": 404}

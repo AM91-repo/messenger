@@ -17,11 +17,11 @@ LOGGER = logging.getLogger(LOGGER_CLIENT)
 
 def tremenal_interactive(sock, name):
     print('Supported commands:')
-    print('msg - send a message')
+    print('m - send a message')
     print('exit - exiting the program')
     while True:
         command = input('Enter the command: ')
-        if command == 'msg':
+        if command == 'm':
             to_user = input('Enter the recipient of the message: ')
             user_message = input('Enter the message to send: ')
             message = create_message(to_user, user_message, name)
@@ -48,11 +48,11 @@ def processing_input_messages(sock, name):
                     f'\nReceived a message from the user {message[SENDER]}:\n{message[MESSAGE]}')
                 LOGGER.info(
                     f'Received a message from the user {message[SENDER]}:\n{message[MESSAGE]}')
+            elif message.keys() == jim.RESPONSE_404.keys():
+                print(f'The server sent a {message[RESPONSE]} response')
             else:
                 LOGGER.error(
                     f'An incorrect message was received from the server: {message}')
-        # except IncorrectDataRecivedError:
-        #     logger.error(f'Не удалось декодировать полученное сообщение.')
         except:
             LOGGER.critical(f'The connection to the server is lost.')
             break

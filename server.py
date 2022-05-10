@@ -6,7 +6,7 @@ import common.jim as jim
 
 from common.decorators import log
 from common.config import (ACTION, ACTION_PRESENCE, ACTION_MESSEGE,
-                           MAX_CONNECTIONS, LOGGER_SERVER, USER,
+                           MAX_CONNECTIONS, LOGGER_SERVER, SENDER, USER,
                            ACCOUNT_NAME, ERROR, RECIPIENT, ACTION_EXIT)
 from common.utils import get_message, send_message, create_parser
 
@@ -58,8 +58,9 @@ def get_client_for_sending_message(recipient, names):
         return names[recipient]
     else:
         LOGGER.error(
-            f'The user {recipient} is not registered \
-            on the server, sending the message is not possible.')
+            f'The user {recipient} is not registered '
+            f'on the server, sending the message is not possible.')
+        return False
 
 
 def get_server_socket(addr, port):
@@ -124,14 +125,18 @@ def main():
                     LOGGER.debug(
                         f'The connection with the client was lost')
                     clients.remove(client_message)
-            print(names_clients.keys())
+            print([i for i in names_clients.keys()])
 
         for message in messages_list:
             try:
                 pass
                 client = get_client_for_sending_message(
                     message[RECIPIENT], names_clients)
-                send_message(client, message)
+                if client:
+                    send_message(client, message)
+                else:
+                    send_message(
+                        names_clients[message[SENDER]], jim.RESPONSE_404)
             except:
                 LOGGER.debug(
                     f'The connection with the client was lost')
