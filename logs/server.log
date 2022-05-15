@@ -831,3 +831,125 @@
 2022-05-10 11:48:50,921 DEBUG server.py Processing of the message from the client has begun : {'action': 'msg', 'time': '2022-05-10 11:48:08', 'to': '4', 'from': '4', 'encoding': '', 'message': 'wqeryqtw'}
 2022-05-10 11:48:50,922 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function <module>. 
 2022-05-10 11:56:27,085 DEBUG server.py The connection with the client was lost
+2022-05-15 11:30:37,257 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-15 11:30:37,257 INFO server.py Server started at 127.0.0.1:7779
+2022-05-15 11:30:38,117 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49068)
+2022-05-15 11:30:38,317 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 11:30:38,318 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 11:30:38', 'type': 'status', 'user': {'account_name': 'test1', 'status': ''}}
+2022-05-15 11:30:38,318 DEBUG server.py added username test1
+2022-05-15 11:30:38,318 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 11:30:39,105 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49070)
+2022-05-15 11:30:39,306 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 11:30:39,306 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 11:30:39', 'type': 'status', 'user': {'account_name': 'test2', 'status': ''}}
+2022-05-15 11:30:39,306 DEBUG server.py added username test2
+2022-05-15 11:30:39,307 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 11:30:40,123 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49072)
+2022-05-15 11:30:40,124 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 11:30:40,124 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 11:30:40', 'type': 'status', 'user': {'account_name': 'test3', 'status': ''}}
+2022-05-15 11:30:40,124 DEBUG server.py added username test3
+2022-05-15 11:30:40,124 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 11:30:55,755 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 11:30:55,755 DEBUG server.py Processing of the message from the client has begun : {'action': 'msg', 'time': '2022-05-15 11:30:39', 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'asd'}
+2022-05-15 11:30:55,756 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 11:31:00,564 DEBUG server.py The connection with the client was lost
+2022-05-15 11:31:01,366 DEBUG server.py The connection with the client was lost
+2022-05-15 14:00:28,044 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:00:28,044 INFO server.py Server started at 127.0.0.1:7779
+2022-05-15 14:00:47,927 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49086)
+2022-05-15 14:00:47,927 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:00:47,927 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:00:47', 'type': 'status', 'user': {'account_name': 'Guest', 'status': ''}}
+2022-05-15 14:00:47,927 DEBUG server.py The connection with the client was lost
+2022-05-15 14:01:19,403 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49088)
+2022-05-15 14:01:19,404 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:01:19,404 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:01:19', 'type': 'status', 'user': {'account_name': 'hi', 'status': ''}}
+2022-05-15 14:01:19,404 DEBUG server.py The connection with the client was lost
+2022-05-15 14:02:45,457 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:02:45,458 INFO server.py Server started at 127.0.0.1:7779
+2022-05-15 14:03:08,286 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49090)
+2022-05-15 14:03:08,287 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:03:08,287 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:03:08', 'type': 'status', 'user': {'account_name': 'Guest', 'status': ''}}
+2022-05-15 14:03:08,287 DEBUG server.py The connection with the client was lost
+2022-05-15 14:04:47,871 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:04:47,872 INFO server.py Server started at 127.0.0.1:7779
+2022-05-15 14:04:51,802 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49092)
+2022-05-15 14:04:51,803 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:04:51,803 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:04:51', 'type': 'status', 'user': {'account_name': 'Guest', 'status': ''}}
+2022-05-15 14:04:51,803 DEBUG server.py The connection with the client was lost
+2022-05-15 14:05:38,695 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:05:38,695 INFO server.py Server started at 127.0.0.1:7779
+2022-05-15 14:05:40,788 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49094)
+2022-05-15 14:05:40,788 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:05:40,788 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:05:40', 'type': 'status', 'user': {'account_name': 'Guest', 'status': ''}}
+2022-05-15 14:05:40,788 DEBUG server.py The connection with the client was lost
+2022-05-15 14:07:52,530 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:07:52,531 INFO server.py Server started at 127.0.0.1:7779
+2022-05-15 14:07:54,597 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49096)
+2022-05-15 14:07:54,597 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:07:54,597 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:07:54', 'type': 'status', 'user': {'account_name': 'Guest', 'status': ''}}
+2022-05-15 14:07:54,597 DEBUG server.py added username Guest
+2022-05-15 14:07:54,598 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:08:01,960 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49098)
+2022-05-15 14:08:01,960 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:08:01,960 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:08:01', 'type': 'status', 'user': {'account_name': 'hi', 'status': ''}}
+2022-05-15 14:08:01,960 DEBUG server.py added username hi
+2022-05-15 14:08:01,960 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:08:15,785 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:08:15,785 DEBUG server.py Processing of the message from the client has begun : {'action': 'msg', 'time': '2022-05-15 14:08:01', 'to': 'Guest', 'from': 'hi', 'encoding': '', 'message': 'sadas'}
+2022-05-15 14:08:15,785 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:09:20,690 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:09:20,690 INFO server.py Server started at 127.0.0.1:7779
+2022-05-15 14:09:27,957 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49102)
+2022-05-15 14:09:28,157 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:09:28,158 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:09:27', 'type': 'status', 'user': {'account_name': '1', 'status': ''}}
+2022-05-15 14:09:28,158 DEBUG server.py added username 1
+2022-05-15 14:09:28,158 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:09:31,921 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49104)
+2022-05-15 14:09:32,122 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:09:32,122 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:09:31', 'type': 'status', 'user': {'account_name': 'hi', 'status': ''}}
+2022-05-15 14:09:32,122 DEBUG server.py added username hi
+2022-05-15 14:09:32,122 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:09:38,133 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:09:38,133 DEBUG server.py Processing of the message from the client has begun : {'action': 'msg', 'time': '2022-05-15 14:09:27', 'to': '1', 'from': '1', 'encoding': '', 'message': 'asdsaddsadasdsadasd'}
+2022-05-15 14:09:38,133 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:11:56,368 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:11:56,369 DEBUG server.py Processing of the message from the client has begun : {'action': 'msg', 'time': '2022-05-15 14:09:27', 'to': 'hi', 'from': '1', 'encoding': '', 'message': 'wqeqwe'}
+2022-05-15 14:11:56,369 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:12:03,181 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:12:03,182 DEBUG server.py Processing of the message from the client has begun : {'action': 'msg', 'time': '2022-05-15 14:09:27', 'to': 'hi', 'from': '1', 'encoding': '', 'message': 'hi'}
+2022-05-15 14:12:03,182 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:12:26,632 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:12:26,632 DEBUG server.py Processing of the message from the client has begun : {'action': 'msg', 'time': '2022-05-15 14:09:31', 'to': '1', 'from': 'hi', 'encoding': '', 'message': 'hi from hi'}
+2022-05-15 14:12:26,633 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:12:41,661 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:12:41,661 DEBUG server.py Processing of the message from the client has begun : {'action': 'msg', 'time': '2022-05-15 14:09:27', 'to': 'hi', 'from': '1', 'encoding': '', 'message': '1234567890'}
+2022-05-15 14:12:41,661 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:17:27,913 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:17:27,913 INFO server.py Server started at 127.0.0.1:7779
+2022-05-15 14:17:31,012 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49106)
+2022-05-15 14:17:31,012 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:17:31,012 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:17:31', 'type': 'status', 'user': {'account_name': '1', 'status': ''}}
+2022-05-15 14:17:31,012 DEBUG server.py added username 1
+2022-05-15 14:17:31,013 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:17:33,302 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49108)
+2022-05-15 14:17:33,303 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:17:33,303 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:17:33', 'type': 'status', 'user': {'account_name': 'hi', 'status': ''}}
+2022-05-15 14:17:33,303 DEBUG server.py added username hi
+2022-05-15 14:17:33,303 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:17:34,505 DEBUG server.py The connection with the client was lost
+2022-05-15 14:17:45,228 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49110)
+2022-05-15 14:17:45,229 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:17:45,229 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:17:45', 'type': 'status', 'user': {'account_name': 'hi', 'status': ''}}
+2022-05-15 14:17:45,229 INFO server.py Clear username hi
+2022-05-15 14:17:45,229 DEBUG server.py added username hi
+2022-05-15 14:17:45,230 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:17:53,244 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:17:53,244 DEBUG server.py Processing of the message from the client has begun : {'action': 'exit', 'time': '2022-05-15 14:17:45', 'account_name': 'hi'}
+2022-05-15 14:17:58,560 DEBUG server.py A client with the address has connected: ('127.0.0.1', 49114)
+2022-05-15 14:17:58,561 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:17:58,561 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': '2022-05-15 14:17:58', 'type': 'status', 'user': {'account_name': 'hi', 'status': ''}}
+2022-05-15 14:17:58,561 DEBUG server.py added username hi
+2022-05-15 14:17:58,561 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:18:06,978 DEBUG server.py The connection with the client was lost
+2022-05-15 14:18:20,803 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-15 14:18:20,803 DEBUG server.py Processing of the message from the client has begun : {'action': 'msg', 'time': '2022-05-15 14:17:31', 'to': 'hi', 'from': '1', 'encoding': '', 'message': '123'}
+2022-05-15 14:18:20,803 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
