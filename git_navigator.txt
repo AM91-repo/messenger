@@ -9,13 +9,13 @@
 # git reflog							 - все операции совершенные в репозитории
 # git reset [hesh commit]				 - переключение на другой commit репозитория
 # git revert [hesh commit]				 - отменна действия указанного commit
+# git restore                            - чтобы отменить изменения в рабочем каталоге
 
 # git add [file] 					     - добавление файла, для включения в commit
 # git commit -m '[text commit]'		     - добовления commit
 # git commit -am '[text commit]'	     - добавление файла и добовления commit одновременно
 # git pull								 - загрузка commit в удаленный репозиторий
 # git push 								 - затягивание из репозитория
-# git restore                            - чтобы отменить изменения в рабочем каталоге
 
 # touch [dir]/.gitkeep 				     - команда для добавления пустой директории в репозиторий
 # touch .gitignore					     - создание файла с описанием правил игнорирования файлов

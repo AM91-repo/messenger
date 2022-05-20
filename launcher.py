@@ -30,20 +30,20 @@ process = []
 
 while True:
     action = input(
-        'Выберите действие: q - выход , s - запустить сервер и клиенты, x - закрыть все окна:')
+        'Select an action: q - exit , s - start the server and clients, x - close all windows:')
 
     if action == 'q':
         break
     elif action == 's':
         clients_count = int(
-            input('Введите количество тестовых клиентов для запуска: '))
+            input('Enter the number of test clients to run: '))
 
         run_server(process)
 
         for i in range(clients_count):
             time.sleep(1)
             run_client(process)
-            print(f'Запущен клиент test{i + 1}')
+            print(f'The client is running test{i + 1}')
 
         print(process)
     elif action == 'x':
