@@ -5,10 +5,10 @@ import logging
 import threading
 import time
 
-from django.dispatch import receiver
 import logs.config_client_log
 import common.jim as jim
 
+from common.metaclasses import ClientMaker
 from common.decorators import log
 from common.config import (USER, ACCOUNT_NAME, RESPONSE, ERROR, LOGGER_CLIENT,
                            RECIPIENT, MESSAGE, SENDER)
@@ -17,7 +17,7 @@ from common.utils import send_message, get_message, create_parser
 LOGGER = logging.getLogger(LOGGER_CLIENT)
 
 
-class ClientSendMessage(threading.Thread):
+class ClientSendMessage(threading.Thread, metaclass=ClientMaker):
     def __init__(self, account_name, sock):
         self.account_name = account_name
         self.sock = sock
@@ -54,7 +54,7 @@ class ClientSendMessage(threading.Thread):
         self._message[MESSAGE] = client_message
 
 
-class ClientReader(threading.Thread):
+class ClientReader(threading.Thread, metaclass=ClientMaker):
     def __init__(self, account_name, sock):
         self.account_name = account_name
         self.sock = sock
@@ -77,49 +77,6 @@ class ClientReader(threading.Thread):
             except:
                 LOGGER.critical(f'The connection to the server is lost.')
                 break
-
-
-def tremenal_interactive(sock, name):
-    print('Supported commands:')
-    print('m - send a message')
-    print('exit - exiting the program')
-    while True:
-        command = input('Enter the command: ')
-        if command == 'm':
-            to_user = input('Enter the recipient of the message: ')
-            user_message = input('Enter the message to send: ')
-            message = create_message(to_user, user_message, name)
-            send_message(sock, message)
-        elif command == 'exit':
-            message_exit = jim.MESSAGE_EXIT
-            message_exit[ACCOUNT_NAME] = name
-            send_message(sock, message_exit)
-            print('Connection termination.')
-            LOGGER.info("Completion of work on the user's command.")
-            time.sleep(0.5)
-            break
-        else:
-            print(
-                'The command is not recognized, try again.')
-
-
-def processing_input_messages(sock, name):
-    while True:
-        try:
-            message = get_message(sock)
-            if message.keys() == jim.MESSAGE.keys() and message[RECIPIENT] == name:
-                print(
-                    f'\nReceived a message from the user {message[SENDER]}:\n{message[MESSAGE]}')
-                LOGGER.info(
-                    f'Received a message from the user {message[SENDER]}:\n{message[MESSAGE]}')
-            elif message.keys() == jim.RESPONSE_404.keys():
-                print(f'The server sent a {message[RESPONSE]} response')
-            else:
-                LOGGER.error(
-                    f'An incorrect message was received from the server: {message}')
-        except:
-            LOGGER.critical(f'The connection to the server is lost.')
-            break
 
 
 def create_message(to_user, client_message, account_name):
@@ -173,14 +130,10 @@ def main():
         exit(1)
     else:
 
-        # receiver = threading.Thread(
-        #     target=processing_input_messages, args=(transport, name))
         receiver = ClientReader(name, transport)
         receiver.daemon = True
         receiver.start()
 
-        # user_interface = threading.Thread(
-        #     target=tremenal_interactive, args=(transport, name))
         user_interface = ClientSendMessage(name, transport)
         user_interface.daemon = True
         user_interface.start()

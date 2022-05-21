@@ -1,6 +1,8 @@
 import dis
 
 # Метакласс для проверки соответствия сервера:
+
+
 class ServerMaker(type):
     def __init__(self, clsname, bases, clsdict):
         # clsname - экземпляр метакласса - Server
@@ -36,7 +38,7 @@ class ServerMaker(type):
             else:
                 # Раз функция разбираем код, получая используемые методы и атрибуты.
                 for i in ret:
-                    print(i)
+                    # print(i)
                     # i - Instruction(opname='LOAD_GLOBAL', opcode=116, arg=9, argval='send_message',
                     # argrepr='send_message', offset=308, starts_line=201, is_jump_target=False)
                     # opname - имя для операции
@@ -48,17 +50,20 @@ class ServerMaker(type):
                         if i.argval not in attrs:
                             # заполняем список атрибутами, использующимися в функциях класса
                             attrs.append(i.argval)
-        print(methods)
+        # print(methods)
         # Если обнаружено использование недопустимого метода connect, бросаем исключение:
         if 'connect' in methods:
-            raise TypeError('Использование метода connect недопустимо в серверном классе')
+            raise TypeError(
+                'Using the connect method is not allowed in the server class')
         # Если сокет не инициализировался константами SOCK_STREAM(TCP) AF_INET(IPv4), тоже исключение.
         if not ('SOCK_STREAM' in attrs and 'AF_INET' in attrs):
-            raise TypeError('Некорректная инициализация сокета.')
+            raise TypeError('Incorrect socket initialization')
         # Обязательно вызываем конструктор предка:
         super().__init__(clsname, bases, clsdict)
 
 # Метакласс для проверки корректности клиентов:
+
+
 class ClientMaker(type):
     def __init__(self, clsname, bases, clsdict):
         # Список методов, которые используются в функциях класса:
@@ -79,10 +84,12 @@ class ClientMaker(type):
         # Если обнаружено использование недопустимого метода accept, listen, socket бросаем исключение:
         for command in ('accept', 'listen', 'socket'):
             if command in methods:
-                raise TypeError('В классе обнаружено использование запрещённого метода')
+                raise TypeError(
+                    'The use of a prohibited method was detected in the class')
         # Вызов get_message или send_message из utils считаем корректным использованием сокетов
         if 'get_message' in methods or 'send_message' in methods:
             pass
         else:
-            raise TypeError('Отсутствуют вызовы функций, работающих с сокетами.')
+            raise TypeError(
+                'There are no calls to functions that work with sockets.')
         super().__init__(clsname, bases, clsdict)

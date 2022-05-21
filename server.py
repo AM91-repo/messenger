@@ -4,7 +4,8 @@ import logging
 import logs.config_server_log
 import common.jim as jim
 
-from common.descrptrs import Port
+from common.metaclasses import ServerMaker
+from common.descrptrs import Port, Addr
 from common.decorators import log
 from common.config import (ACTION, ACTION_PRESENCE, ACTION_MESSEGE,
                            MAX_CONNECTIONS, LOGGER_SERVER, SENDER, USER,
@@ -15,8 +16,9 @@ from common.utils import get_message, send_message, create_parser
 LOGGER = logging.getLogger(LOGGER_SERVER)
 
 
-class Server():
+class Server(metaclass=ServerMaker):
     port = Port()
+    addr = Addr()
 
     def __init__(self, address, port,):
         self.addr = address
