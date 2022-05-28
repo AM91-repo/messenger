@@ -25,6 +25,7 @@ class ClientSendMessage(threading.Thread, metaclass=ClientMaker):
         super().__init__()
 
     def run(self):
+        print(f'Client: {self.account_name}')
         print('Supported commands:')
         print('m - send a message')
         print('exit - exiting the program')

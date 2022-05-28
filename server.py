@@ -4,6 +4,7 @@ import logging
 import logs.config_server_log
 import common.jim as jim
 
+from database.server_database import ServerStorage
 from common.metaclasses import ServerMaker
 from common.descrptrs import Port, Addr
 from common.decorators import log
@@ -20,9 +21,11 @@ class Server(metaclass=ServerMaker):
     port = Port()
     addr = Addr()
 
-    def __init__(self, address, port,):
+    def __init__(self, address, port, database):
         self.addr = address
         self.port = port
+
+        self.database = database
 
         self.clients = []
         self.messages_list = []
@@ -42,7 +45,7 @@ class Server(metaclass=ServerMaker):
         server_addr = self.sock.getsockname()
         LOGGER.info(f'Server started at {server_addr[0]}:{server_addr[1]}')
 
-    def handle_message(self, message, client):
+    def checking_message(self, message, client):
         LOGGER.debug(
             f'Processing of the message from the client has begun : {message}')
         if message.keys() == jim.PRESENCE.keys():
@@ -87,6 +90,44 @@ class Server(metaclass=ServerMaker):
                 f'on the server, sending the message is not possible.')
             return False
 
+    def interaction_with_client(self, sock):
+        msg = get_message(sock)
+        self.handle_message(msg, sock)
+        print(self.message)
+        if self.message[ACTION] == ACTION_PRESENCE:
+            self.clear_names_clients()
+            self.add_name_client(sock)
+            client_ip, client_port = sock.getpeername()
+            self.database.user_login(
+                self.message[USER][ACCOUNT_NAME], client_ip, client_port)
+            send_message(sock, jim.RESPONSE_200)
+        elif self.message[ACTION] == ACTION_MESSEGE:
+            self.messages_list.append(self.message)
+        elif self.message[ACTION] == ACTION_EXIT:
+            self.clients.remove(sock)
+            del self.names_clients[self.message[ACCOUNT_NAME]]
+
+    def processing_client_messages(self, client_sock):
+        msg = get_message(client_sock)
+        self.checking_message(msg, client_sock)
+        # print(self.message)
+        # If this is a presence message
+        if self.message[ACTION] == ACTION_PRESENCE:
+            self.clear_names_clients()
+            self.add_name_client(client_sock)
+            client_ip, client_port = client_sock.getpeername()
+            self.database.user_login(
+                self.message[USER][ACCOUNT_NAME], client_ip, client_port)
+            send_message(client_sock, jim.RESPONSE_200)
+        # If this is a message, then add it to the message queue
+        elif self.message[ACTION] == ACTION_MESSEGE:
+            self.messages_list.append(self.message)
+        # If the client exits
+        elif self.message[ACTION] == ACTION_EXIT:
+            self.database.user_logout(self.message[ACCOUNT_NAME])
+            self.clients.remove(client_sock)
+            del self.names_clients[self.message[ACCOUNT_NAME]]
+
     def run(self):
         self.socket_initialization()
 
@@ -115,24 +156,13 @@ class Server(metaclass=ServerMaker):
             if clients_messages:
                 for client_message in clients_messages:
                     try:
-                        msg = get_message(client_message)
-                        self.handle_message(msg, client_message)
-                        print(self.message)
-                        if self.message[ACTION] == ACTION_PRESENCE:
-                            self.clear_names_clients()
-                            self.add_name_client(client_message)
-                            send_message(client_message, jim.RESPONSE_200)
-                        elif self.message[ACTION] == ACTION_MESSEGE:
-                            self.messages_list.append(self.message)
-                        elif self.message[ACTION] == ACTION_EXIT:
-                            self.clients.remove(client_message)
-                            del self.names_clients[self.message[ACCOUNT_NAME]]
+                        self.processing_client_messages(client_message)
                     except Exception as error:
                         print(error)
                         LOGGER.debug(
                             f'The connection with the client was lost')
                         self.clients.remove(client_message)
-                print([i for i in self.names_clients.keys()])
+                # print([i for i in self.names_clients.keys()])
 
             for message in self.messages_list:
                 try:
@@ -155,7 +185,9 @@ class Server(metaclass=ServerMaker):
 def main():
     address, port, _ = create_parser(LOGGER)
 
-    server = Server(address, port)
+    database = ServerStorage()
+
+    server = Server(address, port, database)
     server.run()
 
 

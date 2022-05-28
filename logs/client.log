@@ -3381,3 +3381,161 @@ hi
 2022-05-21 12:22:01,007 CRITICAL client.py The connection to the server is lost.
 2022-05-21 12:22:01,007 CRITICAL client.py The connection to the server is lost.
 2022-05-21 12:22:01,007 CRITICAL client.py The connection to the server is lost.
+2022-05-28 11:49:39,564 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:39,565 INFO client.py Сonnecting to the server 127.0.0.1:45330
+2022-05-28 11:49:39,565 DEBUG client.py Message created
+2022-05-28 11:49:39,565 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:39,565 DEBUG client.py The message has been sent
+2022-05-28 11:49:39,592 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:39,592 DEBUG client.py Message received: {'response': 200}
+2022-05-28 11:49:39,592 DEBUG client.py Message: 200 : OK
+2022-05-28 11:49:39,592 DEBUG client.py Processes are running
+2022-05-28 11:49:40,542 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:40,542 INFO client.py Сonnecting to the server 127.0.0.1:45332
+2022-05-28 11:49:40,542 DEBUG client.py Message created
+2022-05-28 11:49:40,543 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:40,543 DEBUG client.py The message has been sent
+2022-05-28 11:49:40,569 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:40,569 DEBUG client.py Message received: {'response': 200}
+2022-05-28 11:49:40,570 DEBUG client.py Message: 200 : OK
+2022-05-28 11:49:40,570 DEBUG client.py Processes are running
+2022-05-28 11:49:41,545 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:41,546 INFO client.py Сonnecting to the server 127.0.0.1:45334
+2022-05-28 11:49:41,546 DEBUG client.py Message created
+2022-05-28 11:49:41,546 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:41,546 DEBUG client.py The message has been sent
+2022-05-28 11:49:41,573 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:41,573 DEBUG client.py Message received: {'response': 200}
+2022-05-28 11:49:41,573 DEBUG client.py Message: 200 : OK
+2022-05-28 11:49:41,574 DEBUG client.py Processes are running
+2022-05-28 11:49:42,551 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:42,551 INFO client.py Сonnecting to the server 127.0.0.1:45336
+2022-05-28 11:49:42,551 DEBUG client.py Message created
+2022-05-28 11:49:42,551 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:42,551 DEBUG client.py The message has been sent
+2022-05-28 11:49:42,578 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:49:42,578 DEBUG client.py Message received: {'response': 200}
+2022-05-28 11:49:42,578 DEBUG client.py Message: 200 : OK
+2022-05-28 11:49:42,579 DEBUG client.py Processes are running
+2022-05-28 11:49:56,681 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:49:56,821 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:49:56,821 INFO client.py Received a message from the user test4:
+asdasd
+2022-05-28 11:50:10,375 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:50:10,463 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:50:26,418 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:50:26,511 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:50:26,511 INFO client.py Received a message from the user test4:
+asd
+2022-05-28 11:50:29,922 CRITICAL client.py The connection to the server is lost.
+2022-05-28 11:50:29,922 CRITICAL client.py The connection to the server is lost.
+2022-05-28 11:50:29,922 CRITICAL client.py The connection to the server is lost.
+2022-05-28 11:50:29,922 CRITICAL client.py The connection to the server is lost.
+2022-05-28 11:51:57,618 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:51:57,618 INFO client.py Сonnecting to the server 127.0.0.1:45338
+2022-05-28 11:51:57,618 DEBUG client.py Message created
+2022-05-28 11:51:57,618 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:51:57,618 DEBUG client.py The message has been sent
+2022-05-28 11:51:57,648 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:51:57,648 DEBUG client.py Message received: {'response': 200}
+2022-05-28 11:51:57,648 DEBUG client.py Message: 200 : OK
+2022-05-28 11:51:57,649 DEBUG client.py Processes are running
+2022-05-28 11:51:58,628 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:51:58,628 INFO client.py Сonnecting to the server 127.0.0.1:45340
+2022-05-28 11:51:58,628 DEBUG client.py Message created
+2022-05-28 11:51:58,628 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:51:58,628 DEBUG client.py The message has been sent
+2022-05-28 11:51:58,649 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:51:58,649 DEBUG client.py Message received: {'response': 200}
+2022-05-28 11:51:58,649 DEBUG client.py Message: 200 : OK
+2022-05-28 11:51:58,650 DEBUG client.py Processes are running
+2022-05-28 11:52:08,074 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:52:08,077 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:52:08,077 INFO client.py Received a message from the user test2:
+asdasdasdas
+2022-05-28 11:52:41,072 CRITICAL client.py The connection to the server is lost.
+2022-05-28 11:52:41,072 CRITICAL client.py The connection to the server is lost.
+2022-05-28 11:52:50,419 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:52:50,419 INFO client.py Сonnecting to the server 127.0.0.1:45342
+2022-05-28 11:52:50,419 DEBUG client.py Message created
+2022-05-28 11:52:50,419 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:52:50,419 DEBUG client.py The message has been sent
+2022-05-28 11:52:50,449 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:52:50,449 DEBUG client.py Message received: {'response': 200}
+2022-05-28 11:52:50,449 DEBUG client.py Message: 200 : OK
+2022-05-28 11:52:50,450 DEBUG client.py Processes are running
+2022-05-28 11:52:51,447 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:52:51,447 INFO client.py Сonnecting to the server 127.0.0.1:45344
+2022-05-28 11:52:51,447 DEBUG client.py Message created
+2022-05-28 11:52:51,447 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:52:51,447 DEBUG client.py The message has been sent
+2022-05-28 11:52:51,468 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:52:51,468 DEBUG client.py Message received: {'response': 200}
+2022-05-28 11:52:51,468 DEBUG client.py Message: 200 : OK
+2022-05-28 11:52:51,469 DEBUG client.py Processes are running
+2022-05-28 11:53:09,098 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:53:09,117 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:53:09,117 INFO client.py Received a message from the user test2:
+sadasdasd
+2022-05-28 11:53:12,486 CRITICAL client.py The connection to the server is lost.
+2022-05-28 11:53:12,486 CRITICAL client.py The connection to the server is lost.
+2022-05-28 11:55:34,413 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:55:34,413 INFO client.py Сonnecting to the server 127.0.0.1:45346
+2022-05-28 11:55:34,413 DEBUG client.py Message created
+2022-05-28 11:55:34,414 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:55:34,414 DEBUG client.py The message has been sent
+2022-05-28 11:55:34,445 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:55:34,445 DEBUG client.py Message received: {'response': 200}
+2022-05-28 11:55:34,446 DEBUG client.py Message: 200 : OK
+2022-05-28 11:55:34,447 DEBUG client.py Processes are running
+2022-05-28 11:55:35,430 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:55:35,430 INFO client.py Сonnecting to the server 127.0.0.1:45348
+2022-05-28 11:55:35,430 DEBUG client.py Message created
+2022-05-28 11:55:35,430 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:55:35,430 DEBUG client.py The message has been sent
+2022-05-28 11:55:35,451 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 11:55:35,451 DEBUG client.py Message received: {'response': 200}
+2022-05-28 11:55:35,451 DEBUG client.py Message: 200 : OK
+2022-05-28 11:55:35,452 DEBUG client.py Processes are running
+2022-05-28 11:55:47,403 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:55:47,404 INFO client.py Completion of work on the user's command.
+2022-05-28 11:55:53,270 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-05-28 11:55:53,270 INFO client.py Completion of work on the user's command.
+2022-05-28 12:00:46,250 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:00:46,250 INFO client.py Сonnecting to the server 127.0.0.1:45350
+2022-05-28 12:00:46,251 DEBUG client.py Message created
+2022-05-28 12:00:46,251 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:00:46,251 DEBUG client.py The message has been sent
+2022-05-28 12:00:46,290 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:00:46,290 DEBUG client.py Message received: {'response': 200}
+2022-05-28 12:00:46,290 DEBUG client.py Message: 200 : OK
+2022-05-28 12:00:46,291 DEBUG client.py Processes are running
+2022-05-28 12:00:47,255 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:00:47,256 INFO client.py Сonnecting to the server 127.0.0.1:45352
+2022-05-28 12:00:47,256 DEBUG client.py Message created
+2022-05-28 12:00:47,256 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:00:47,256 DEBUG client.py The message has been sent
+2022-05-28 12:00:47,285 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:00:47,285 DEBUG client.py Message received: {'response': 200}
+2022-05-28 12:00:47,285 DEBUG client.py Message: 200 : OK
+2022-05-28 12:00:47,286 DEBUG client.py Processes are running
+2022-05-28 12:17:16,775 CRITICAL client.py The connection to the server is lost.
+2022-05-28 12:17:16,775 CRITICAL client.py The connection to the server is lost.
+2022-05-28 12:17:30,134 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:17:30,134 INFO client.py Сonnecting to the server 127.0.0.1:45358
+2022-05-28 12:17:30,134 DEBUG client.py Message created
+2022-05-28 12:17:30,134 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:17:30,134 DEBUG client.py The message has been sent
+2022-05-28 12:17:30,164 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:17:30,164 DEBUG client.py Message received: {'response': 200}
+2022-05-28 12:17:30,164 DEBUG client.py Message: 200 : OK
+2022-05-28 12:17:30,165 DEBUG client.py Processes are running
+2022-05-28 12:17:31,121 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:17:31,121 INFO client.py Сonnecting to the server 127.0.0.1:45360
+2022-05-28 12:17:31,122 DEBUG client.py Message created
+2022-05-28 12:17:31,122 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:17:31,122 DEBUG client.py The message has been sent
+2022-05-28 12:17:31,344 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-05-28 12:17:31,345 DEBUG client.py Message received: {'response': 200}
+2022-05-28 12:17:31,345 DEBUG client.py Message: 200 : OK
+2022-05-28 12:17:31,345 DEBUG client.py Processes are running
