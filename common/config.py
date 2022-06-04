@@ -1,5 +1,6 @@
 import logging
 import sys
+import os
 
 
 DEFAULT_IP_ADDRESS = "localhost"
@@ -9,7 +10,7 @@ MAX_PACKAGE_LENGTH = 1024
 
 ENCODING = "utf-8"
 
-SERVER_DATABASE = 'sqlite:///server.db3'
+SERVER_DATABASE = f'sqlite:///database/server.db3'
 
 CLIENT_MODE_LISTEN = "listen"
 CLIENT_MODE_SEND = "send"
@@ -29,6 +30,11 @@ ACTION_EXIT = "exit"
 RESPONSE = "response"
 ERROR = "error"
 MESSAGE = "message"
+GET_CONTACTS = "get_contacts"
+LIST_INFO = "data_list"
+REMOVE_CONTACT = "remove"
+ADD_CONTACT = "add"
+USERS_REQUEST = "get_users"
 
 LOGGER_CLIENT = "client"
 LOG_CLIENT_FILE = "client.log"

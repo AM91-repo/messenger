@@ -4,13 +4,15 @@ import logging
 import logs.config_server_log
 import common.jim as jim
 
-from database.server_database import ServerStorage
+from database.server_database import ServerDB
 from common.metaclasses import ServerMaker
 from common.descrptrs import Port, Addr
 from common.decorators import log
 from common.config import (ACTION, ACTION_PRESENCE, ACTION_MESSEGE,
                            MAX_CONNECTIONS, LOGGER_SERVER, SENDER, USER,
-                           ACCOUNT_NAME, ERROR, RECIPIENT, ACTION_EXIT)
+                           ACCOUNT_NAME, ERROR, RECIPIENT, ACTION_EXIT,
+                           GET_CONTACTS, ADD_CONTACT, REMOVE_CONTACT,
+                           USERS_REQUEST, LIST_INFO)
 from common.utils import get_message, send_message, create_parser
 
 
@@ -45,20 +47,6 @@ class Server(metaclass=ServerMaker):
         server_addr = self.sock.getsockname()
         LOGGER.info(f'Server started at {server_addr[0]}:{server_addr[1]}')
 
-    def checking_message(self, message, client):
-        LOGGER.debug(
-            f'Processing of the message from the client has begun : {message}')
-        if message.keys() == jim.PRESENCE.keys():
-            self.message = message
-        elif message.keys() == jim.MESSAGE.keys():
-            self.message = message
-        elif message.keys() == jim.MESSAGE_EXIT.keys():
-            self.message = message
-        else:
-            LOGGER.error('Invalid request received')
-            send_message(client, jim.RESPONSE_400)
-            raise Exception
-
     def add_name_client(self, client):
         if self.message[USER][ACCOUNT_NAME] not in self.names_clients.keys():
             self.names_clients[self.message[USER][ACCOUNT_NAME]] = client
@@ -90,27 +78,33 @@ class Server(metaclass=ServerMaker):
                 f'on the server, sending the message is not possible.')
             return False
 
-    def interaction_with_client(self, sock):
-        msg = get_message(sock)
-        self.handle_message(msg, sock)
-        print(self.message)
-        if self.message[ACTION] == ACTION_PRESENCE:
-            self.clear_names_clients()
-            self.add_name_client(sock)
-            client_ip, client_port = sock.getpeername()
-            self.database.user_login(
-                self.message[USER][ACCOUNT_NAME], client_ip, client_port)
-            send_message(sock, jim.RESPONSE_200)
-        elif self.message[ACTION] == ACTION_MESSEGE:
-            self.messages_list.append(self.message)
-        elif self.message[ACTION] == ACTION_EXIT:
-            self.clients.remove(sock)
-            del self.names_clients[self.message[ACCOUNT_NAME]]
+    def checking_message(self, message, client):
+        LOGGER.debug(
+            f'Processing of the message from the client has begun : {message}')
+        if message.keys() == jim.PRESENCE.keys():
+            self.message = message
+        elif message.keys() == jim.MESSAGE.keys():
+            self.message = message
+        elif message.keys() == jim.MESSAGE_EXIT.keys():
+            self.message = message
+        elif message.keys() == jim.REQUEST_CONTACTS.keys():
+            self.message = message
+        elif message.keys() == jim.ADDING_CONTACT.keys():
+            self.message = message
+        elif message.keys() == jim.REMOVE_CONTACT.keys():
+            self.message = message
+        elif message.keys() == jim.USERS_REQUEST.keys():
+            self.message = message
+        else:
+            LOGGER.error('Invalid request received')
+            send_message(client, jim.RESPONSE_400)
+            raise Exception
 
     def processing_client_messages(self, client_sock):
         msg = get_message(client_sock)
         self.checking_message(msg, client_sock)
-        # print(self.message)
+        print(self.message)
+
         # If this is a presence message
         if self.message[ACTION] == ACTION_PRESENCE:
             self.clear_names_clients()
@@ -119,14 +113,40 @@ class Server(metaclass=ServerMaker):
             self.database.user_login(
                 self.message[USER][ACCOUNT_NAME], client_ip, client_port)
             send_message(client_sock, jim.RESPONSE_200)
+
         # If this is a message, then add it to the message queue
         elif self.message[ACTION] == ACTION_MESSEGE:
             self.messages_list.append(self.message)
+            
         # If the client exits
         elif self.message[ACTION] == ACTION_EXIT:
             self.database.user_logout(self.message[ACCOUNT_NAME])
             self.clients.remove(client_sock)
             del self.names_clients[self.message[ACCOUNT_NAME]]
+        
+        # Contact list request
+        elif self.message[ACTION] == GET_CONTACTS:
+            response = jim.RESPONSE_202
+            response[LIST_INFO] = self.database.get_contacts(self.message[USER])
+            send_message(client_sock, response)
+
+        # adding a contact
+        elif self.message[ACTION] == ADD_CONTACT:
+            self.database.add_contact(self.message[USER], self.message[ACCOUNT_NAME])
+            send_message(client_sock, jim.RESPONSE_200)
+
+        # deleting a contact
+        elif self.message[ACTION] == REMOVE_CONTACT:
+            self.database.remove_contact(self.message[USER], self.message[ACCOUNT_NAME])
+            send_message(client_sock, jim.RESPONSE_200)
+
+        # request for famous users
+        elif self.message[ACTION] == USERS_REQUEST:
+            response = jim.RESPONSE_202
+            response[LIST_INFO] = [user[0]
+                                   for user in self.database.users_list()]
+            send_message(client_sock, response)
+
 
     def run(self):
         self.socket_initialization()
@@ -185,7 +205,7 @@ class Server(metaclass=ServerMaker):
 def main():
     address, port, _ = create_parser(LOGGER)
 
-    database = ServerStorage()
+    database = ServerDB()
 
     server = Server(address, port, database)
     server.run()

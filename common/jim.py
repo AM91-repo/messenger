@@ -1,10 +1,8 @@
-from datetime import datetime
-
-TIME = datetime.now().replace(microsecond=0).isoformat(sep=' ')
+JIM = list()
 
 RESPONSE = {
     "response": None,
-    "time": str(TIME),
+    "time": None,
     "alert": None,
     "from": "Server",
     "contacts": None
@@ -12,7 +10,7 @@ RESPONSE = {
 
 PRESENCE = {
     "action": "presence",
-    "time": str(TIME),
+    "time": None,
     "type": "status",
     "user": {
         "account_name": "",
@@ -22,20 +20,50 @@ PRESENCE = {
 
 MESSAGE = {
     "action": "msg",
-    "time": str(TIME),
+    "time": None,
     "to": None,
     "from": None,
     "encoding": "",
-    "message": None
+    "message": None,
 }
 
 MESSAGE_EXIT = {
     "action": "exit",
-    "time": str(TIME),
+    "time": None,
+    "account_name": "",
+}
+
+REQUEST_CONTACTS = {
+    "action": "get_contacts",
+    "time": None,
+    "user": "",
+}
+
+ADDING_CONTACT = {
+    "action": "add",
+    "time": None,
+    "account_name": "",
+    "user": "",
+}
+
+REMOVE_CONTACT = {
+    "action": "remove",
+    "time": None,
+    "account_name": "",
+    "user": "",
+}
+
+USERS_REQUEST = {
+    "action": "get_users",
+    "time": None,
     "account_name": "",
 }
 
 RESPONSE_200 = {"response": 200}
+RESPONSE_202 = {
+    "response": 202,
+    "data_list":None
+}
 RESPONSE_400 = {
     "response": 400,
     "error": 'Bad Request'
