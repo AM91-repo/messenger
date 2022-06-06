@@ -1,3 +1,4 @@
+from common.config import SERVER_DATABASE
 from sqlalchemy.orm import mapper, sessionmaker
 from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, ForeignKey, DateTime
 import sys
@@ -5,8 +6,6 @@ import os
 import datetime
 
 sys.path.append(os.path.join(os.getcwd(), '..'))
-
-from common.config import SERVER_DATABASE
 
 
 class ServerDB:
@@ -45,27 +44,27 @@ class ServerDB:
             self.sent = 0
             self.accepted = 0
 
-    def __init__(self):
+    def __init__(self, path):
         # Creating a database engine
-        self.engine = create_engine(
-            SERVER_DATABASE, echo=False, pool_recycle=7200)
+        self.engine = create_engine(f'sqlite:///{path}', echo=False,
+                                    pool_recycle=7200, connect_args={'check_same_thread': False})
 
         self.metadata = MetaData()
 
         users = Table('Users', self.metadata,
-                            Column('id', Integer, primary_key=True),
-                            Column('name', String, unique=True),
-                            Column('last_login', DateTime)
-                            )
+                      Column('id', Integer, primary_key=True),
+                      Column('name', String, unique=True),
+                      Column('last_login', DateTime)
+                      )
 
         active_users = Table('Active_users', self.metadata,
-                                   Column('id', Integer, primary_key=True),
-                                   Column('user', ForeignKey(
-                                       'Users.id'), unique=True),
-                                   Column('ip_address', String),
-                                   Column('port', Integer),
-                                   Column('login_time', DateTime)
-                                   )
+                             Column('id', Integer, primary_key=True),
+                             Column('user', ForeignKey(
+                                 'Users.id'), unique=True),
+                             Column('ip_address', String),
+                             Column('port', Integer),
+                             Column('login_time', DateTime)
+                             )
 
         user_login_history = Table('Login_history', self.metadata,
                                    Column('id', Integer, primary_key=True),
@@ -115,6 +114,8 @@ class ServerDB:
             user = self.AllUsers(username)
             self.session.add(user)
             self.session.commit()
+            user_in_history = self.UsersHistory(user.id)
+            self.session.add(user_in_history)
 
         new_active_user = self.ActiveUsers(
             user.id, ip_address, port, datetime.datetime.now())
@@ -135,19 +136,24 @@ class ServerDB:
         self.session.commit()
 
     def process_message(self, sender, recipient):
-        sender = self.session.query(self.AllUsers).filter_by(name=sender).first().id
-        recipient = self.session.query(self.AllUsers).filter_by(name=recipient).first().id
-        
-        sender_row = self.session.query(self.UsersHistory).filter_by(user=sender).first()
+        sender = self.session.query(
+            self.AllUsers).filter_by(name=sender).first().id
+        recipient = self.session.query(
+            self.AllUsers).filter_by(name=recipient).first().id
+
+        sender_row = self.session.query(
+            self.UsersHistory).filter_by(user=sender).first()
         sender_row.sent += 1
-        recipient_row = self.session.query(self.UsersHistory).filter_by(user=recipient).first()
+        recipient_row = self.session.query(
+            self.UsersHistory).filter_by(user=recipient).first()
         recipient_row.accepted += 1
 
         self.session.commit()
 
     def add_contact(self, user, contact):
         user = self.session.query(self.AllUsers).filter_by(name=user).first()
-        contact = self.session.query(self.AllUsers).filter_by(name=contact).first()
+        contact = self.session.query(
+            self.AllUsers).filter_by(name=contact).first()
 
         if not contact or self.session.query(self.UsersContacts).filter_by(user=user.id, contact=contact.id).count():
             return
@@ -158,7 +164,8 @@ class ServerDB:
 
     def remove_contact(self, user, contact):
         user = self.session.query(self.AllUsers).filter_by(name=user).first()
-        contact = self.session.query(self.AllUsers).filter_by(name=contact).first()
+        contact = self.session.query(
+            self.AllUsers).filter_by(name=contact).first()
 
         if not contact:
             return
@@ -168,7 +175,7 @@ class ServerDB:
             self.UsersContacts.contact == contact.id
         ).delete())
         self.session.commit()
-    
+
     def users_list(self):
         query = self.session.query(
             self.AllUsers.name,
@@ -222,4 +229,3 @@ if __name__ == '__main__':
 
     test_db.user_logout('client_1')
     test_db.user_logout('client_1')
-

@@ -1,9 +1,16 @@
+import os
+import sys
 import socket
 import select
 import logging
 import logs.config_server_log
+import configparser
+import threading
 import common.jim as jim
 
+from PyQt5.QtWidgets import QApplication, QMessageBox
+from PyQt5.QtCore import QTimer
+from server_gui import MainWindow, gui_create_model, HistoryWindow, create_stat_model, ConfigWindow
 from database.server_database import ServerDB
 from common.metaclasses import ServerMaker
 from common.descrptrs import Port, Addr
@@ -18,8 +25,11 @@ from common.utils import get_message, send_message, create_parser
 
 LOGGER = logging.getLogger(LOGGER_SERVER)
 
+NEW_CONNECTION = False
+CONFLAG_LOCK = threading.Lock()
 
-class Server(metaclass=ServerMaker):
+
+class Server(threading.Thread, metaclass=ServerMaker):
     port = Port()
     addr = Addr()
 
@@ -34,6 +44,8 @@ class Server(metaclass=ServerMaker):
         self.names_clients = {}
 
         self.message = {}
+
+        super().__init__()
 
     def socket_initialization(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -101,9 +113,10 @@ class Server(metaclass=ServerMaker):
             raise Exception
 
     def processing_client_messages(self, client_sock):
+        global NEW_CONNECTION
         msg = get_message(client_sock)
         self.checking_message(msg, client_sock)
-        print(self.message)
+        # print(self.message)
 
         # If this is a presence message
         if self.message[ACTION] == ACTION_PRESENCE:
@@ -113,31 +126,40 @@ class Server(metaclass=ServerMaker):
             self.database.user_login(
                 self.message[USER][ACCOUNT_NAME], client_ip, client_port)
             send_message(client_sock, jim.RESPONSE_200)
+            with CONFLAG_LOCK:
+                NEW_CONNECTION = True
 
         # If this is a message, then add it to the message queue
         elif self.message[ACTION] == ACTION_MESSEGE:
             self.messages_list.append(self.message)
-            
+            self.database.process_message(
+                self.message[SENDER], self.message[RECIPIENT])
+
         # If the client exits
         elif self.message[ACTION] == ACTION_EXIT:
             self.database.user_logout(self.message[ACCOUNT_NAME])
             self.clients.remove(client_sock)
             del self.names_clients[self.message[ACCOUNT_NAME]]
-        
+            with CONFLAG_LOCK:
+                NEW_CONNECTION = True
+
         # Contact list request
         elif self.message[ACTION] == GET_CONTACTS:
             response = jim.RESPONSE_202
-            response[LIST_INFO] = self.database.get_contacts(self.message[USER])
+            response[LIST_INFO] = self.database.get_contacts(
+                self.message[USER])
             send_message(client_sock, response)
 
         # adding a contact
         elif self.message[ACTION] == ADD_CONTACT:
-            self.database.add_contact(self.message[USER], self.message[ACCOUNT_NAME])
+            self.database.add_contact(
+                self.message[USER], self.message[ACCOUNT_NAME])
             send_message(client_sock, jim.RESPONSE_200)
 
         # deleting a contact
         elif self.message[ACTION] == REMOVE_CONTACT:
-            self.database.remove_contact(self.message[USER], self.message[ACCOUNT_NAME])
+            self.database.remove_contact(
+                self.message[USER], self.message[ACCOUNT_NAME])
             send_message(client_sock, jim.RESPONSE_200)
 
         # request for famous users
@@ -146,7 +168,6 @@ class Server(metaclass=ServerMaker):
             response[LIST_INFO] = [user[0]
                                    for user in self.database.users_list()]
             send_message(client_sock, response)
-
 
     def run(self):
         self.socket_initialization()
@@ -203,12 +224,93 @@ class Server(metaclass=ServerMaker):
 
 
 def main():
-    address, port, _ = create_parser(LOGGER)
+    config = configparser.ConfigParser()
 
-    database = ServerDB()
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    config.read(f"{dir_path}/{'server.ini'}")
+
+    address, port, _ = create_parser(LOGGER,
+                                     config['SETTINGS']['Default_port'], config['SETTINGS']['Listen_Address'])
+
+    db_file = os.path.join(
+        config['SETTINGS']['Database_path'],
+        config['SETTINGS']['Database_file'])
+
+    database = ServerDB(db_file)
 
     server = Server(address, port, database)
-    server.run()
+    server.daemon = True
+    server.start()
+
+    server_app = QApplication(sys.argv)
+    main_window = MainWindow()
+
+    main_window.statusBar().showMessage('Server Working')
+    main_window.active_clients_table.setModel(gui_create_model(database))
+    main_window.active_clients_table.resizeColumnsToContents()
+    main_window.active_clients_table.resizeRowsToContents()
+
+    def list_update():
+        global NEW_CONNECTION
+        # print(NEW_CONNECTION)
+        if NEW_CONNECTION:
+            main_window.active_clients_table.setModel(
+                gui_create_model(database))
+            main_window.active_clients_table.resizeColumnsToContents()
+            main_window.active_clients_table.resizeRowsToContents()
+            with CONFLAG_LOCK:
+                NEW_CONNECTION = False
+
+    def show_statistics():
+        global stat_window
+        stat_window = HistoryWindow()
+        stat_window.history_table.setModel(create_stat_model(database))
+        stat_window.history_table.resizeColumnsToContents()
+        stat_window.history_table.resizeRowsToContents()
+        stat_window.show()
+
+    def server_config():
+        global config_window
+        config_window = ConfigWindow()
+        config_window.db_path.insert(config['SETTINGS']['Database_path'])
+        config_window.db_file.insert(config['SETTINGS']['Database_file'])
+        config_window.port.insert(config['SETTINGS']['Default_port'])
+        config_window.ip.insert(config['SETTINGS']['Listen_Address'])
+        config_window.save_btn.clicked.connect(save_server_config)
+
+    def save_server_config():
+        global config_window
+        message = QMessageBox()
+        config['SETTINGS']['Database_path'] = config_window.db_path.text()
+        config['SETTINGS']['Database_file'] = config_window.db_file.text()
+        try:
+            port = int(config_window.port.text())
+        except ValueError:
+            message.warning(config_window, 'Ошибка', 'Порт должен быть числом')
+        else:
+            config['SETTINGS']['Listen_Address'] = config_window.ip.text()
+            if 1023 < port < 65536:
+                config['SETTINGS']['Default_port'] = str(port)
+                print(port)
+                with open('server.ini', 'w') as conf:
+                    config.write(conf)
+                    message.information(
+                        config_window, 'OK', 'Настройки успешно сохранены!')
+            else:
+                message.warning(
+                    config_window,
+                    'Ошибка',
+                    'Порт должен быть от 1024 до 65536')
+
+    timer = QTimer()
+    timer.timeout.connect(list_update)
+    timer.start(1000)
+
+    main_window.refresh_button.triggered.connect(list_update)
+    main_window.show_history_button.triggered.connect(show_statistics)
+    main_window.config_btn.triggered.connect(server_config)
+
+    server_app.exec_()
 
 
 if __name__ == '__main__':

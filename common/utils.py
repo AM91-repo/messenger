@@ -8,7 +8,7 @@ from common.config import (USER_TEST, ENCODING, MAX_PACKAGE_LENGTH,
 
 
 @log
-def create_parser(logger):
+def create_parser(logger, default_port=DEFAULT_PORT, default_address=DEFAULT_IP_ADDRESS):
     parser = argparse.ArgumentParser()
     parser_group = parser.add_argument_group(title='Parameters')
 
@@ -17,14 +17,14 @@ def create_parser(logger):
 
     if sys.argv[0] == 'server.py':
         parser_group.add_argument('-a', '--addr',
-                                  default=DEFAULT_IP_ADDRESS, help='IP address')
+                                  default=default_address, help='IP address')
         parser_group.add_argument('-p', '--port', type=int,
-                                  default=DEFAULT_PORT, help='TCP port')
+                                  default=default_port, help='TCP port')
     elif sys.argv[0] == 'client.py':
         parser_group.add_argument(
-            'addr', default=DEFAULT_IP_ADDRESS, nargs='?')
+            'addr', default=default_address, nargs='?')
         parser_group.add_argument(
-            'port', default=DEFAULT_PORT, type=int, nargs='?')
+            'port', default=default_port, type=int, nargs='?')
     else:
         print('create_parser() improper use')
         sys.exit(1)
