@@ -1,3 +1,4 @@
+from email import message
 import os
 import sys
 import socket
@@ -131,9 +132,16 @@ class Server(threading.Thread, metaclass=ServerMaker):
 
         # If this is a message, then add it to the message queue
         elif self.message[ACTION] == ACTION_MESSEGE:
-            self.messages_list.append(self.message)
-            self.database.process_message(
-                self.message[SENDER], self.message[RECIPIENT])
+            if self.message[RECIPIENT] in self.names_clients:
+                self.messages_list.append(self.message)
+                self.database.process_message(
+                    self.message[SENDER], self.message[RECIPIENT])
+                send_message(client_sock, jim.RESPONSE_200)
+            else:
+                response = jim.RESPONSE_400
+                response[ERROR] = 'The user is not registered on the server.'
+                send_message(client_sock, response)
+            return
 
         # If the client exits
         elif self.message[ACTION] == ACTION_EXIT:

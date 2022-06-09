@@ -4945,3 +4945,536 @@ hi
 2022-06-05 12:49:06,959 CRITICAL client.py The connection to the server is lost.
 2022-06-05 12:49:06,959 CRITICAL client.py The connection to the server is lost.
 2022-06-05 12:49:07,034 CRITICAL client.py The connection to the server is lost.
+2022-06-08 18:48:24,213 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:48:24,328 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2022-06-08 18:48:24,374 INFO transport.py Попытка подключения №1
+2022-06-08 18:48:24,375 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:48:25,184 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:48:25,269 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2022-06-08 18:48:25,330 INFO transport.py Попытка подключения №1
+2022-06-08 18:48:25,330 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:49:03,364 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:49:03,450 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: Guest
+2022-06-08 18:49:03,537 INFO transport.py Попытка подключения №1
+2022-06-08 18:49:03,538 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:50:15,938 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:16,031 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: Guest
+2022-06-08 18:50:16,052 INFO transport.py Попытка подключения №1
+2022-06-08 18:50:16,053 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:50:16,053 DEBUG transport.py Sent presence message from user Guest
+2022-06-08 18:50:16,054 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:16,294 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:16,294 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 18:50:16,294 INFO transport.py The connection to the server has been successfully established
+2022-06-08 18:50:16,294 DEBUG transport.py Requesting a list of known users Guest
+2022-06-08 18:50:16,295 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:16,498 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:16,519 DEBUG transport.py Request a contact sheet for the user Guest
+2022-06-08 18:50:16,519 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654703416.5195107, 'user': 'Guest'}
+2022-06-08 18:50:16,519 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:16,704 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:16,704 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2022-06-08 18:50:16,705 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 18:50:45,084 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:45,166 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: t1
+2022-06-08 18:50:45,252 INFO transport.py Попытка подключения №1
+2022-06-08 18:50:45,252 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:50:45,253 DEBUG transport.py Sent presence message from user t1
+2022-06-08 18:50:45,253 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:45,269 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:45,270 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 18:50:45,270 INFO transport.py The connection to the server has been successfully established
+2022-06-08 18:50:45,270 DEBUG transport.py Requesting a list of known users t1
+2022-06-08 18:50:45,270 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:45,473 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:45,494 DEBUG transport.py Request a contact sheet for the user t1
+2022-06-08 18:50:45,494 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654703445.4942136, 'user': 't1'}
+2022-06-08 18:50:45,494 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:45,677 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:50:45,677 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2022-06-08 18:50:45,678 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 18:51:46,315 DEBUG transport.py The connection to the server is lost.
+2022-06-08 18:51:46,768 DEBUG transport.py The connection to the server is lost.
+2022-06-08 18:51:48,454 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:51:48,455 DEBUG transport.py Transport is shutting down.
+2022-06-08 18:51:49,602 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:51:49,603 DEBUG transport.py Transport is shutting down.
+2022-06-08 18:52:02,701 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:02,781 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2022-06-08 18:52:02,802 INFO transport.py Попытка подключения №1
+2022-06-08 18:52:02,803 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:52:02,803 DEBUG transport.py Sent presence message from user test1
+2022-06-08 18:52:02,804 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:02,832 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:02,833 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 18:52:02,833 INFO transport.py The connection to the server has been successfully established
+2022-06-08 18:52:02,833 DEBUG transport.py Requesting a list of known users test1
+2022-06-08 18:52:02,833 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:03,036 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:03,048 DEBUG transport.py Request a contact sheet for the user test1
+2022-06-08 18:52:03,049 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654703523.04906, 'user': 'test1'}
+2022-06-08 18:52:03,049 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:03,243 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:03,243 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2022-06-08 18:52:03,243 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 18:52:03,705 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:03,783 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2022-06-08 18:52:03,812 INFO transport.py Попытка подключения №1
+2022-06-08 18:52:03,812 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:52:03,812 DEBUG transport.py Sent presence message from user test2
+2022-06-08 18:52:03,813 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:03,833 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:03,834 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 18:52:03,834 INFO transport.py The connection to the server has been successfully established
+2022-06-08 18:52:03,834 DEBUG transport.py Requesting a list of known users test2
+2022-06-08 18:52:03,834 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:04,036 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:04,050 DEBUG transport.py Request a contact sheet for the user test2
+2022-06-08 18:52:04,050 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654703524.0501966, 'user': 'test2'}
+2022-06-08 18:52:04,050 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:04,240 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:04,240 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2022-06-08 18:52:04,241 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 18:52:04,690 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:04,771 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test3
+2022-06-08 18:52:04,822 INFO transport.py Попытка подключения №1
+2022-06-08 18:52:04,823 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:52:04,823 DEBUG transport.py Sent presence message from user test3
+2022-06-08 18:52:04,824 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:05,044 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:05,044 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 18:52:05,044 INFO transport.py The connection to the server has been successfully established
+2022-06-08 18:52:05,044 DEBUG transport.py Requesting a list of known users test3
+2022-06-08 18:52:05,044 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:05,245 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:05,258 DEBUG transport.py Request a contact sheet for the user test3
+2022-06-08 18:52:05,258 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654703525.2583203, 'user': 'test3'}
+2022-06-08 18:52:05,258 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:05,448 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:52:05,448 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2022-06-08 18:52:05,449 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 18:54:18,108 DEBUG transport.py The connection to the server is lost.
+2022-06-08 18:54:18,603 DEBUG transport.py The connection to the server is lost.
+2022-06-08 18:54:18,882 DEBUG transport.py The connection to the server is lost.
+2022-06-08 18:54:20,855 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:20,856 DEBUG transport.py Transport is shutting down.
+2022-06-08 18:54:21,733 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:21,734 DEBUG transport.py Transport is shutting down.
+2022-06-08 18:54:22,551 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:22,551 DEBUG transport.py Transport is shutting down.
+2022-06-08 18:54:28,988 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:29,075 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2022-06-08 18:54:29,095 INFO transport.py Попытка подключения №1
+2022-06-08 18:54:29,095 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:54:29,095 DEBUG transport.py Sent presence message from user test1
+2022-06-08 18:54:29,096 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:29,114 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:29,114 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 18:54:29,115 INFO transport.py The connection to the server has been successfully established
+2022-06-08 18:54:29,115 DEBUG transport.py Requesting a list of known users test1
+2022-06-08 18:54:29,115 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:29,316 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:29,326 DEBUG transport.py Request a contact sheet for the user test1
+2022-06-08 18:54:29,327 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654703669.3272512, 'user': 'test1'}
+2022-06-08 18:54:29,327 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:29,523 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:29,523 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2022-06-08 18:54:29,523 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 18:54:29,949 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:30,058 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2022-06-08 18:54:30,089 INFO transport.py Попытка подключения №1
+2022-06-08 18:54:30,090 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:54:30,090 DEBUG transport.py Sent presence message from user test2
+2022-06-08 18:54:30,090 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:30,101 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:30,101 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 18:54:30,101 INFO transport.py The connection to the server has been successfully established
+2022-06-08 18:54:30,101 DEBUG transport.py Requesting a list of known users test2
+2022-06-08 18:54:30,102 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:30,303 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:30,325 DEBUG transport.py Request a contact sheet for the user test2
+2022-06-08 18:54:30,325 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654703670.3258305, 'user': 'test2'}
+2022-06-08 18:54:30,326 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:30,507 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:30,507 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2022-06-08 18:54:30,508 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 18:54:39,497 DEBUG transport.py Creating a contact test2
+2022-06-08 18:54:39,498 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:39,579 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:39,580 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 18:54:39,594 INFO main_window.py Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7f7c652b2ee0>
+2022-06-08 18:54:49,389 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1654703689.3893876, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi\n'}
+2022-06-08 18:54:49,390 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:49,531 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-06-08 18:54:49,531 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1654703689.3893876, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi\n'}
+2022-06-08 18:54:49,531 DEBUG transport.py Разбор сообщения от сервера: {'action': 'msg', 'time': 1654703689.3893876, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi\n'}
+2022-06-08 18:54:49,531 DEBUG transport.py Received a message from the user test1:hi
+
+2022-06-08 18:54:52,077 DEBUG transport.py Creating a contact test1
+2022-06-08 18:54:52,544 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:52,653 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:54:52,654 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 18:54:52,663 INFO main_window.py Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7fd870137e50>
+2022-06-08 18:55:09,534 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1654703709.5339613, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi'}
+2022-06-08 18:55:09,915 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:55:10,145 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-06-08 18:55:10,145 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1654703709.5339613, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi'}
+2022-06-08 18:55:10,145 DEBUG transport.py Разбор сообщения от сервера: {'action': 'msg', 'time': 1654703709.5339613, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi'}
+2022-06-08 18:55:10,145 DEBUG transport.py Received a message from the user test1:hi
+2022-06-08 18:55:30,669 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1654703730.6689088, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi'}
+2022-06-08 18:55:30,669 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:55:31,441 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-06-08 18:55:31,441 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1654703730.6689088, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi'}
+2022-06-08 18:55:31,441 DEBUG transport.py Разбор сообщения от сервера: {'action': 'msg', 'time': 1654703730.6689088, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi'}
+2022-06-08 18:55:31,441 DEBUG transport.py Received a message from the user test2:hi
+2022-06-08 18:55:56,490 DEBUG transport.py The connection to the server is lost.
+2022-06-08 18:55:56,700 DEBUG transport.py The connection to the server is lost.
+2022-06-08 18:55:58,293 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:55:58,294 DEBUG transport.py Transport is shutting down.
+2022-06-08 18:56:00,032 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:56:00,032 DEBUG transport.py Transport is shutting down.
+2022-06-08 18:59:53,809 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:53,908 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2022-06-08 18:59:53,941 INFO transport.py Попытка подключения №1
+2022-06-08 18:59:53,941 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:59:53,941 DEBUG transport.py Sent presence message from user test1
+2022-06-08 18:59:53,942 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:53,962 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:53,962 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 18:59:53,962 INFO transport.py The connection to the server has been successfully established
+2022-06-08 18:59:53,962 DEBUG transport.py Requesting a list of known users test1
+2022-06-08 18:59:53,962 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:54,165 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:54,185 DEBUG transport.py Request a contact sheet for the user test1
+2022-06-08 18:59:54,185 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654703994.1855834, 'user': 'test1'}
+2022-06-08 18:59:54,186 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:54,372 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:54,372 DEBUG transport.py Response received {'response': 202, 'data_list': ['test2']}
+2022-06-08 18:59:54,393 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 18:59:54,782 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:54,899 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2022-06-08 18:59:54,930 INFO transport.py Попытка подключения №1
+2022-06-08 18:59:54,931 DEBUG transport.py A connection to the server has been established
+2022-06-08 18:59:54,932 DEBUG transport.py Sent presence message from user test2
+2022-06-08 18:59:54,932 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:55,153 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:55,153 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 18:59:55,154 INFO transport.py The connection to the server has been successfully established
+2022-06-08 18:59:55,154 DEBUG transport.py Requesting a list of known users test2
+2022-06-08 18:59:55,154 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:55,356 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:55,371 DEBUG transport.py Request a contact sheet for the user test2
+2022-06-08 18:59:55,371 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654703995.371368, 'user': 'test2'}
+2022-06-08 18:59:55,372 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:55,560 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 18:59:55,561 DEBUG transport.py Response received {'response': 202, 'data_list': ['test1']}
+2022-06-08 18:59:55,577 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 19:00:08,714 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1654704008.7147574, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi\n'}
+2022-06-08 19:00:08,715 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:00:08,843 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-06-08 19:00:08,843 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1654704008.7147574, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi\n'}
+2022-06-08 19:00:08,843 DEBUG transport.py Разбор сообщения от сервера: {'action': 'msg', 'time': 1654704008.7147574, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi\n'}
+2022-06-08 19:00:08,843 DEBUG transport.py Received a message from the user test1:hi
+
+2022-06-08 19:01:13,793 DEBUG transport.py The connection to the server is lost.
+2022-06-08 19:01:15,677 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:15,677 DEBUG transport.py Transport is shutting down.
+2022-06-08 19:01:54,650 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:54,733 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2022-06-08 19:01:54,789 INFO transport.py Попытка подключения №1
+2022-06-08 19:01:54,790 DEBUG transport.py A connection to the server has been established
+2022-06-08 19:01:54,790 DEBUG transport.py Sent presence message from user test1
+2022-06-08 19:01:54,790 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:54,819 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:54,819 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 19:01:54,820 INFO transport.py The connection to the server has been successfully established
+2022-06-08 19:01:54,820 DEBUG transport.py Requesting a list of known users test1
+2022-06-08 19:01:54,820 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:55,023 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:55,045 DEBUG transport.py Request a contact sheet for the user test1
+2022-06-08 19:01:55,045 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654704115.0456672, 'user': 'test1'}
+2022-06-08 19:01:55,046 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:55,228 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:55,228 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2022-06-08 19:01:55,229 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 19:01:55,700 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:55,795 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2022-06-08 19:01:55,852 INFO transport.py Попытка подключения №1
+2022-06-08 19:01:55,852 DEBUG transport.py A connection to the server has been established
+2022-06-08 19:01:55,852 DEBUG transport.py Sent presence message from user test2
+2022-06-08 19:01:55,853 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:55,872 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:55,872 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 19:01:55,872 INFO transport.py The connection to the server has been successfully established
+2022-06-08 19:01:55,872 DEBUG transport.py Requesting a list of known users test2
+2022-06-08 19:01:55,872 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:56,074 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:56,095 DEBUG transport.py Request a contact sheet for the user test2
+2022-06-08 19:01:56,095 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654704116.0955245, 'user': 'test2'}
+2022-06-08 19:01:56,095 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:56,278 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:01:56,278 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2022-06-08 19:01:56,279 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 19:02:16,802 DEBUG transport.py Creating a contact test1
+2022-06-08 19:02:16,803 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:02:16,947 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:02:16,948 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 19:02:16,962 INFO main_window.py Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7faa6c3a44c0>
+2022-06-08 19:02:22,164 DEBUG transport.py Requesting a list of known users test1
+2022-06-08 19:02:22,277 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:02:22,361 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:02:22,369 DEBUG add_contact.py Обновление списка пользователей с сервера выполнено
+2022-06-08 19:02:31,457 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1654704151.4571872, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi'}
+2022-06-08 19:02:31,457 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:02:32,291 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-06-08 19:02:32,291 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1654704151.4571872, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi'}
+2022-06-08 19:02:32,291 DEBUG transport.py Разбор сообщения от сервера: {'action': 'msg', 'time': 1654704151.4571872, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi'}
+2022-06-08 19:02:32,291 DEBUG transport.py Received a message from the user test2:hi
+2022-06-08 19:02:34,362 DEBUG transport.py Creating a contact test2
+2022-06-08 19:02:34,363 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:02:34,424 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:02:34,424 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 19:02:34,433 INFO main_window.py Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7fd836496310>
+2022-06-08 19:02:56,288 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1654704176.2886152, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi'}
+2022-06-08 19:02:56,525 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:02:57,340 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-06-08 19:02:57,340 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1654704176.2886152, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi'}
+2022-06-08 19:02:57,341 DEBUG transport.py Разбор сообщения от сервера: {'action': 'msg', 'time': 1654704176.2886152, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi'}
+2022-06-08 19:02:57,341 DEBUG transport.py Received a message from the user test2:hi
+2022-06-08 19:06:13,580 DEBUG transport.py The connection to the server is lost.
+2022-06-08 19:06:13,748 DEBUG transport.py The connection to the server is lost.
+2022-06-08 19:06:15,470 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:15,470 DEBUG transport.py Transport is shutting down.
+2022-06-08 19:06:16,563 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:16,564 DEBUG transport.py Transport is shutting down.
+2022-06-08 19:06:21,579 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:21,661 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2022-06-08 19:06:21,682 INFO transport.py Попытка подключения №1
+2022-06-08 19:06:21,683 DEBUG transport.py A connection to the server has been established
+2022-06-08 19:06:21,683 DEBUG transport.py Sent presence message from user test1
+2022-06-08 19:06:21,684 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:21,911 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:21,912 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 19:06:21,912 INFO transport.py The connection to the server has been successfully established
+2022-06-08 19:06:21,912 DEBUG transport.py Requesting a list of known users test1
+2022-06-08 19:06:21,913 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:22,115 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:22,136 DEBUG transport.py Request a contact sheet for the user test1
+2022-06-08 19:06:22,136 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654704382.1363091, 'user': 'test1'}
+2022-06-08 19:06:22,136 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:22,319 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:22,319 DEBUG transport.py Response received {'response': 202, 'data_list': ['test2']}
+2022-06-08 19:06:22,330 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 19:06:22,561 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:22,657 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2022-06-08 19:06:22,688 INFO transport.py Попытка подключения №1
+2022-06-08 19:06:22,688 DEBUG transport.py A connection to the server has been established
+2022-06-08 19:06:22,688 DEBUG transport.py Sent presence message from user test2
+2022-06-08 19:06:22,689 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:22,699 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:22,699 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 19:06:22,700 INFO transport.py The connection to the server has been successfully established
+2022-06-08 19:06:22,700 DEBUG transport.py Requesting a list of known users test2
+2022-06-08 19:06:22,700 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:22,902 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:22,922 DEBUG transport.py Request a contact sheet for the user test2
+2022-06-08 19:06:22,923 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654704382.9231522, 'user': 'test2'}
+2022-06-08 19:06:22,923 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:23,106 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:23,107 DEBUG transport.py Response received {'response': 202, 'data_list': ['test1']}
+2022-06-08 19:06:23,121 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 19:06:41,628 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1654704401.628208, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi\n'}
+2022-06-08 19:06:41,629 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:41,771 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-06-08 19:06:41,771 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1654704401.628208, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi\n'}
+2022-06-08 19:06:41,771 DEBUG transport.py Разбор сообщения от сервера: {'action': 'msg', 'time': 1654704401.628208, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi\n'}
+2022-06-08 19:06:41,771 DEBUG transport.py Received a message from the user test2:hi
+
+2022-06-08 19:06:53,793 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:53,793 DEBUG transport.py Transport is shutting down.
+2022-06-08 19:06:55,641 DEBUG transport.py The connection to the server is lost.
+2022-06-08 19:06:56,962 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:06:56,962 DEBUG transport.py Transport is shutting down.
+2022-06-08 19:17:34,129 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:34,213 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2022-06-08 19:17:34,244 INFO transport.py Попытка подключения №1
+2022-06-08 19:17:34,245 DEBUG transport.py A connection to the server has been established
+2022-06-08 19:17:34,245 DEBUG transport.py Sent presence message from user test1
+2022-06-08 19:17:34,246 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:34,476 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:34,476 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 19:17:34,476 INFO transport.py The connection to the server has been successfully established
+2022-06-08 19:17:34,476 DEBUG transport.py Requesting a list of known users test1
+2022-06-08 19:17:34,477 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:34,679 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:34,689 DEBUG transport.py Request a contact sheet for the user test1
+2022-06-08 19:17:34,689 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654705054.6896558, 'user': 'test1'}
+2022-06-08 19:17:34,690 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:34,884 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:34,885 DEBUG transport.py Response received {'response': 202, 'data_list': ['test2']}
+2022-06-08 19:17:34,909 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 19:17:35,092 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:35,180 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2022-06-08 19:17:35,214 INFO transport.py Попытка подключения №1
+2022-06-08 19:17:35,215 DEBUG transport.py A connection to the server has been established
+2022-06-08 19:17:35,215 DEBUG transport.py Sent presence message from user test2
+2022-06-08 19:17:35,216 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:35,227 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:35,228 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 19:17:35,228 INFO transport.py The connection to the server has been successfully established
+2022-06-08 19:17:35,228 DEBUG transport.py Requesting a list of known users test2
+2022-06-08 19:17:35,228 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:35,430 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:35,451 DEBUG transport.py Request a contact sheet for the user test2
+2022-06-08 19:17:35,451 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654705055.4519196, 'user': 'test2'}
+2022-06-08 19:17:35,452 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:35,634 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:35,634 DEBUG transport.py Response received {'response': 202, 'data_list': ['test1']}
+2022-06-08 19:17:35,650 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-08 19:17:45,649 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1654705065.648956, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi'}
+2022-06-08 19:17:45,649 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:45,708 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:17:45,708 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 19:17:45,708 INFO transport.py A message has been sent to the user test2
+2022-06-08 19:17:45,709 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-06-08 19:17:45,709 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1654705065.648956, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi'}
+2022-06-08 19:17:45,709 DEBUG transport.py Разбор сообщения от сервера: {'action': 'msg', 'time': 1654705065.648956, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'hi'}
+2022-06-08 19:17:45,709 DEBUG transport.py Received a message from the user test1:hi
+2022-06-08 19:17:45,719 DEBUG main_window.py A message has been sent for test2: hi
+2022-06-08 19:18:17,171 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1654705097.1717024, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'what you want?\n'}
+2022-06-08 19:18:17,263 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:18:17,408 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:18:17,408 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-08 19:18:17,408 INFO transport.py A message has been sent to the user test1
+2022-06-08 19:18:17,415 DEBUG main_window.py A message has been sent for test1: what you want?
+
+2022-06-08 19:18:17,983 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-06-08 19:18:17,983 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1654705097.1717024, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'what you want?\n'}
+2022-06-08 19:18:17,984 DEBUG transport.py Разбор сообщения от сервера: {'action': 'msg', 'time': 1654705097.1717024, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'what you want?\n'}
+2022-06-08 19:18:17,984 DEBUG transport.py Received a message from the user test2:what you want?
+
+2022-06-08 19:18:30,414 DEBUG transport.py The connection to the server is lost.
+2022-06-08 19:18:31,018 DEBUG transport.py The connection to the server is lost.
+2022-06-08 19:18:32,098 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:18:32,099 DEBUG transport.py Transport is shutting down.
+2022-06-08 19:18:33,172 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-08 19:18:33,172 DEBUG transport.py Transport is shutting down.
+2022-06-09 18:06:37,970 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:38,063 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2022-06-09 18:06:38,084 INFO transport.py Попытка подключения №1
+2022-06-09 18:06:38,084 DEBUG transport.py A connection to the server has been established
+2022-06-09 18:06:38,084 DEBUG transport.py Sent presence message from user test1
+2022-06-09 18:06:38,084 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:38,104 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:38,104 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-09 18:06:38,104 INFO transport.py The connection to the server has been successfully established
+2022-06-09 18:06:38,104 DEBUG transport.py Requesting a list of known users test1
+2022-06-09 18:06:38,104 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:38,307 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:38,340 DEBUG transport.py Request a contact sheet for the user test1
+2022-06-09 18:06:38,340 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654787198.340162, 'user': 'test1'}
+2022-06-09 18:06:38,340 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:38,515 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:38,515 DEBUG transport.py Response received {'response': 202, 'data_list': ['test2']}
+2022-06-09 18:06:38,529 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-09 18:06:38,973 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:39,050 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2022-06-09 18:06:39,082 INFO transport.py Попытка подключения №1
+2022-06-09 18:06:39,083 DEBUG transport.py A connection to the server has been established
+2022-06-09 18:06:39,083 DEBUG transport.py Sent presence message from user test2
+2022-06-09 18:06:39,083 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:39,305 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:39,305 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-09 18:06:39,305 INFO transport.py The connection to the server has been successfully established
+2022-06-09 18:06:39,305 DEBUG transport.py Requesting a list of known users test2
+2022-06-09 18:06:39,305 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:39,508 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:39,528 DEBUG transport.py Request a contact sheet for the user test2
+2022-06-09 18:06:39,528 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654787199.5281885, 'user': 'test2'}
+2022-06-09 18:06:39,528 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:39,711 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:39,711 DEBUG transport.py Response received {'response': 202, 'data_list': ['test1']}
+2022-06-09 18:06:39,724 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-09 18:06:39,963 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:40,066 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test3
+2022-06-09 18:06:40,110 INFO transport.py Попытка подключения №1
+2022-06-09 18:06:40,111 DEBUG transport.py A connection to the server has been established
+2022-06-09 18:06:40,111 DEBUG transport.py Sent presence message from user test3
+2022-06-09 18:06:40,112 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:40,331 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:40,331 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-09 18:06:40,331 INFO transport.py The connection to the server has been successfully established
+2022-06-09 18:06:40,331 DEBUG transport.py Requesting a list of known users test3
+2022-06-09 18:06:40,331 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:40,534 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:40,554 DEBUG transport.py Request a contact sheet for the user test3
+2022-06-09 18:06:40,554 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1654787200.5549662, 'user': 'test3'}
+2022-06-09 18:06:40,555 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:40,739 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:40,739 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2022-06-09 18:06:40,739 DEBUG transport.py The process - receiver of messages from the server is started.
+2022-06-09 18:06:56,309 DEBUG transport.py Requesting a list of known users test2
+2022-06-09 18:06:56,310 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:56,368 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:06:56,378 DEBUG add_contact.py Обновление списка пользователей с сервера выполнено
+2022-06-09 18:07:01,258 DEBUG transport.py Requesting a list of known users test2
+2022-06-09 18:07:01,259 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:01,378 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:01,396 DEBUG add_contact.py Обновление списка пользователей с сервера выполнено
+2022-06-09 18:07:08,144 DEBUG transport.py Requesting a list of known users test1
+2022-06-09 18:07:08,586 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:08,590 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:08,765 DEBUG add_contact.py Обновление списка пользователей с сервера выполнено
+2022-06-09 18:07:20,708 DEBUG transport.py Requesting a list of known users test3
+2022-06-09 18:07:20,708 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:20,810 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:20,819 DEBUG add_contact.py Обновление списка пользователей с сервера выполнено
+2022-06-09 18:07:31,719 DEBUG transport.py Creating a contact test3
+2022-06-09 18:07:31,720 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:31,895 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:31,895 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-09 18:07:31,985 INFO main_window.py Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7f81183af9d0>
+2022-06-09 18:07:48,079 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1654787268.0792015, 'to': 'test3', 'from': 'test2', 'encoding': '', 'message': 'привет'}
+2022-06-09 18:07:48,079 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:48,172 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:48,172 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-09 18:07:48,173 INFO transport.py A message has been sent to the user test3
+2022-06-09 18:07:48,173 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-06-09 18:07:48,174 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1654787268.0792015, 'to': 'test3', 'from': 'test2', 'encoding': '', 'message': 'привет'}
+2022-06-09 18:07:48,174 DEBUG transport.py Разбор сообщения от сервера: {'action': 'msg', 'time': 1654787268.0792015, 'to': 'test3', 'from': 'test2', 'encoding': '', 'message': 'привет'}
+2022-06-09 18:07:48,174 DEBUG transport.py Received a message from the user test2:привет
+2022-06-09 18:07:48,182 DEBUG main_window.py A message has been sent for test3: привет
+2022-06-09 18:07:51,861 DEBUG transport.py Creating a contact test2
+2022-06-09 18:07:51,862 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:52,027 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:07:52,027 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-09 18:07:52,035 INFO main_window.py Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7f99a809d430>
+2022-06-09 18:08:01,212 DEBUG transport.py Deleting a contact test3
+2022-06-09 18:08:01,213 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:08:01,290 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:08:01,290 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-09 18:08:01,293 INFO main_window.py Successfully deleted contact test3
+2022-06-09 18:08:09,680 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1654787289.680799, 'to': 'test2', 'from': 'test3', 'encoding': '', 'message': 'привет'}
+2022-06-09 18:08:09,681 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:08:09,735 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:08:09,735 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-09 18:08:09,735 INFO transport.py A message has been sent to the user test2
+2022-06-09 18:08:09,736 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2022-06-09 18:08:09,736 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1654787289.680799, 'to': 'test2', 'from': 'test3', 'encoding': '', 'message': 'привет'}
+2022-06-09 18:08:09,736 DEBUG transport.py Разбор сообщения от сервера: {'action': 'msg', 'time': 1654787289.680799, 'to': 'test2', 'from': 'test3', 'encoding': '', 'message': 'привет'}
+2022-06-09 18:08:09,736 DEBUG transport.py Received a message from the user test3:привет
+2022-06-09 18:08:09,743 DEBUG main_window.py A message has been sent for test2: привет
+2022-06-09 18:08:11,550 DEBUG transport.py Creating a contact test3
+2022-06-09 18:08:11,551 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:08:11,760 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:08:11,761 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2022-06-09 18:08:11,769 INFO main_window.py Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7f81183af160>
+2022-06-09 18:08:43,623 DEBUG transport.py The connection to the server is lost.
+2022-06-09 18:08:43,788 DEBUG transport.py The connection to the server is lost.
+2022-06-09 18:08:44,193 DEBUG transport.py The connection to the server is lost.
+2022-06-09 18:08:45,993 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:08:45,993 DEBUG transport.py Transport is shutting down.
+2022-06-09 18:08:47,146 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:08:47,146 DEBUG transport.py Transport is shutting down.
+2022-06-09 18:08:47,882 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2022-06-09 18:08:47,882 DEBUG transport.py Transport is shutting down.
