@@ -1,9 +1,10 @@
-from dataclasses import dataclass
+import os
 import sys
 import logging
 import logs.config_client_log
 
-from PyQt5.QtWidgets import QApplication
+from Cryptodome.PublicKey import RSA
+from PyQt5.QtWidgets import QApplication, QMessageBox
 
 from database.client_database import ClientDatabase
 from common.errors import ServerError
@@ -18,7 +19,7 @@ LOGGER = logging.getLogger(LOGGER_CLIENT)
 
 
 def main():
-    server_address, server_port, name = create_parser(LOGGER)
+    server_address, server_port, name, password, _ = create_parser(LOGGER)
 
     client_gui = QApplication(sys.argv)
 
@@ -27,19 +28,32 @@ def main():
         client_gui.exec_()
         if start_dialog.ok_pressed:
             name = start_dialog.client_name.text()
-            del start_dialog
+            password = start_dialog.client_passwd.text()
+            LOGGER.debug(f'Using USERNAME = {name}, PASSWD = {password}.')
         else:
             exit(0)
 
     LOGGER.info(f'The client is running with the following parameters: server address: '
                 f'{server_address} , port: {server_port}, user name: {name}')
 
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    key_file = os.path.join(dir_path, f'{name}.key')
+    if not os.path.exists(key_file):
+        keys = RSA.generate(2048, os.urandom)
+        with open(key_file, 'wb') as key:
+            key.write(keys.export_key())
+    else:
+        with open(key_file, 'rb') as key:
+            keys = RSA.import_key(key.read())
+
     database = ClientDatabase(name)
 
     try:
-        transport = ClientTransport(server_port, server_address, database, name)
+        transport = ClientTransport(server_port, server_address, 
+                                    database, name, password, keys)
     except ServerError as error:
-        print(error.text)
+        message = QMessageBox()
+        message.critical(start_dialog, 'Server error', error.text)
         exit(1)
     transport.setDaemon(True)
     transport.start()

@@ -13,7 +13,9 @@ def create_parser(logger, default_port=DEFAULT_PORT, default_address=DEFAULT_IP_
     parser_group = parser.add_argument_group(title='Parameters')
 
     parser_group.add_argument('-n', '--name',
-                              default=USER_TEST, help='TCP port')
+                              default='', help='TCP port')
+    parser_group.add_argument('-s', '--password', default='', nargs='?')
+    parser_group.add_argument('--no_gui', action='store_true')
 
     if sys.argv[0] == 'server.py':
         parser_group.add_argument('-a', '--addr',
@@ -33,13 +35,15 @@ def create_parser(logger, default_port=DEFAULT_PORT, default_address=DEFAULT_IP_
     listen_address = namespace.addr
     listen_port = namespace.port
     name = namespace.name
+    password = namespace.password
+    gui_flag = namespace.no_gui
 
     if not 1023 < listen_port < 65536:
         logger.critical(
             'The port must be specified in the range from 1024 to 65535')
         sys.exit(1)
 
-    return listen_address, listen_port, name
+    return listen_address, listen_port, name, password, gui_flag
 
 
 @log

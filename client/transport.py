@@ -1,17 +1,21 @@
+from email import message
 import socket
 import sys
 import time
 import logging
 import json
 import threading
+import hashlib
+import hmac
+import binascii
 from PyQt5.QtCore import pyqtSignal, QObject
 
 sys.path.append('../')
 import common.jim as jim
 from common.errors import ServerError
 from common.utils import send_message, get_message
-from common.config import (USER, ACCOUNT_NAME, RESPONSE, ERROR, LOGGER_CLIENT,
-                           RECIPIENT, MESSAGE, SENDER, LIST_INFO, TIME)
+from common.config import (USER, ACCOUNT_NAME, RESPONSE, ERROR, LOGGER_CLIENT, DATA,
+                           RECIPIENT, MESSAGE, SENDER, LIST_INFO, TIME, PUBLIC_KEY)
 
 
 LOGGER = logging.getLogger(LOGGER_CLIENT)
@@ -20,16 +24,23 @@ SOCK_LOCK = threading.Lock()
 
 # Transport class, responsible for interacting with the server
 class ClientTransport(threading.Thread, QObject):
+    '''
+    A class implementing the transport subsystem of the client
+    module. Responsible for interacting with the server.
+    '''
     new_message = pyqtSignal(str)
     connection_lost = pyqtSignal()
+    message_205 = pyqtSignal()
 
-    def __init__(self, port, ip_address, database, account_name):
+    def __init__(self, port, ip_address, database, account_name, passwd, keys):
         threading.Thread.__init__(self)
         QObject.__init__(self)
 
         self.database = database
         self.account_name = account_name
+        self.password = passwd
         self.transport = None
+        self.keys = keys
         self.connection_init(port, ip_address)
         try:
             self.user_list_update()
@@ -52,7 +63,7 @@ class ClientTransport(threading.Thread, QObject):
 
         connected = False
         for i in range(5):
-            LOGGER.info(f'Попытка подключения №{i + 1}')
+            LOGGER.info(f'Connection attempt №{i + 1}')
             try:
                 self.transport.connect((ip, port))
             except (OSError, ConnectionRefusedError):
@@ -66,17 +77,47 @@ class ClientTransport(threading.Thread, QObject):
             LOGGER.critical('Failed to establish a connection with the server')
             raise ServerError('Failed to establish a connection with the server')
 
-        LOGGER.debug('A connection to the server has been established')
+        LOGGER.debug('Starting auth dialog.')
 
-        try:
-            with SOCK_LOCK:
-                send_message(self.transport, self.create_presence())
-                self.handle_response(get_message(self.transport))
-        except (OSError, json.JSONDecodeError):
-            LOGGER.critical('The connection to the server is lost!')
-            raise ServerError('The connection to the server is lost!')
+        passwd_bytes = self.password.encode('utf-8')
+        salt = self.account_name.lower().encode('utf-8')
+        passwd_hash = hashlib.pbkdf2_hmac('sha512', passwd_bytes, salt, 10000)
+        passwd_hash_string = binascii.hexlify(passwd_hash)
 
-        LOGGER.info('The connection to the server has been successfully established')
+        LOGGER.debug(f'Passwd hash ready: {passwd_hash_string}')
+
+        pubkey = self.keys.publickey().export_key().decode('ascii')
+
+        with SOCK_LOCK:
+            presense = jim.PRESENCE
+            presense[TIME] = time.time()
+            presense[USER][ACCOUNT_NAME] = self.account_name
+            presense[USER][PUBLIC_KEY] = pubkey
+            LOGGER.debug(f"Presense message = {presense}")
+
+            try:
+                send_message(self.transport, presense)
+                ans = get_message(self.transport)
+                LOGGER.debug(f'Server response = {ans}.')
+
+                if RESPONSE in ans:
+                    if ans[RESPONSE] == 400:
+                        raise ServerError(ans[ERROR])
+                    elif ans[RESPONSE] == 511:
+                        ans_data = ans[DATA]
+                        hash = hmac.new(passwd_hash_string, ans_data.encode('utf-8'), 'MD5')
+                        digest = hash.digest()
+                        my_ans = jim.RESPONSE_511
+                        my_ans[DATA] = binascii.b2a_base64(
+                            digest).decode('ascii')
+                        send_message(self.transport, my_ans)
+                        msg = get_message(self.transport)
+                        self.handle_response(msg)
+            except (OSError, json.JSONDecodeError) as err:
+                LOGGER.debug(f'Connection error.', exc_info=err)
+                raise ServerError('Connection failure during authorization.')
+
+
 
     def create_presence(self):
         message = jim.PRESENCE
@@ -86,7 +127,7 @@ class ClientTransport(threading.Thread, QObject):
         return message
 
     def handle_response(self, message):
-        LOGGER.debug(f'Разбор сообщения от сервера: {message}')
+        LOGGER.debug(f'Parsing a message from the server: {message}')
         print('get')
 
         if RESPONSE in message:
@@ -94,6 +135,10 @@ class ClientTransport(threading.Thread, QObject):
                 return
             elif message[RESPONSE] == 400:
                 raise ServerError(f'{message[ERROR]}')
+            elif message[RESPONSE] == 205:
+                self.user_list_update()
+                self.contacts_list_update()
+                self.message_205.emit()
             else:
                 LOGGER.debug(f'Unknown confirmation code received {message[RESPONSE]}')
 

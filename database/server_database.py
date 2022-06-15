@@ -1,6 +1,5 @@
-from common.config import SERVER_DATABASE
 from sqlalchemy.orm import mapper, sessionmaker
-from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, ForeignKey, DateTime
+from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, ForeignKey, DateTime, Text
 import sys
 import os
 import datetime
@@ -8,14 +7,26 @@ import datetime
 sys.path.append(os.path.join(os.getcwd(), '..'))
 
 
-class ServerDB:
+class ServerStorage:
+    '''
+    Wrapper class for working with the server database.
+    Uses SQLite database, implemented with
+    SQLAlchemy ORM and the classical approach is used.
+    '''
+
     class AllUsers:
-        def __init__(self, username):
+        '''Class - displaying a table of all users.'''
+
+        def __init__(self, username, passwd_hash):
             self.name = username
             self.last_login = datetime.datetime.now()
+            self.passwd_hash = passwd_hash
+            self.pubkey = None
             self.id = None
 
     class ActiveUsers:
+        '''Class - displaying a table of active users.'''
+
         def __init__(self, user_id, ip_address, port, login_time):
             self.user = user_id
             self.ip_address = ip_address
@@ -24,6 +35,8 @@ class ServerDB:
             self.id = None
 
     class LoginHistory:
+        '''Class - displaying the entry history table.'''
+
         def __init__(self, name, date, ip, port):
             self.id = None
             self.name = name
@@ -32,12 +45,16 @@ class ServerDB:
             self.port = port
 
     class UsersContacts:
+        '''Class - displaying a table of user contacts.'''
+
         def __init__(self, user, contact):
             self.id = None
             self.user = user
             self.contact = contact
 
     class UsersHistory:
+        '''Class - displaying the action history table'''
+
         def __init__(self, user):
             self.id = None
             self.user = user
@@ -45,26 +62,30 @@ class ServerDB:
             self.accepted = 0
 
     def __init__(self, path):
-        # Creating a database engine
-        self.engine = create_engine(f'sqlite:///{path}', echo=False,
-                                    pool_recycle=7200, connect_args={'check_same_thread': False})
+        self.database_engine = create_engine(
+            f'sqlite:///{path}',
+            echo=False,
+            pool_recycle=7200,
+            connect_args={
+                'check_same_thread': False})
 
         self.metadata = MetaData()
 
-        users = Table('Users', self.metadata,
-                      Column('id', Integer, primary_key=True),
-                      Column('name', String, unique=True),
-                      Column('last_login', DateTime)
-                      )
+        users_table = Table('Users', self.metadata,
+                            Column('id', Integer, primary_key=True),
+                            Column('name', String, unique=True),
+                            Column('last_login', DateTime),
+                            Column('passwd_hash', String),
+                            Column('pubkey', Text)
+                            )
 
-        active_users = Table('Active_users', self.metadata,
-                             Column('id', Integer, primary_key=True),
-                             Column('user', ForeignKey(
-                                 'Users.id'), unique=True),
-                             Column('ip_address', String),
-                             Column('port', Integer),
-                             Column('login_time', DateTime)
-                             )
+        active_users_table = Table('Active_users', self.metadata,
+                                   Column('id', Integer, primary_key=True),
+                                   Column('user', ForeignKey('Users.id'), unique=True),
+                                   Column('ip_address', String),
+                                   Column('port', Integer),
+                                   Column('login_time', DateTime)
+                                   )
 
         user_login_history = Table('Login_history', self.metadata,
                                    Column('id', Integer, primary_key=True),
@@ -87,35 +108,35 @@ class ServerDB:
                                     Column('accepted', Integer)
                                     )
 
-        self.metadata.create_all(self.engine)
+        self.metadata.create_all(self.database_engine)
 
-        mapper(self.AllUsers, users)
-        mapper(self.ActiveUsers, active_users)
+        mapper(self.AllUsers, users_table)
+        mapper(self.ActiveUsers, active_users_table)
         mapper(self.LoginHistory, user_login_history)
         mapper(self.UsersContacts, contacts)
         mapper(self.UsersHistory, users_history_table)
 
-        Session = sessionmaker(bind=self.engine)
+        Session = sessionmaker(bind=self.database_engine)
         self.session = Session()
 
-        # If there are records in the active users table, then they must be deleted
         self.session.query(self.ActiveUsers).delete()
         self.session.commit()
 
-    def user_login(self, username, ip_address, port):
-        print(username, ip_address, port)
+    def user_login(self, username, ip_address, port, key):
+        """
+        The method executed when the user logs in records the fact of logging in to the database
+        updates the user's public key when it changes.
+        """
 
         rez = self.session.query(self.AllUsers).filter_by(name=username)
 
         if rez.count():
             user = rez.first()
             user.last_login = datetime.datetime.now()
+            if user.pubkey != key:
+                user.pubkey = key
         else:
-            user = self.AllUsers(username)
-            self.session.add(user)
-            self.session.commit()
-            user_in_history = self.UsersHistory(user.id)
-            self.session.add(user_in_history)
+            raise ValueError('Пользователь не зарегистрирован.')
 
         new_active_user = self.ActiveUsers(
             user.id, ip_address, port, datetime.datetime.now())
@@ -127,35 +148,89 @@ class ServerDB:
 
         self.session.commit()
 
+    def add_user(self, name, passwd_hash):
+        """
+        User registration method.
+        Accepts the name and password hash, creates an entry in the statistics table.
+        """
+        user_row = self.AllUsers(name, passwd_hash)
+        self.session.add(user_row)
+        self.session.commit()
+        history_row = self.UsersHistory(user_row.id)
+        self.session.add(history_row)
+        self.session.commit()
+
+    def remove_user(self, name):
+        """Method that removes the user from the database."""
+        user = self.session.query(self.AllUsers).filter_by(name=name).first()
+        self.session.query(self.ActiveUsers).filter_by(user=user.id).delete()
+        self.session.query(self.LoginHistory).filter_by(name=user.id).delete()
+        self.session.query(self.UsersContacts).filter_by(user=user.id).delete()
+        self.session.query(
+            self.UsersContacts).filter_by(
+            contact=user.id).delete()
+        self.session.query(self.UsersHistory).filter_by(user=user.id).delete()
+        self.session.query(self.AllUsers).filter_by(name=name).delete()
+        self.session.commit()
+
+    def get_hash(self, name):
+        """Method of obtaining a hash of the user's password."""
+        user = self.session.query(self.AllUsers).filter_by(name=name).first()
+        return user.passwd_hash
+
+    def get_pubkey(self, name):
+        """Method of obtaining the user's public key."""
+        user = self.session.query(self.AllUsers).filter_by(name=name).first()
+        return user.pubkey
+
+    def check_user(self, name):
+        """A method that verifies the existence of a user."""
+        if self.session.query(self.AllUsers).filter_by(name=name).count():
+            return True
+        else:
+            return False
+
     def user_logout(self, username):
+        """Method fixing user disconnections."""
         user = self.session.query(
-            self.AllUsers).filter_by(name=username).first()
+            self.AllUsers).filter_by(
+            name=username).first()
 
         self.session.query(self.ActiveUsers).filter_by(user=user.id).delete()
 
         self.session.commit()
 
     def process_message(self, sender, recipient):
+        """A method that records the fact of message transmission in the statistics table."""
         sender = self.session.query(
-            self.AllUsers).filter_by(name=sender).first().id
+            self.AllUsers).filter_by(
+            name=sender).first().id
         recipient = self.session.query(
-            self.AllUsers).filter_by(name=recipient).first().id
+            self.AllUsers).filter_by(
+            name=recipient).first().id
 
         sender_row = self.session.query(
-            self.UsersHistory).filter_by(user=sender).first()
+            self.UsersHistory).filter_by(
+            user=sender).first()
         sender_row.sent += 1
         recipient_row = self.session.query(
-            self.UsersHistory).filter_by(user=recipient).first()
+            self.UsersHistory).filter_by(
+            user=recipient).first()
         recipient_row.accepted += 1
 
         self.session.commit()
 
     def add_contact(self, user, contact):
+        """Method of adding a contact for the user."""
         user = self.session.query(self.AllUsers).filter_by(name=user).first()
         contact = self.session.query(
-            self.AllUsers).filter_by(name=contact).first()
+            self.AllUsers).filter_by(
+            name=contact).first()
 
-        if not contact or self.session.query(self.UsersContacts).filter_by(user=user.id, contact=contact.id).count():
+        if not contact or self.session.query(
+                self.UsersContacts).filter_by(
+                user=user.id,
+                contact=contact.id).count():
             return
 
         contact_row = self.UsersContacts(user.id, contact.id)
@@ -163,20 +238,23 @@ class ServerDB:
         self.session.commit()
 
     def remove_contact(self, user, contact):
+        """Method of deleting a user's contact."""
         user = self.session.query(self.AllUsers).filter_by(name=user).first()
         contact = self.session.query(
-            self.AllUsers).filter_by(name=contact).first()
+            self.AllUsers).filter_by(
+            name=contact).first()
 
         if not contact:
             return
 
-        print(self.session.query(self.UsersContacts).filter(
+        self.session.query(self.UsersContacts).filter(
             self.UsersContacts.user == user.id,
             self.UsersContacts.contact == contact.id
-        ).delete())
+        ).delete()
         self.session.commit()
 
     def users_list(self):
+        """Method that returns a list of known users with the time of the last login."""
         query = self.session.query(
             self.AllUsers.name,
             self.AllUsers.last_login
@@ -184,6 +262,7 @@ class ServerDB:
         return query.all()
 
     def active_users_list(self):
+        """Method that returns a list of active users."""
         query = self.session.query(
             self.AllUsers.name,
             self.ActiveUsers.ip_address,
@@ -193,16 +272,19 @@ class ServerDB:
         return query.all()
 
     def login_history(self, username=None):
-        query = self.session.query(self.AllUsers.name,
-                                   self.LoginHistory.date_time,
-                                   self.LoginHistory.ip,
-                                   self.LoginHistory.port
-                                   ).join(self.AllUsers)
+        """Method that returns the history of inputs."""
+        query = self.session.query(
+            self.AllUsers.name,
+            self.LoginHistory.date_time,
+            self.LoginHistory.ip,
+            self.LoginHistory.port
+        ).join(self.AllUsers)
         if username:
             query = query.filter(self.AllUsers.name == username)
         return query.all()
 
     def get_contacts(self, username):
+        """Method that returns the user's contact list."""
         user = self.session.query(self.AllUsers).filter_by(name=username).one()
 
         query = self.session.query(self.UsersContacts, self.AllUsers.name). \
@@ -212,6 +294,7 @@ class ServerDB:
         return [contact[1] for contact in query.all()]
 
     def message_history(self):
+        """Method that returns message statistics."""
         query = self.session.query(
             self.AllUsers.name,
             self.AllUsers.last_login,
@@ -221,11 +304,18 @@ class ServerDB:
         return query.all()
 
 
+# Отладка
 if __name__ == '__main__':
-    test_db = ServerDB()
-
-    test_db.user_login('client_1', '192.168.1.4', 8888)
-    test_db.user_login('client_2', '192.168.1.5', 7777)
-
-    test_db.user_logout('client_1')
-    test_db.user_logout('client_1')
+    test_db = ServerStorage('/server_database.db3')
+    test_db.user_login('test1', '192.168.1.113', 8080)
+    test_db.user_login('test2', '192.168.1.113', 8081)
+    print(test_db.users_list())
+    # print(test_db.active_users_list())
+    # test_db.user_logout('McG')
+    # print(test_db.login_history('re'))
+    # test_db.add_contact('test2', 'test1')
+    # test_db.add_contact('test1', 'test3')
+    # test_db.add_contact('test1', 'test6')
+    # test_db.remove_contact('test1', 'test3')
+    test_db.process_message('test1', 'test2')
+    print(test_db.message_history())

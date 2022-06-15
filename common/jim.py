@@ -14,7 +14,7 @@ PRESENCE = {
     "type": "status",
     "user": {
         "account_name": "",
-        "status": ""
+        "pubkey": ""
     }
 }
 
@@ -59,14 +59,26 @@ USERS_REQUEST = {
     "account_name": "",
 }
 
+PUBLIC_KEY_REQUEST = {
+    "action": "get_users",
+    "time": None,
+    "account_name": "",
+}
+
 RESPONSE_200 = {"response": 200}
 RESPONSE_202 = {
     "response": 202,
     "data_list":None
 }
+RESPONSE_205 = {"response": 205}
 RESPONSE_400 = {
     "response": 400,
     "error": 'Bad Request'
 }
 RESPONSE_404 = {
     "response": 404}
+
+RESPONSE_511 = {
+    "response": 511,
+    "bin": None
+}

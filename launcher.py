@@ -8,7 +8,7 @@ import time
 def run_client(process):
     if platform == 'linux':
         process.append(subprocess.Popen(
-            f'gnome-terminal -- bash -c "python3 client.py -n test{i + 1}"', shell=True, preexec_fn=os.setpgrp))
+            f'gnome-terminal -- bash -c "python3 client.py -n test{i + 1} -s 123456"', shell=True, preexec_fn=os.setpgrp))
     elif platform == 'win32':
         process.append(subprocess.Popen(
             f'python client.py -n test{i + 1}', creationflags=subprocess.CREATE_NEW_CONSOLE))
@@ -29,6 +29,7 @@ print(platform)
 process = []
 
 while True:
+    print('Make sure that the required number of clients with the password 123456 is registered on the server.')
     action = input(
         'Select an action: q - exit , s - start the server and clients, x - close all windows:')
 

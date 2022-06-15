@@ -24,6 +24,7 @@ SENDER = 'from'
 RECIPIENT = 'to'
 
 USER_TEST = "Guest"
+RESPONSE = "response"
 ACTION_PRESENCE = "presence"
 ACTION_MESSEGE = "msg"
 ACTION_EXIT = "exit"
@@ -35,6 +36,9 @@ LIST_INFO = "data_list"
 REMOVE_CONTACT = "remove"
 ADD_CONTACT = "add"
 USERS_REQUEST = "get_users"
+PUBLIC_KEY = "pubkey"
+PUBLIC_KEY_REQUEST = 'pubkey_need'
+DATA = "bin"
 
 LOGGER_CLIENT = "client"
 LOG_CLIENT_FILE = "client.log"
