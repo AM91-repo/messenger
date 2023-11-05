@@ -1,0 +1,29 @@
+*.db3
+*.key
+
+# Compiled Python files
+*.pyc
+*.pyo
+__pycache__
+
+# Virtual environment
+venv/
+env/
+.env
+
+# Development environments
+.vscode/
+.idea/
+
+# Logs and databases
+*.log.*
+*.log
+*.sqlite3
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Other
+*.swp
+.DS_Store

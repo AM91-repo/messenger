@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine, Table, Column, Integer, String, Text, MetaData, DateTime
-from sqlalchemy.orm import mapper, sessionmaker
+from sqlalchemy.orm import registry, sessionmaker
 import datetime
 
 
@@ -50,10 +50,11 @@ class ClientDatabase:
                          )
 
         self.metadata.create_all(self.database_engine)
+        mapper = registry()
 
-        mapper(self.KnownUsers, users)
-        mapper(self.MessageHistory, history)
-        mapper(self.Contacts, contacts)
+        mapper.map_imperatively(self.KnownUsers, users)
+        mapper.map_imperatively(self.MessageHistory, history)
+        mapper.map_imperatively(self.Contacts, contacts)
 
         Session = sessionmaker(bind=self.database_engine)
         self.session = Session()

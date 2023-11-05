@@ -1,4 +1,5 @@
-from sqlalchemy.orm import mapper, sessionmaker
+from sqlalchemy.orm import registry, sessionmaker
+
 from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, ForeignKey, DateTime, Text
 import sys
 import os
@@ -110,11 +111,13 @@ class ServerStorage:
 
         self.metadata.create_all(self.database_engine)
 
-        mapper(self.AllUsers, users_table)
-        mapper(self.ActiveUsers, active_users_table)
-        mapper(self.LoginHistory, user_login_history)
-        mapper(self.UsersContacts, contacts)
-        mapper(self.UsersHistory, users_history_table)
+        mapper = registry()
+
+        mapper.map_imperatively(self.AllUsers, users_table)
+        mapper.map_imperatively(self.ActiveUsers, active_users_table)
+        mapper.map_imperatively(self.UsersContacts, contacts)
+        mapper.map_imperatively(self.LoginHistory, user_login_history)
+        mapper.map_imperatively(self.UsersHistory, users_history_table)
 
         Session = sessionmaker(bind=self.database_engine)
         self.session = Session()

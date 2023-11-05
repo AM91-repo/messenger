@@ -1,586 +1,158 @@
-2022-06-13 15:09:38,731 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-13 15:09:38,750 INFO server.py Server started at 127.0.0.1:7777
-2022-06-13 15:09:47,741 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-13 15:09:47,771 INFO server.py Server started at 127.0.0.1:7777
-2022-06-13 15:09:48,759 DEBUG server.py A client with the address has connected: ('127.0.0.1', 52094)
-2022-06-13 15:09:48,961 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:09:48,961 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': 1655122188.759182, 'type': 'status', 'user': {'account_name': 'test1', 'status': ''}}
-2022-06-13 15:09:48,961 DEBUG server.py added username test1
-2022-06-13 15:09:48,979 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:09:49,180 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:09:49,180 DEBUG server.py Processing of the message from the client has begun : {'action': 'get_users', 'time': 1655122188.9799886, 'account_name': 'test1'}
-2022-06-13 15:09:49,182 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:09:49,383 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:09:49,383 DEBUG server.py Processing of the message from the client has begun : {'action': 'get_contacts', 'time': 1655122189.1942384, 'user': 'test1'}
-2022-06-13 15:09:49,394 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:09:49,759 DEBUG server.py A client with the address has connected: ('127.0.0.1', 52096)
-2022-06-13 15:09:49,960 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:09:49,960 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': 1655122189.7599168, 'type': 'status', 'user': {'account_name': 'test2', 'status': ''}}
-2022-06-13 15:09:49,960 DEBUG server.py added username test2
-2022-06-13 15:09:49,982 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:09:50,183 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:09:50,184 DEBUG server.py Processing of the message from the client has begun : {'action': 'get_users', 'time': 1655122189.9832835, 'account_name': 'test2'}
-2022-06-13 15:09:50,185 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:09:50,386 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:09:50,387 DEBUG server.py Processing of the message from the client has begun : {'action': 'get_contacts', 'time': 1655122190.2074535, 'user': 'test2'}
-2022-06-13 15:09:50,389 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:10:01,613 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:10:01,613 DEBUG server.py Processing of the message from the client has begun : {'action': 'add', 'time': 1655122201.6050346, 'account_name': 'test1', 'user': 'test2'}
-2022-06-13 15:10:01,638 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:10:13,261 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:10:13,261 DEBUG server.py Processing of the message from the client has begun : {'action': 'msg', 'time': 1655122213.1470988, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'hi\n'}
-2022-06-13 15:10:13,315 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:10:13,317 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:10:14,921 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:10:14,921 DEBUG server.py Processing of the message from the client has begun : {'action': 'add', 'time': 1655122214.7182245, 'account_name': 'test2', 'user': 'test1'}
-2022-06-13 15:10:14,942 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:15,503 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-13 15:14:15,522 INFO server.py Server started at 127.0.0.1:7777
-2022-06-13 15:14:16,503 DEBUG server.py A client with the address has connected: ('127.0.0.1', 52098)
-2022-06-13 15:14:16,504 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:16,504 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': 1655122456.503085, 'type': 'status', 'user': {'account_name': 'test1', 'status': ''}}
-2022-06-13 15:14:16,504 DEBUG server.py added username test1
-2022-06-13 15:14:16,522 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:16,723 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:16,723 DEBUG server.py Processing of the message from the client has begun : {'action': 'get_users', 'time': 1655122456.522436, 'account_name': 'test1'}
-2022-06-13 15:14:16,725 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:16,926 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:16,926 DEBUG server.py Processing of the message from the client has begun : {'action': 'get_contacts', 'time': 1655122456.7468524, 'user': 'test1'}
-2022-06-13 15:14:16,932 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:17,435 DEBUG server.py A client with the address has connected: ('127.0.0.1', 52100)
-2022-06-13 15:14:17,436 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:17,436 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': 1655122457.435654, 'type': 'status', 'user': {'account_name': 'test2', 'status': ''}}
-2022-06-13 15:14:17,436 DEBUG server.py added username test2
-2022-06-13 15:14:17,444 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:17,645 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:17,646 DEBUG server.py Processing of the message from the client has begun : {'action': 'get_users', 'time': 1655122457.4450874, 'account_name': 'test2'}
-2022-06-13 15:14:17,650 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:17,851 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:14:17,851 DEBUG server.py Processing of the message from the client has begun : {'action': 'get_contacts', 'time': 1655122457.6700833, 'user': 'test2'}
-2022-06-13 15:14:17,853 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:21:56,701 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-13 15:21:56,720 INFO server.py Server started at 127.0.0.1:7777
-2022-06-13 15:23:33,675 DEBUG server.py A client with the address has connected: ('127.0.0.1', 52102)
-2022-06-13 15:23:33,676 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:23:33,676 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': 1655123013.6754563, 'type': 'status', 'user': {'account_name': 'Guest', 'status': ''}}
-2022-06-13 15:23:33,676 DEBUG server.py added username Guest
-2022-06-13 15:23:33,701 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:23:33,901 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:23:33,902 DEBUG server.py Processing of the message from the client has begun : {'action': 'get_users', 'time': 1655123013.7016425, 'account_name': 'Guest'}
-2022-06-13 15:23:33,904 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:23:34,105 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:23:34,105 DEBUG server.py Processing of the message from the client has begun : {'action': 'get_contacts', 'time': 1655123013.9264889, 'user': 'Guest'}
-2022-06-13 15:23:34,111 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:23:43,129 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 15:23:43,129 DEBUG server.py Processing of the message from the client has begun : {'action': 'exit', 'time': 1655123022.8442223, 'account_name': 'Guest'}
-2022-06-13 20:28:16,436 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-13 20:28:16,466 INFO server.py Server started at 127.0.0.1:7777
-2022-06-13 20:28:37,985 DEBUG server.py A client with the address has connected: ('127.0.0.1', 52110)
-2022-06-13 20:28:38,187 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 20:28:38,187 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': 1655141317.985976, 'type': 'status', 'user': {'account_name': 'Guest', 'pubkey': ''}}
-2022-06-13 20:28:38,187 DEBUG server.py added username Guest
-2022-06-13 20:28:38,217 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 20:28:38,418 DEBUG server.py The connection with the client was lost
-2022-06-13 20:29:05,980 DEBUG server.py A client with the address has connected: ('127.0.0.1', 52112)
-2022-06-13 20:29:06,181 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-13 20:29:06,182 DEBUG server.py Processing of the message from the client has begun : {'action': 'presence', 'time': 1655141345.980907, 'type': 'status', 'user': {'account_name': 'Guest', 'pubkey': ''}}
-2022-06-13 20:29:06,182 INFO server.py Clear username Guest
-2022-06-13 20:29:06,182 DEBUG server.py added username Guest
-2022-06-13 20:29:06,186 DEBUG server.py The connection with the client was lost
-2022-06-14 19:35:44,817 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 19:35:44,818 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 19:35:44,882 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 19:36:42,811 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 19:36:42,812 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 19:36:42,841 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 19:37:39,860 INFO core.py The connection to the PC is established ('127.0.0.1', 57918)
-2022-06-14 19:37:39,862 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:37:39,862 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655224659.8599913, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': ''}}
-2022-06-14 19:37:39,862 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': ''}
-2022-06-14 19:37:39,864 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 19:37:39,866 DEBUG core.py Auth message = {'response': 511, 'bin': '8f3db3f62c3be6630801d572dce2a96cdd44d59f1c0b16c5906f09a4e690843444cb04fbfc26d4016489a9784645610975cd5e53efb4d0e2528654ab6c326b4d'}
-2022-06-14 19:37:39,867 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:37:39,975 DEBUG core.py Getting data from client exception.
-Traceback (most recent call last):
-  File "/home/anatol/prod/messeger/messenger/server/core.py", line 77, in run
-    self.process_client_message(
-  File "/home/anatol/prod/messeger/messenger/common/decorators.py", line 56, in checker
-    return func(*args, **kwargs)
-  File "/home/anatol/prod/messeger/messenger/server/core.py", line 141, in process_client_message
-    self.autorize_user(message, client)
-  File "/home/anatol/prod/messeger/messenger/server/core.py", line 261, in autorize_user
-    ans = get_message(sock)
-  File "/home/anatol/prod/messeger/messenger/common/decorators.py", line 21, in wraper
-    ret = func(*args, **kwargs)
-  File "/home/anatol/prod/messeger/messenger/common/utils.py", line 61, in get_message
-    response_dict = json.loads(json_response)
-  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
-    return _default_decoder.decode(s)
-  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2022-06-14 19:37:39,977 INFO core.py Client ('127.0.0.1', 57918) disconnected from the server.
-2022-06-14 19:40:15,908 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 19:40:15,909 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 19:40:15,938 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 19:40:21,486 INFO core.py The connection to the PC is established ('127.0.0.1', 57920)
-2022-06-14 19:40:21,488 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:40:21,488 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655224821.4869523, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': ''}}
-2022-06-14 19:40:21,488 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': ''}
-2022-06-14 19:40:21,495 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 19:40:21,498 DEBUG core.py Auth message = {'response': 511, 'bin': '041b7319374a2d2c20fddb3191bb4b93e72067eece39211582348264b003b769ba4096dfe126a6342b98962fcda8d8e7dcd3642e76ed03412841b438e3d99148'}
-2022-06-14 19:40:21,499 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:40:21,515 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:53:35,096 DEBUG decorators.py Function: main(). Module: __main__. Calling from a function main(). 
-2022-06-14 19:53:38,230 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 19:53:38,231 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 19:53:38,271 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 19:53:50,767 INFO core.py The connection to the PC is established ('127.0.0.1', 57930)
-2022-06-14 19:53:50,768 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:53:50,768 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655225630.7670581, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': ''}}
-2022-06-14 19:53:50,768 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': ''}
-2022-06-14 19:53:50,776 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 19:53:50,777 DEBUG core.py Auth message = {'response': 511, 'bin': '4b97860557d1877d17aec3f6424661df29395a56fcc7159e4f1335a509f3176ce0b3bd4f61cf0a4ae370d4cc9008508f55dc08fd9b05faf82b3513b80a75cd45'}
-2022-06-14 19:53:50,778 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:53:50,792 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:55:28,617 DEBUG decorators.py Function: main(). Module: __main__. Calling from a function main(). 
-2022-06-14 19:55:32,064 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 19:55:32,064 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 19:55:32,104 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 19:55:39,362 INFO core.py The connection to the PC is established ('127.0.0.1', 57936)
-2022-06-14 19:55:39,363 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:55:39,363 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655225739.3625908, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': ''}}
-2022-06-14 19:55:39,363 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': ''}
-2022-06-14 19:55:39,371 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 19:55:39,373 DEBUG core.py Auth message = {'response': 511, 'bin': '82401caf8539dfd1393e813ac7f0dcc3cba3fc5517ac11a46ed42e130e15d67e32d4b6833da1469321743cdb090dbe00c365d67c239bf4a8d89d6aab85a00a8a'}
-2022-06-14 19:55:39,374 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:55:39,390 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:55:58,369 DEBUG decorators.py Function: main(). Module: __main__. Calling from a function main(). 
-2022-06-14 19:59:16,825 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 19:59:16,826 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 19:59:16,865 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 19:59:23,507 INFO core.py The connection to the PC is established ('127.0.0.1', 57938)
-2022-06-14 19:59:23,508 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:59:23,508 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655225963.5070922, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': ''}}
-2022-06-14 19:59:23,508 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': ''}
-2022-06-14 19:59:23,515 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 19:59:23,517 DEBUG core.py Auth message = {'response': 511, 'bin': '81b8ff1c5abe7da8283f1ff3e22710dc4e61e15eafc1331e3e201dab98d7ec43d884597573775fda69c1b3c2490dc8f60ba79cb56aac4f5b4cd86dfa382118d5'}
-2022-06-14 19:59:23,518 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 19:59:23,532 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:03:48,720 DEBUG decorators.py Function: main(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:06:04,160 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:06:04,161 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:06:04,179 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:06:29,193 INFO core.py The connection to the PC is established ('127.0.0.1', 57942)
-2022-06-14 20:06:29,194 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:06:29,194 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655226389.193454, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': ''}}
-2022-06-14 20:06:29,195 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': ''}
-2022-06-14 20:06:29,201 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:06:29,203 DEBUG core.py Auth message = {'response': 511, 'bin': 'e7ce8be599ebd6d446674e37bf8fe8559402803ed49ef1499fb0de2b42e3ac9930f88bf91acc987db5302b25860f3af4f56432a836fd2e4d64e7b491b36bf9a2'}
-2022-06-14 20:06:29,203 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:06:29,219 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:11:42,726 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:11:42,727 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:11:42,785 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:11:50,912 INFO core.py The connection to the PC is established ('127.0.0.1', 57944)
-2022-06-14 20:11:51,414 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:11:51,414 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655226710.9260187, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:11:51,414 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:11:51,422 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:11:51,424 DEBUG core.py Auth message = {'response': 511, 'bin': '1769b08ec52e4077bddef36bd5966e8bffd1e3e2c95ccfcbab51b803c87c553a3390e89f860a4f35a2183eafc6ac967ad32cc1e5011b70545acc0b87ff9bf4a9'}
-2022-06-14 20:11:51,425 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:11:51,425 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:12:24,017 DEBUG decorators.py Function: main(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:12:26,371 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:12:26,372 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:12:26,390 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:12:32,338 INFO core.py The connection to the PC is established ('127.0.0.1', 57950)
-2022-06-14 20:12:32,840 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:12:32,840 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655226752.3542173, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:12:32,841 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:12:32,848 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:12:32,849 DEBUG core.py Auth message = {'response': 511, 'bin': '0e605fb43a94a48f3b965337317bb8661131d7a43506a9c0d96b09e0be91e753baf4cc8d44c274d05eabe1d6c92c87af531ea2aed36823582182ab1d4f9c7ae1'}
-2022-06-14 20:12:32,850 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:12:32,850 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:12:32,851 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:12:33,373 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:12:33,373 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655226752.8516665, 'account_name': 'test2'}
-2022-06-14 20:12:33,373 INFO core.py Client ('127.0.0.1', 57950) disconnected from the server.
-2022-06-14 20:13:28,506 INFO core.py The connection to the PC is established ('127.0.0.1', 57954)
-2022-06-14 20:13:29,008 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:13:29,008 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655226808.5226276, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:13:29,008 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:13:29,010 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:13:29,011 DEBUG core.py Auth message = {'response': 511, 'bin': '79f7918d78c2705d003aea3c310c3031aaa43f9b112c90d4c6c2850a0e0f9d3416e722be2518f5d18c7fed6c257664818ae2828ef9dc99c2fb78a1e6761ee42b'}
-2022-06-14 20:13:29,012 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:13:29,013 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:13:29,013 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:13:29,534 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:13:29,535 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655226809.0144005, 'account_name': 'test2'}
-2022-06-14 20:13:29,535 INFO core.py Client ('127.0.0.1', 57954) disconnected from the server.
-2022-06-14 20:17:02,528 INFO core.py The connection to the PC is established ('127.0.0.1', 57956)
-2022-06-14 20:17:03,029 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:17:03,030 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655227022.5429106, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:17:03,030 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:17:03,031 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:17:03,033 DEBUG core.py Auth message = {'response': 511, 'bin': 'e8f3fab6b172ee52c95ea7189f0a273d751216f519a02e669a1c74f3b3cba2c5e147f5c380d647dc8c0737dfc32059157c38f4a48eb9525cd97b6668deafd1e9'}
-2022-06-14 20:17:03,033 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:17:03,034 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:17:03,035 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:17:03,548 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:17:03,548 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655227023.0357745, 'account_name': 'test2'}
-2022-06-14 20:17:03,548 INFO core.py Client ('127.0.0.1', 57956) disconnected from the server.
-2022-06-14 20:19:36,925 INFO core.py The connection to the PC is established ('127.0.0.1', 57958)
-2022-06-14 20:19:37,427 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:19:37,427 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655227176.9409666, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:19:37,427 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:19:37,429 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:19:37,431 DEBUG core.py Auth message = {'response': 511, 'bin': '0f013ed32899a3401a54ddc5f79c8c0bc8ea632f54000ce6edd120fec89b427271b592faf85e751e1fa9b3a03bf0e4fb7422f2cdfde78fffb10a38c85309e56c'}
-2022-06-14 20:19:37,431 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:19:37,432 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:19:37,433 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:19:37,954 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:19:37,955 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655227177.4342167, 'account_name': 'test2'}
-2022-06-14 20:19:37,955 INFO core.py Client ('127.0.0.1', 57958) disconnected from the server.
-2022-06-14 20:19:51,220 DEBUG decorators.py Function: main(). Module: __main__. Calling from a function <module>. 
-2022-06-14 20:19:55,472 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:19:55,473 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:19:55,513 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:22:31,962 INFO core.py The connection to the PC is established ('127.0.0.1', 57960)
-2022-06-14 20:22:32,464 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:22:32,464 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655227351.9759076, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:22:32,465 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:22:32,471 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:22:32,474 DEBUG core.py Auth message = {'response': 511, 'bin': 'bedf52c0f65de6bcc700cbd6055117066738b8e091d2a7aae57350c43cb6b10840e03b4346a35af47f7fa741178b44ab893694ca80ac976d9a742c27fed3fd0d'}
-2022-06-14 20:22:32,474 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:22:32,475 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:22:32,475 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:22:32,997 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:22:32,997 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655227352.4759417, 'account_name': 'test2'}
-2022-06-14 20:22:32,997 INFO core.py Client ('127.0.0.1', 57960) disconnected from the server.
-2022-06-14 20:23:49,581 INFO core.py The connection to the PC is established ('127.0.0.1', 57962)
-2022-06-14 20:23:50,082 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:23:50,082 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655227429.5873446, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:23:50,082 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:23:50,084 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:23:50,085 DEBUG core.py Auth message = {'response': 511, 'bin': '1fd818c7373363783f9586f9ecf9d35e57e1fdc019bafc8dc18bd9b7c097db4f7fa1122060dfe9180625bbb9f96b46391afeed25850c1a6b6b3f612d7f87f6a5'}
-2022-06-14 20:23:50,086 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:23:50,087 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:23:50,087 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:23:50,608 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:23:50,608 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655227430.0887141, 'account_name': 'test2'}
-2022-06-14 20:23:50,608 INFO core.py Client ('127.0.0.1', 57962) disconnected from the server.
-2022-06-14 20:26:27,178 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:26:27,179 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:26:27,197 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:26:31,748 INFO core.py The connection to the PC is established ('127.0.0.1', 57964)
-2022-06-14 20:26:32,250 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:26:32,250 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655227591.755295, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:26:32,250 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:26:32,256 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:26:32,258 DEBUG core.py Auth message = {'response': 511, 'bin': '9cd1b220c918e82969d578e60edb03a0491cf58207dc7623602720e222f37fe8da211d0d9edfa80207c58f568d6d089a32b45db9c588110278c143e25527bece'}
-2022-06-14 20:26:32,258 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:26:32,259 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:26:32,259 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:26:32,781 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:26:32,781 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655227592.2593505, 'account_name': 'test2'}
-2022-06-14 20:26:32,781 INFO core.py Client ('127.0.0.1', 57964) disconnected from the server.
-2022-06-14 20:28:12,939 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:28:12,939 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:28:12,958 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:28:18,096 INFO core.py The connection to the PC is established ('127.0.0.1', 57966)
-2022-06-14 20:28:18,598 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:28:18,599 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655227698.1123173, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:28:18,599 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:28:18,606 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:28:18,609 DEBUG core.py Auth message = {'response': 511, 'bin': 'd96d3c488f9d04cadb5a39a21b0fc778fbbc6621be347b7e30c209907d07932031dd49eb4bd9269b8c981e5e8cfcef601cf3e0613ccbc1a4494ca5611ee95804'}
-2022-06-14 20:28:18,609 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:28:18,610 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:28:18,610 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:28:19,133 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:28:19,133 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655227698.6108124, 'account_name': 'test2'}
-2022-06-14 20:28:19,133 INFO core.py Client ('127.0.0.1', 57966) disconnected from the server.
-2022-06-14 20:30:53,577 INFO core.py The connection to the PC is established ('127.0.0.1', 57968)
-2022-06-14 20:30:54,079 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:30:54,079 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655227853.5930133, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:30:54,080 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:30:54,082 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:30:54,084 DEBUG core.py Auth message = {'response': 511, 'bin': '835fffc1d3b7fa637c4bd7cdfa8a913748d91215be9866938a51569f0ed21b3036ff4a9a1ddb2ed7bfa2940650a6754fc65a52a52511606910f90fad05dc3059'}
-2022-06-14 20:30:54,085 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:30:54,086 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:30:54,086 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:30:54,610 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:30:54,610 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655227854.087231, 'account_name': 'test2'}
-2022-06-14 20:30:54,610 INFO core.py Client ('127.0.0.1', 57968) disconnected from the server.
-2022-06-14 20:31:09,962 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:31:09,962 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:31:09,983 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:31:14,365 INFO core.py The connection to the PC is established ('127.0.0.1', 57970)
-2022-06-14 20:31:14,867 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:31:14,867 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655227874.3813314, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:31:14,867 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:31:14,875 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:31:14,877 DEBUG core.py Auth message = {'response': 511, 'bin': '54adee5d433bcd8391952aea0768feee2c333d885409a01b379e6005780ee1d438948cd4b2da8712efbd8b0576bc4fd9e0b7f807e40e4b46c90142428d6c199e'}
-2022-06-14 20:31:14,877 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:31:14,878 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:31:14,878 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:31:15,402 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:31:15,402 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655227874.8793163, 'account_name': 'test2'}
-2022-06-14 20:31:15,403 INFO core.py Client ('127.0.0.1', 57970) disconnected from the server.
-2022-06-14 20:33:01,429 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:33:01,430 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:33:01,450 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:33:04,277 INFO core.py The connection to the PC is established ('127.0.0.1', 57972)
-2022-06-14 20:33:04,779 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:33:04,779 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655227984.2929654, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:33:04,779 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:33:04,786 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:33:04,788 DEBUG core.py Auth message = {'response': 511, 'bin': 'f74ba7958ad08ef91e6649cbc8769e024f030b87f802a269f677480b926233c987b72a817fab24759bb09e48cf17d578e89e3371eb5bfe43696390fef34abb12'}
-2022-06-14 20:33:04,789 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:33:04,790 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:33:04,790 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:33:05,313 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:33:05,313 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655227984.7912033, 'account_name': 'test2'}
-2022-06-14 20:33:05,313 INFO core.py Client ('127.0.0.1', 57972) disconnected from the server.
-2022-06-14 20:40:12,202 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:40:12,203 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:40:12,221 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:40:16,806 INFO core.py The connection to the PC is established ('127.0.0.1', 57974)
-2022-06-14 20:40:17,309 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:40:17,309 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655228416.8218722, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:40:17,309 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:40:17,316 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:40:17,318 DEBUG core.py Auth message = {'response': 511, 'bin': 'f718914cbc3daf0c52f1307c06223dffa0cfbec018fefbd0e1e56006670257f904cfa30beb5f4108f15a6056b14be9f92e89ccd307e1ab9da70998b983a0f100'}
-2022-06-14 20:40:17,318 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:40:17,319 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:40:17,319 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:40:17,841 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:40:17,841 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655228417.3198771, 'account_name': 'test2'}
-2022-06-14 20:40:17,844 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:40:18,345 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:40:18,345 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1655228417.8664277, 'user': 'test2'}
-2022-06-14 20:40:18,351 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:25,280 INFO core.py The connection to the PC is established ('127.0.0.1', 57976)
-2022-06-14 20:41:25,781 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:25,782 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655228485.2949784, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnxq1Cl30xP2EdKSu8E17\n3a/nZ/1F5KditfTsVNLyxMEqx37lliceLYEiC6O/235Qb9nV1LsxUcxLiF12ULgL\ngWv3KJgzzoDSQw5R0YmIKhntmxPgprtqzCYlir8d938aLOzhOHg4NvNt5rvlSpnH\nGHs59QcOpY3FlT62859LuA0EpxdTdkWWQn4vJ5EX4ZaNDX8zeJEjYEE1CaJFuqv5\nDM8FWjVbynZP7HaE3W4B7KRlWPonf9PLbvlL8o25CIjHuYO3VpJYgb69aY//ZLP+\noED0qVFO2TE5J0O/kUXS/65xf6iZIu6ggDHa/zkGU/EDlKNE/VQMHi3OAtQvpccH\niQIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:41:25,782 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnxq1Cl30xP2EdKSu8E17\n3a/nZ/1F5KditfTsVNLyxMEqx37lliceLYEiC6O/235Qb9nV1LsxUcxLiF12ULgL\ngWv3KJgzzoDSQw5R0YmIKhntmxPgprtqzCYlir8d938aLOzhOHg4NvNt5rvlSpnH\nGHs59QcOpY3FlT62859LuA0EpxdTdkWWQn4vJ5EX4ZaNDX8zeJEjYEE1CaJFuqv5\nDM8FWjVbynZP7HaE3W4B7KRlWPonf9PLbvlL8o25CIjHuYO3VpJYgb69aY//ZLP+\noED0qVFO2TE5J0O/kUXS/65xf6iZIu6ggDHa/zkGU/EDlKNE/VQMHi3OAtQvpccH\niQIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:41:25,783 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:41:25,784 DEBUG core.py Auth message = {'response': 511, 'bin': '622694ea9e7bcd2d49f462b4d5d0711e2c5aa3ee8cd35d062cb528080a8137776c57d5879e3d208bfc69514e00e328a863c4fe37098a9cb4956fa6cc4c07c4a2'}
-2022-06-14 20:41:25,785 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:25,786 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:25,786 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:26,309 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:26,309 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655228485.787319, 'account_name': 'test1'}
-2022-06-14 20:41:26,311 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:26,812 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:26,813 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1655228486.3324149, 'user': 'test1'}
-2022-06-14 20:41:26,816 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:33,325 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:33,325 DEBUG core.py Parsing a message from a client : {'action': 'add', 'time': 1655228493.317438, 'account_name': 'test3', 'user': 'test1'}
-2022-06-14 20:41:33,351 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:40,862 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:40,863 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1655228500.6670482, 'to': 'test3', 'from': 'test1', 'encoding': '', 'message': 'ghbdtn\n'}
-2022-06-14 20:41:40,863 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:52,380 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:52,381 DEBUG core.py Parsing a message from a client : {'action': 'add', 'time': 1655228512.1187558, 'account_name': 'test2', 'user': 'test1'}
-2022-06-14 20:41:52,429 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:59,941 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:59,941 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1655228519.798679, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'ghbdtn'}
-2022-06-14 20:41:59,994 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:41:59,995 INFO core.py A message was sent to the user test2 from the user test1.
-2022-06-14 20:41:59,995 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:42:01,998 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:42:01,998 DEBUG core.py Parsing a message from a client : {'action': 'add', 'time': 1655228521.44427, 'account_name': 'test1', 'user': 'test2'}
-2022-06-14 20:42:02,020 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:42:10,533 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:42:10,533 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1655228530.3887804, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'привет'}
-2022-06-14 20:42:10,544 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:42:10,544 INFO core.py A message was sent to the user test1 from the user test2.
-2022-06-14 20:42:10,544 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:48:58,190 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:48:58,190 DEBUG core.py Parsing a message from a client : {'action': 'remove', 'time': 1655228938.0222929, 'account_name': 'test1', 'user': 'test2'}
-2022-06-14 20:48:58,210 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:49:01,715 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:49:01,715 DEBUG core.py Parsing a message from a client : {'action': 'add', 'time': 1655228941.2467134, 'account_name': 'test1', 'user': 'test2'}
-2022-06-14 20:49:01,766 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:02,945 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:02,945 DEBUG core.py Parsing a message from a client : {'action': 'exit', 'time': 1655229062.5919867, 'account_name': 'test2'}
-2022-06-14 20:51:02,945 INFO core.py Client ('127.0.0.1', 57974) disconnected from the server.
-2022-06-14 20:51:23,609 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:51:23,610 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:51:23,629 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:51:24,570 INFO core.py The connection to the PC is established ('127.0.0.1', 57978)
-2022-06-14 20:51:25,071 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:25,071 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655229084.580751, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnxq1Cl30xP2EdKSu8E17\n3a/nZ/1F5KditfTsVNLyxMEqx37lliceLYEiC6O/235Qb9nV1LsxUcxLiF12ULgL\ngWv3KJgzzoDSQw5R0YmIKhntmxPgprtqzCYlir8d938aLOzhOHg4NvNt5rvlSpnH\nGHs59QcOpY3FlT62859LuA0EpxdTdkWWQn4vJ5EX4ZaNDX8zeJEjYEE1CaJFuqv5\nDM8FWjVbynZP7HaE3W4B7KRlWPonf9PLbvlL8o25CIjHuYO3VpJYgb69aY//ZLP+\noED0qVFO2TE5J0O/kUXS/65xf6iZIu6ggDHa/zkGU/EDlKNE/VQMHi3OAtQvpccH\niQIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:51:25,071 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnxq1Cl30xP2EdKSu8E17\n3a/nZ/1F5KditfTsVNLyxMEqx37lliceLYEiC6O/235Qb9nV1LsxUcxLiF12ULgL\ngWv3KJgzzoDSQw5R0YmIKhntmxPgprtqzCYlir8d938aLOzhOHg4NvNt5rvlSpnH\nGHs59QcOpY3FlT62859LuA0EpxdTdkWWQn4vJ5EX4ZaNDX8zeJEjYEE1CaJFuqv5\nDM8FWjVbynZP7HaE3W4B7KRlWPonf9PLbvlL8o25CIjHuYO3VpJYgb69aY//ZLP+\noED0qVFO2TE5J0O/kUXS/65xf6iZIu6ggDHa/zkGU/EDlKNE/VQMHi3OAtQvpccH\niQIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:51:25,075 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:51:25,078 DEBUG core.py Auth message = {'response': 511, 'bin': '823da30ede884928320d95c7e53af32a7358916de3676f26df086966801765e17391413ea3291d5a988d5b8d6d1781dc2514348ee519a37badf3b178b71b8533'}
-2022-06-14 20:51:25,079 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:25,079 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:25,080 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:25,542 INFO core.py The connection to the PC is established ('127.0.0.1', 57980)
-2022-06-14 20:51:25,543 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:25,543 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655229085.0799038, 'account_name': 'test1'}
-2022-06-14 20:51:25,545 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:26,046 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:26,047 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1655229085.555586, 'user': 'test1'}
-2022-06-14 20:51:26,053 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:26,054 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:26,054 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655229085.5589268, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:51:26,054 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:51:26,056 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:51:26,057 DEBUG core.py Auth message = {'response': 511, 'bin': '39d3e42caf443383dc8996635a17a510844b96323ca865bb58b8bf68b17ebe85135bba79fd014d951812fc528a201e302739b02df3348ae8eed090bb80346f1d'}
-2022-06-14 20:51:26,058 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:26,058 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:26,058 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:26,578 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:26,578 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655229086.0585558, 'account_name': 'test2'}
-2022-06-14 20:51:26,580 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:26,855 INFO core.py The connection to the PC is established ('127.0.0.1', 57982)
-2022-06-14 20:51:26,855 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:26,855 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1655229086.6015902, 'user': 'test2'}
-2022-06-14 20:51:26,857 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:27,358 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:27,358 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655229086.86189, 'type': 'status', 'user': {'account_name': 'test3', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvWV9SZFoFBBvadaqrs2X\nVEBonO4NMZ8OZjb4jnYuJEQx96kF0xFErZ+Jhc8QhmD0tGL6pSSGBknqRVpQ3nqo\ngMnBOp6JMjvFlnVaQivYivMHhrkNa8RiJp1Pz380OGfIsSbwPpON07wjiqaWCKnc\ntNG4rqDbP80X2cTH0x/fSGLZS94oiDqF9Ym2mgmbRCQ4nKeY8oNcSWl5h33zJt+0\nbxu4qX3zFMt7FnLRyWvSAAhy70WqIQX7QTtMG5iZrP1flEN2FaUg1l1VLHLoyAf7\nPjVc8os42dncx6En6Zhz4UTBd5sBRJNIsq1e/Jg8N+qc9s8QWhDWxhzHrm5b9e2Z\nDQIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:51:27,359 DEBUG core.py Start auth process for {'account_name': 'test3', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvWV9SZFoFBBvadaqrs2X\nVEBonO4NMZ8OZjb4jnYuJEQx96kF0xFErZ+Jhc8QhmD0tGL6pSSGBknqRVpQ3nqo\ngMnBOp6JMjvFlnVaQivYivMHhrkNa8RiJp1Pz380OGfIsSbwPpON07wjiqaWCKnc\ntNG4rqDbP80X2cTH0x/fSGLZS94oiDqF9Ym2mgmbRCQ4nKeY8oNcSWl5h33zJt+0\nbxu4qX3zFMt7FnLRyWvSAAhy70WqIQX7QTtMG5iZrP1flEN2FaUg1l1VLHLoyAf7\nPjVc8os42dncx6En6Zhz4UTBd5sBRJNIsq1e/Jg8N+qc9s8QWhDWxhzHrm5b9e2Z\nDQIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:51:27,360 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:51:27,361 DEBUG core.py Auth message = {'response': 511, 'bin': 'c536c2ef6c28aa163482e279250fdf94a635aa7ef8345046f64a65731941d904738153b3c7dadad0ef4334584440ac2416e634842e766abcc8f1fb97cc8322b0'}
-2022-06-14 20:51:27,362 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:27,363 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:27,363 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:27,885 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:27,885 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655229087.363648, 'account_name': 'test3'}
-2022-06-14 20:51:27,886 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:28,387 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:28,388 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1655229087.898326, 'user': 'test3'}
-2022-06-14 20:51:28,391 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:45,414 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:45,414 DEBUG core.py Parsing a message from a client : {'action': 'add', 'time': 1655229105.1288307, 'account_name': 'test2', 'user': 'test3'}
-2022-06-14 20:51:45,438 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:53,449 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:53,450 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1655229113.2282865, 'to': 'test2', 'from': 'test3', 'encoding': '', 'message': 'hi'}
-2022-06-14 20:51:53,465 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:53,465 INFO core.py A message was sent to the user test2 from the user test3.
-2022-06-14 20:51:53,465 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:55,469 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:51:55,469 DEBUG core.py Parsing a message from a client : {'action': 'add', 'time': 1655229114.6273086, 'account_name': 'test3', 'user': 'test2'}
-2022-06-14 20:51:55,491 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:52:00,999 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:52:01,000 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1655229120.5044825, 'to': 'test3', 'from': 'test2', 'encoding': '', 'message': 'hi'}
-2022-06-14 20:52:01,021 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:52:01,022 INFO core.py A message was sent to the user test3 from the user test2.
-2022-06-14 20:52:01,022 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:52:19,549 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:52:19,549 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1655229139.113559, 'to': 'test3', 'from': 'test2', 'encoding': '', 'message': 'how are you?'}
-2022-06-14 20:52:19,597 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:52:19,598 INFO core.py A message was sent to the user test3 from the user test2.
-2022-06-14 20:52:19,598 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:52:27,609 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:52:27,609 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1655229147.2369823, 'to': 'test2', 'from': 'test3', 'encoding': '', 'message': 'fine'}
-2022-06-14 20:52:27,619 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:52:27,619 INFO core.py A message was sent to the user test2 from the user test3.
-2022-06-14 20:52:27,619 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:02,893 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:53:02,893 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:53:02,952 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:53:03,983 INFO core.py The connection to the PC is established ('127.0.0.1', 57984)
-2022-06-14 20:53:04,485 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:04,485 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655229183.9975128, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnxq1Cl30xP2EdKSu8E17\n3a/nZ/1F5KditfTsVNLyxMEqx37lliceLYEiC6O/235Qb9nV1LsxUcxLiF12ULgL\ngWv3KJgzzoDSQw5R0YmIKhntmxPgprtqzCYlir8d938aLOzhOHg4NvNt5rvlSpnH\nGHs59QcOpY3FlT62859LuA0EpxdTdkWWQn4vJ5EX4ZaNDX8zeJEjYEE1CaJFuqv5\nDM8FWjVbynZP7HaE3W4B7KRlWPonf9PLbvlL8o25CIjHuYO3VpJYgb69aY//ZLP+\noED0qVFO2TE5J0O/kUXS/65xf6iZIu6ggDHa/zkGU/EDlKNE/VQMHi3OAtQvpccH\niQIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:53:04,485 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnxq1Cl30xP2EdKSu8E17\n3a/nZ/1F5KditfTsVNLyxMEqx37lliceLYEiC6O/235Qb9nV1LsxUcxLiF12ULgL\ngWv3KJgzzoDSQw5R0YmIKhntmxPgprtqzCYlir8d938aLOzhOHg4NvNt5rvlSpnH\nGHs59QcOpY3FlT62859LuA0EpxdTdkWWQn4vJ5EX4ZaNDX8zeJEjYEE1CaJFuqv5\nDM8FWjVbynZP7HaE3W4B7KRlWPonf9PLbvlL8o25CIjHuYO3VpJYgb69aY//ZLP+\noED0qVFO2TE5J0O/kUXS/65xf6iZIu6ggDHa/zkGU/EDlKNE/VQMHi3OAtQvpccH\niQIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:53:04,491 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:53:04,493 DEBUG core.py Auth message = {'response': 511, 'bin': '56aad4c3940b7fc8a8f0a8b484f28c49716025a7b5fdc26ca5b8d419311fbb054402a53e10711dfcac5dc34cdc92bdb109240233452a540e18406e1fd0e97382'}
-2022-06-14 20:53:04,493 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:04,494 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:04,494 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:04,910 INFO core.py The connection to the PC is established ('127.0.0.1', 57986)
-2022-06-14 20:53:04,911 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:04,911 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655229184.4946165, 'account_name': 'test1'}
-2022-06-14 20:53:04,913 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:05,415 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:05,415 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1655229184.9247825, 'user': 'test1'}
-2022-06-14 20:53:05,420 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:05,420 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:05,420 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655229184.9253373, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:53:05,421 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:53:05,422 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:53:05,423 DEBUG core.py Auth message = {'response': 511, 'bin': '832382e064a15d88cfea6cfc9e28e924d420e49282aeedae9f2d2944b09d920f9ef5f36bd92cbea8e1e696cee9d68f4003aa89573d4db274713eec2a4f3b0825'}
-2022-06-14 20:53:05,423 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:05,424 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:05,424 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:05,884 INFO core.py The connection to the PC is established ('127.0.0.1', 57988)
-2022-06-14 20:53:05,884 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:05,885 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655229185.4249315, 'account_name': 'test2'}
-2022-06-14 20:53:05,886 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:06,387 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:06,388 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1655229185.8979442, 'user': 'test2'}
-2022-06-14 20:53:06,390 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:06,390 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:06,391 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655229185.8936498, 'type': 'status', 'user': {'account_name': 'test3', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvWV9SZFoFBBvadaqrs2X\nVEBonO4NMZ8OZjb4jnYuJEQx96kF0xFErZ+Jhc8QhmD0tGL6pSSGBknqRVpQ3nqo\ngMnBOp6JMjvFlnVaQivYivMHhrkNa8RiJp1Pz380OGfIsSbwPpON07wjiqaWCKnc\ntNG4rqDbP80X2cTH0x/fSGLZS94oiDqF9Ym2mgmbRCQ4nKeY8oNcSWl5h33zJt+0\nbxu4qX3zFMt7FnLRyWvSAAhy70WqIQX7QTtMG5iZrP1flEN2FaUg1l1VLHLoyAf7\nPjVc8os42dncx6En6Zhz4UTBd5sBRJNIsq1e/Jg8N+qc9s8QWhDWxhzHrm5b9e2Z\nDQIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:53:06,391 DEBUG core.py Start auth process for {'account_name': 'test3', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvWV9SZFoFBBvadaqrs2X\nVEBonO4NMZ8OZjb4jnYuJEQx96kF0xFErZ+Jhc8QhmD0tGL6pSSGBknqRVpQ3nqo\ngMnBOp6JMjvFlnVaQivYivMHhrkNa8RiJp1Pz380OGfIsSbwPpON07wjiqaWCKnc\ntNG4rqDbP80X2cTH0x/fSGLZS94oiDqF9Ym2mgmbRCQ4nKeY8oNcSWl5h33zJt+0\nbxu4qX3zFMt7FnLRyWvSAAhy70WqIQX7QTtMG5iZrP1flEN2FaUg1l1VLHLoyAf7\nPjVc8os42dncx6En6Zhz4UTBd5sBRJNIsq1e/Jg8N+qc9s8QWhDWxhzHrm5b9e2Z\nDQIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:53:06,392 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:53:06,394 DEBUG core.py Auth message = {'response': 511, 'bin': 'f02ad991cef31cefd38a3c740a4046a18f0c7eff962ebaa19b5baf7ff27a393f30d80026dbace1365f772a8d0fad63d40d0860d1720f0d9ca3f9877acef484e2'}
-2022-06-14 20:53:06,394 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:06,395 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:06,396 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:06,916 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:06,916 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655229186.3968112, 'account_name': 'test3'}
-2022-06-14 20:53:06,918 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:06,971 INFO core.py The connection to the PC is established ('127.0.0.1', 57990)
-2022-06-14 20:53:06,971 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:06,971 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1655229186.9395728, 'user': 'test3'}
-2022-06-14 20:53:06,973 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:07,474 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:53:07,475 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655229186.977278, 'type': 'status', 'user': {'account_name': 'test4', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtJCfK8qHICd75BZ09a4c\nyxiPkV+YEOC0VldnWk6XHbB1x0/Zc3Ron51KpdpS9r/hUdhwmtySc56cCqvt6d/u\neC/ODvIXuzpL+lTI8VzvWRZUgH2DuLI9bVbV1LJgfXz3Kske1AWRiFaLbhndW3gU\nHHBvu+BcYLDrbxOprKxVMmYjb5xs3ETzGwFKWOt6syzpdoNW5W8oFF3c1jk0wJEn\n7ufF744LgmUo98QLVWgMd8W7ARhZD3UIw/2GwYU3NBxC+iuIuJnDzGZHG/BeoCZF\nttxtwaAJEI6MB7mX/L1tcqcI+sNdyP+XbN4xXNQpgv75EUAZ6OtGOSRabF5VUC3i\nLwIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:53:07,475 DEBUG core.py Start auth process for {'account_name': 'test4', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtJCfK8qHICd75BZ09a4c\nyxiPkV+YEOC0VldnWk6XHbB1x0/Zc3Ron51KpdpS9r/hUdhwmtySc56cCqvt6d/u\neC/ODvIXuzpL+lTI8VzvWRZUgH2DuLI9bVbV1LJgfXz3Kske1AWRiFaLbhndW3gU\nHHBvu+BcYLDrbxOprKxVMmYjb5xs3ETzGwFKWOt6syzpdoNW5W8oFF3c1jk0wJEn\n7ufF744LgmUo98QLVWgMd8W7ARhZD3UIw/2GwYU3NBxC+iuIuJnDzGZHG/BeoCZF\nttxtwaAJEI6MB7mX/L1tcqcI+sNdyP+XbN4xXNQpgv75EUAZ6OtGOSRabF5VUC3i\nLwIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:53:07,476 DEBUG core.py Unknown username, sending {'response': 400, 'error': 'The user is not registered.'}
-2022-06-14 20:53:07,477 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:05,202 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
-2022-06-14 20:55:05,203 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
-2022-06-14 20:55:05,223 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
-2022-06-14 20:55:06,219 INFO core.py The connection to the PC is established ('127.0.0.1', 57992)
-2022-06-14 20:55:06,721 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:06,721 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655229306.2340803, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnxq1Cl30xP2EdKSu8E17\n3a/nZ/1F5KditfTsVNLyxMEqx37lliceLYEiC6O/235Qb9nV1LsxUcxLiF12ULgL\ngWv3KJgzzoDSQw5R0YmIKhntmxPgprtqzCYlir8d938aLOzhOHg4NvNt5rvlSpnH\nGHs59QcOpY3FlT62859LuA0EpxdTdkWWQn4vJ5EX4ZaNDX8zeJEjYEE1CaJFuqv5\nDM8FWjVbynZP7HaE3W4B7KRlWPonf9PLbvlL8o25CIjHuYO3VpJYgb69aY//ZLP+\noED0qVFO2TE5J0O/kUXS/65xf6iZIu6ggDHa/zkGU/EDlKNE/VQMHi3OAtQvpccH\niQIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:55:06,721 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnxq1Cl30xP2EdKSu8E17\n3a/nZ/1F5KditfTsVNLyxMEqx37lliceLYEiC6O/235Qb9nV1LsxUcxLiF12ULgL\ngWv3KJgzzoDSQw5R0YmIKhntmxPgprtqzCYlir8d938aLOzhOHg4NvNt5rvlSpnH\nGHs59QcOpY3FlT62859LuA0EpxdTdkWWQn4vJ5EX4ZaNDX8zeJEjYEE1CaJFuqv5\nDM8FWjVbynZP7HaE3W4B7KRlWPonf9PLbvlL8o25CIjHuYO3VpJYgb69aY//ZLP+\noED0qVFO2TE5J0O/kUXS/65xf6iZIu6ggDHa/zkGU/EDlKNE/VQMHi3OAtQvpccH\niQIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:55:06,727 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:55:06,729 DEBUG core.py Auth message = {'response': 511, 'bin': '0cc09fcba19fc40bb1b13a898eab9ac7479b560063a5dd5c992142eac6d6794b106b4fa3535c9ebb66a32809b75838a6159a176704c49dcb8465fa177811a237'}
-2022-06-14 20:55:06,730 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:06,730 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:06,731 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:07,198 INFO core.py The connection to the PC is established ('127.0.0.1', 57994)
-2022-06-14 20:55:07,199 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:07,199 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655229306.7314901, 'account_name': 'test1'}
-2022-06-14 20:55:07,204 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:07,705 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:07,706 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1655229307.2104626, 'user': 'test1'}
-2022-06-14 20:55:07,713 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:07,713 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:07,713 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655229307.2108755, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:55:07,713 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr3pFfJenwcmgPABa6D8Y\n9xsiV7G9XhQJgN62mY19+vGQfrxdoj3UWxLTpq8oHPsv8BfeiWzNkRB5YqA85+eM\neOUXgxnOlpH0wgPzrcZv89SyaKKFxUPNsG7+h5EdY6g2vjMALXa7rMsr8N5vQ2bG\nrlMTwP3cnDfdx3Nc03uhyLsbH1SFMFMEO5d3AUEq0s8Vx9kD4wKM1YXhfDR9S/B0\nMGA3ZRmgPkeFu4qysWUivUHUo4pZOCAULpQa/EuUOP5/JTo7JXwQmZHA9tCSjqXr\nNxNNmapgdOIU/WV2onl9Om6yqXVK8pdfF+YkaYkTjtSn7jDSIlpWaPMFZ0GL7h8W\n2QIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:55:07,715 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:55:07,716 DEBUG core.py Auth message = {'response': 511, 'bin': 'e0c0ae4b577ed4e062412407d7bda4753ca6ed55921c45483aaf045d5fc513bd931d6f45ccc0f3bc2b751664c65597407a247a5f9120eaaac735d052f6483972'}
-2022-06-14 20:55:07,717 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:07,717 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:07,717 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:08,230 INFO core.py The connection to the PC is established ('127.0.0.1', 57998)
-2022-06-14 20:55:08,230 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:08,231 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655229307.7182922, 'account_name': 'test2'}
-2022-06-14 20:55:08,232 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:08,734 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:08,734 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1655229308.2416606, 'user': 'test2'}
-2022-06-14 20:55:08,736 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:08,737 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:08,737 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1655229308.2407134, 'type': 'status', 'user': {'account_name': 'test3', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvWV9SZFoFBBvadaqrs2X\nVEBonO4NMZ8OZjb4jnYuJEQx96kF0xFErZ+Jhc8QhmD0tGL6pSSGBknqRVpQ3nqo\ngMnBOp6JMjvFlnVaQivYivMHhrkNa8RiJp1Pz380OGfIsSbwPpON07wjiqaWCKnc\ntNG4rqDbP80X2cTH0x/fSGLZS94oiDqF9Ym2mgmbRCQ4nKeY8oNcSWl5h33zJt+0\nbxu4qX3zFMt7FnLRyWvSAAhy70WqIQX7QTtMG5iZrP1flEN2FaUg1l1VLHLoyAf7\nPjVc8os42dncx6En6Zhz4UTBd5sBRJNIsq1e/Jg8N+qc9s8QWhDWxhzHrm5b9e2Z\nDQIDAQAB\n-----END PUBLIC KEY-----'}}
-2022-06-14 20:55:08,737 DEBUG core.py Start auth process for {'account_name': 'test3', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvWV9SZFoFBBvadaqrs2X\nVEBonO4NMZ8OZjb4jnYuJEQx96kF0xFErZ+Jhc8QhmD0tGL6pSSGBknqRVpQ3nqo\ngMnBOp6JMjvFlnVaQivYivMHhrkNa8RiJp1Pz380OGfIsSbwPpON07wjiqaWCKnc\ntNG4rqDbP80X2cTH0x/fSGLZS94oiDqF9Ym2mgmbRCQ4nKeY8oNcSWl5h33zJt+0\nbxu4qX3zFMt7FnLRyWvSAAhy70WqIQX7QTtMG5iZrP1flEN2FaUg1l1VLHLoyAf7\nPjVc8os42dncx6En6Zhz4UTBd5sBRJNIsq1e/Jg8N+qc9s8QWhDWxhzHrm5b9e2Z\nDQIDAQAB\n-----END PUBLIC KEY-----'}
-2022-06-14 20:55:08,738 DEBUG core.py Correct username, starting passwd check.
-2022-06-14 20:55:08,740 DEBUG core.py Auth message = {'response': 511, 'bin': '366be794ec15fe42c936d61ac56b490f3dc9405854e0c4a104170aa8919b1fa551a6fba9f1f193422fb206af3543478fea6330e1c090253c60fdf2086a758bf4'}
-2022-06-14 20:55:08,740 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:08,741 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:08,742 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:09,262 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:09,263 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1655229308.7427578, 'account_name': 'test3'}
-2022-06-14 20:55:09,264 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:09,765 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
-2022-06-14 20:55:09,765 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1655229309.285026, 'user': 'test3'}
-2022-06-14 20:55:09,768 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 10:46:30,385 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
+2023-11-01 10:46:30,387 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 10:51:42,952 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
+2023-11-01 10:51:42,953 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 10:53:13,467 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
+2023-11-01 10:53:13,468 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 10:55:18,779 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
+2023-11-01 10:55:18,780 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 10:55:18,819 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
+2023-11-01 10:55:47,197 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
+2023-11-01 10:55:47,198 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 10:55:47,239 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
+2023-11-01 11:05:09,469 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
+2023-11-01 11:05:09,471 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:05:09,503 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
+2023-11-01 11:09:02,298 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
+2023-11-01 11:09:02,299 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:02,339 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
+2023-11-01 11:09:03,470 INFO core.py The connection to the PC is established ('127.0.0.1', 44188)
+2023-11-01 11:09:03,984 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:09:03,985 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1698826143.4829586, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:09:03,985 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}
+2023-11-01 11:09:03,993 DEBUG core.py Unknown username, sending {'response': 400, 'error': 'The user is not registered.'}
+2023-11-01 11:09:03,994 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:09:04,483 INFO core.py The connection to the PC is established ('127.0.0.1', 44192)
+2023-11-01 11:09:04,984 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:09:04,984 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1698826144.4952767, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuntqpMWdrOMa2e+A9Ljl\nziQgt1V/m2l0ycpIFCJbV2CJraO5xDG2gecBfJFdxVXCx2u3F7EhjIxQJHLdA2o2\nT/VNMtt4ttpAB5QUyXkc3TQa27mGmBkFm/lYtbosozJ8lqVe0+OJmEHXHaPKOy57\n3jzEYXu53mRunUmCI8bDEBmgwHGu4v1zN51Y/4ex5f292DuYdFGv01UGPZ/bHoA/\nBgBEiWDFDhLYyTMuKTLWevSmwhJ0UMReFqlG6suBpeFOT/HOdkT9Zk7qM7lCoA8O\nPCLyWSh8XwS60onZ19Xc7FT0Ic1DHnEdrcbKmnZuJ+ztFW8D4+rcnvmja4B0OiQR\n+wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:09:04,985 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuntqpMWdrOMa2e+A9Ljl\nziQgt1V/m2l0ycpIFCJbV2CJraO5xDG2gecBfJFdxVXCx2u3F7EhjIxQJHLdA2o2\nT/VNMtt4ttpAB5QUyXkc3TQa27mGmBkFm/lYtbosozJ8lqVe0+OJmEHXHaPKOy57\n3jzEYXu53mRunUmCI8bDEBmgwHGu4v1zN51Y/4ex5f292DuYdFGv01UGPZ/bHoA/\nBgBEiWDFDhLYyTMuKTLWevSmwhJ0UMReFqlG6suBpeFOT/HOdkT9Zk7qM7lCoA8O\nPCLyWSh8XwS60onZ19Xc7FT0Ic1DHnEdrcbKmnZuJ+ztFW8D4+rcnvmja4B0OiQR\n+wIDAQAB\n-----END PUBLIC KEY-----'}
+2023-11-01 11:09:04,987 DEBUG core.py Unknown username, sending {'response': 400, 'error': 'The user is not registered.'}
+2023-11-01 11:09:04,987 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:09:25,921 INFO core.py The connection to the PC is established ('127.0.0.1', 45536)
+2023-11-01 11:09:26,423 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:09:26,423 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1698826165.9346323, 'type': 'status', 'user': {'account_name': 'user1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1VY7ub6ge0dkBaIyl2qE\nTqd7Y3xA+/ihEckm1hNjwK+T8YubWPv/ekk1o+bfbUR86joBAAZuY0pSKS11f8Lz\n3xWri/CZI+wxHJmgV0OzUWSY5ngQ3dvEnB2GwG/xWLcI23Ddi20uHSKSh7iACt1i\neKAMpIb9QVwkCXKMCL/WPHP0J3k04nXw4Q59AEtPVy3mfM2G6b4njm4G6bdkl60i\nxvi85lXt4zFiW+N0mhSROkjZhMbU046bqgtGP8P91nyOY143oZAm9ZV8006CalWb\nxtzy3YU4C5xwKMnyHGPPx2w6H1Zk5TQ/fvZVnUjEQJRTybHoJVQe+BVaD7vdZzN1\ntQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:09:26,423 DEBUG core.py Start auth process for {'account_name': 'user1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1VY7ub6ge0dkBaIyl2qE\nTqd7Y3xA+/ihEckm1hNjwK+T8YubWPv/ekk1o+bfbUR86joBAAZuY0pSKS11f8Lz\n3xWri/CZI+wxHJmgV0OzUWSY5ngQ3dvEnB2GwG/xWLcI23Ddi20uHSKSh7iACt1i\neKAMpIb9QVwkCXKMCL/WPHP0J3k04nXw4Q59AEtPVy3mfM2G6b4njm4G6bdkl60i\nxvi85lXt4zFiW+N0mhSROkjZhMbU046bqgtGP8P91nyOY143oZAm9ZV8006CalWb\nxtzy3YU4C5xwKMnyHGPPx2w6H1Zk5TQ/fvZVnUjEQJRTybHoJVQe+BVaD7vdZzN1\ntQIDAQAB\n-----END PUBLIC KEY-----'}
+2023-11-01 11:09:26,425 DEBUG core.py Unknown username, sending {'response': 400, 'error': 'The user is not registered.'}
+2023-11-01 11:09:26,425 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:09:45,190 INFO core.py The connection to the PC is established ('127.0.0.1', 36258)
+2023-11-01 11:09:45,692 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:09:45,692 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1698826185.2039585, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:09:45,692 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}
+2023-11-01 11:09:45,694 DEBUG core.py Unknown username, sending {'response': 400, 'error': 'The user is not registered.'}
+2023-11-01 11:09:45,694 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:17,830 INFO core.py The connection to the PC is established ('127.0.0.1', 50878)
+2023-11-01 11:11:18,332 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:18,332 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1698826277.8442292, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:11:18,333 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}
+2023-11-01 11:11:18,335 DEBUG core.py Correct username, starting passwd check.
+2023-11-01 11:11:18,337 DEBUG core.py Auth message = {'response': 511, 'bin': 'ae85105ef1779333c9c6adb123639e82ea8434b3a3c54d1fff9fd69b8e949a1a82da6a5ed98f0ced2176f7cf4327c28f72ca9cbe2e9388f83c2c3891f80c43d9'}
+2023-11-01 11:11:18,338 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:18,339 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:18,339 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:18,867 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:18,867 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1698826278.3402424, 'account_name': 'test1'}
+2023-11-01 11:11:18,869 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:19,370 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:19,371 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1698826278.8910522, 'user': 'test1'}
+2023-11-01 11:11:19,377 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:28,890 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:28,890 DEBUG core.py Parsing a message from a client : {'action': 'exit', 'time': 1698826288.0095885, 'account_name': 'test1'}
+2023-11-01 11:11:28,890 INFO core.py Client ('127.0.0.1', 50878) disconnected from the server.
+2023-11-01 11:11:46,038 INFO core.py The connection to the PC is established ('127.0.0.1', 44526)
+2023-11-01 11:11:46,539 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:46,539 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1698826306.051613, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:11:46,539 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}
+2023-11-01 11:11:46,541 DEBUG core.py Correct username, starting passwd check.
+2023-11-01 11:11:46,542 DEBUG core.py Auth message = {'response': 511, 'bin': 'c6aade52f60ff18c3ca7c6ba805543c224a677b42aa8c49932c90fff321ec269463c833d4017841d4f0cf7db72fc48826ddb143dd0d9d82abaaec340348c5ff2'}
+2023-11-01 11:11:46,543 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:46,544 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:46,544 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:47,066 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:47,067 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1698826306.5448325, 'account_name': 'test1'}
+2023-11-01 11:11:47,068 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:47,569 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:11:47,569 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1698826307.0900714, 'user': 'test1'}
+2023-11-01 11:11:47,572 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:12:20,116 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:12:20,116 DEBUG core.py Parsing a message from a client : {'action': 'add', 'time': 1698826339.6379514, 'account_name': 'test2', 'user': 'test1'}
+2023-11-01 11:12:20,170 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:12:33,693 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:12:33,693 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1698826353.3473506, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'привет'}
+2023-11-01 11:12:33,694 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:25,675 INFO core.py The connection to the PC is established ('127.0.0.1', 43272)
+2023-11-01 11:13:26,177 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:26,177 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1698826405.68969, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuntqpMWdrOMa2e+A9Ljl\nziQgt1V/m2l0ycpIFCJbV2CJraO5xDG2gecBfJFdxVXCx2u3F7EhjIxQJHLdA2o2\nT/VNMtt4ttpAB5QUyXkc3TQa27mGmBkFm/lYtbosozJ8lqVe0+OJmEHXHaPKOy57\n3jzEYXu53mRunUmCI8bDEBmgwHGu4v1zN51Y/4ex5f292DuYdFGv01UGPZ/bHoA/\nBgBEiWDFDhLYyTMuKTLWevSmwhJ0UMReFqlG6suBpeFOT/HOdkT9Zk7qM7lCoA8O\nPCLyWSh8XwS60onZ19Xc7FT0Ic1DHnEdrcbKmnZuJ+ztFW8D4+rcnvmja4B0OiQR\n+wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:13:26,177 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuntqpMWdrOMa2e+A9Ljl\nziQgt1V/m2l0ycpIFCJbV2CJraO5xDG2gecBfJFdxVXCx2u3F7EhjIxQJHLdA2o2\nT/VNMtt4ttpAB5QUyXkc3TQa27mGmBkFm/lYtbosozJ8lqVe0+OJmEHXHaPKOy57\n3jzEYXu53mRunUmCI8bDEBmgwHGu4v1zN51Y/4ex5f292DuYdFGv01UGPZ/bHoA/\nBgBEiWDFDhLYyTMuKTLWevSmwhJ0UMReFqlG6suBpeFOT/HOdkT9Zk7qM7lCoA8O\nPCLyWSh8XwS60onZ19Xc7FT0Ic1DHnEdrcbKmnZuJ+ztFW8D4+rcnvmja4B0OiQR\n+wIDAQAB\n-----END PUBLIC KEY-----'}
+2023-11-01 11:13:26,179 DEBUG core.py Correct username, starting passwd check.
+2023-11-01 11:13:26,181 DEBUG core.py Auth message = {'response': 511, 'bin': '43b3fed3faf7e5110984f12acd2f55527fa50ae7b8834c0585a3f7f83ef06daa5e78ef3042168a025324b8747a3b049d9bf4c477d445311a87425a4e54ab3251'}
+2023-11-01 11:13:26,181 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:26,182 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:26,182 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:26,704 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:26,704 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1698826406.1830094, 'account_name': 'test2'}
+2023-11-01 11:13:26,706 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:27,207 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:27,207 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1698826406.7282197, 'user': 'test2'}
+2023-11-01 11:13:27,210 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:34,219 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:34,219 DEBUG core.py Parsing a message from a client : {'action': 'add', 'time': 1698826413.8379908, 'account_name': 'test1', 'user': 'test2'}
+2023-11-01 11:13:34,240 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:55,269 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:55,270 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1698826434.892805, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'привет'}
+2023-11-01 11:13:55,296 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:55,296 INFO core.py A message was sent to the user test1 from the user test2.
+2023-11-01 11:13:55,296 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:03,309 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:03,309 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1698826442.7686622, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'привет'}
+2023-11-01 11:14:03,333 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:03,333 INFO core.py A message was sent to the user test2 from the user test1.
+2023-11-01 11:14:03,333 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:13,349 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:13,349 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1698826453.1118896, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'как дела?'}
+2023-11-01 11:14:13,398 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:13,398 INFO core.py A message was sent to the user test2 from the user test1.
+2023-11-01 11:14:13,399 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:22,412 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:22,413 DEBUG core.py Parsing a message from a client : {'action': 'msg', 'time': 1698826461.9521723, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'норм'}
+2023-11-01 11:14:22,463 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:22,463 INFO core.py A message was sent to the user test1 from the user test2.
+2023-11-01 11:14:22,463 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:59,525 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:59,525 DEBUG core.py Parsing a message from a client : {'action': 'exit', 'time': 1698826499.5066946, 'account_name': 'test2'}
+2023-11-01 11:14:59,525 INFO core.py Client ('127.0.0.1', 43272) disconnected from the server.
+2023-11-01 11:15:04,551 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:04,551 DEBUG core.py Parsing a message from a client : {'action': 'exit', 'time': 1698826504.2672646, 'account_name': 'test1'}
+2023-11-01 11:15:04,551 INFO core.py Client ('127.0.0.1', 44526) disconnected from the server.
+2023-11-01 11:15:33,438 DEBUG decorators.py Function: config_load(). Module: __main__. Calling from a function main(). 
+2023-11-01 11:15:33,440 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:33,481 INFO core.py The server is running, the port to connect to: 7777.the address from which connections are accepted: 127.0.0.1.If the address is not specified, connections from any addresses are accepted.
+2023-11-01 11:15:34,639 INFO core.py The connection to the PC is established ('127.0.0.1', 53938)
+2023-11-01 11:15:35,141 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:35,141 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1698826534.6519916, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:15:35,141 DEBUG core.py Start auth process for {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}
+2023-11-01 11:15:35,151 DEBUG core.py Correct username, starting passwd check.
+2023-11-01 11:15:35,154 DEBUG core.py Auth message = {'response': 511, 'bin': 'ec91ba27430e4469cfa01fa1529b4212fc261652e3a2e6d3aae59e0dedf499c3cf40db4421d853037ac70f6d01c35be90cb85cef738eb23ad9debe0a7cd55b7d'}
+2023-11-01 11:15:35,155 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:35,156 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:35,156 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:35,685 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:35,686 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1698826535.157009, 'account_name': 'test1'}
+2023-11-01 11:15:35,688 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:35,692 INFO core.py The connection to the PC is established ('127.0.0.1', 53948)
+2023-11-01 11:15:36,193 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:36,193 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1698826535.7000837, 'user': 'test1'}
+2023-11-01 11:15:36,200 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:36,200 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:36,200 DEBUG core.py Parsing a message from a client : {'action': 'presence', 'time': 1698826535.705014, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuntqpMWdrOMa2e+A9Ljl\nziQgt1V/m2l0ycpIFCJbV2CJraO5xDG2gecBfJFdxVXCx2u3F7EhjIxQJHLdA2o2\nT/VNMtt4ttpAB5QUyXkc3TQa27mGmBkFm/lYtbosozJ8lqVe0+OJmEHXHaPKOy57\n3jzEYXu53mRunUmCI8bDEBmgwHGu4v1zN51Y/4ex5f292DuYdFGv01UGPZ/bHoA/\nBgBEiWDFDhLYyTMuKTLWevSmwhJ0UMReFqlG6suBpeFOT/HOdkT9Zk7qM7lCoA8O\nPCLyWSh8XwS60onZ19Xc7FT0Ic1DHnEdrcbKmnZuJ+ztFW8D4+rcnvmja4B0OiQR\n+wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:15:36,200 DEBUG core.py Start auth process for {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuntqpMWdrOMa2e+A9Ljl\nziQgt1V/m2l0ycpIFCJbV2CJraO5xDG2gecBfJFdxVXCx2u3F7EhjIxQJHLdA2o2\nT/VNMtt4ttpAB5QUyXkc3TQa27mGmBkFm/lYtbosozJ8lqVe0+OJmEHXHaPKOy57\n3jzEYXu53mRunUmCI8bDEBmgwHGu4v1zN51Y/4ex5f292DuYdFGv01UGPZ/bHoA/\nBgBEiWDFDhLYyTMuKTLWevSmwhJ0UMReFqlG6suBpeFOT/HOdkT9Zk7qM7lCoA8O\nPCLyWSh8XwS60onZ19Xc7FT0Ic1DHnEdrcbKmnZuJ+ztFW8D4+rcnvmja4B0OiQR\n+wIDAQAB\n-----END PUBLIC KEY-----'}
+2023-11-01 11:15:36,202 DEBUG core.py Correct username, starting passwd check.
+2023-11-01 11:15:36,204 DEBUG core.py Auth message = {'response': 511, 'bin': 'b918038cbda56432993a5b63c50553b7393d84cf5102171e444a722a27803b284572382fc4cab28e71561705a4e5cff5cb40c6cc529593265a7acb3f41dc33d3'}
+2023-11-01 11:15:36,204 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:36,205 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:36,205 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:36,728 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:36,728 DEBUG core.py Parsing a message from a client : {'action': 'get_users', 'time': 1698826536.206263, 'account_name': 'test2'}
+2023-11-01 11:15:36,730 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:37,231 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:15:37,231 DEBUG core.py Parsing a message from a client : {'action': 'get_contacts', 'time': 1698826536.752919, 'user': 'test2'}
+2023-11-01 11:15:37,234 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 

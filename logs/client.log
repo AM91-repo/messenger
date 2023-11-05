@@ -6506,3 +6506,228 @@ socket.timeout: timed out
 2022-06-14 20:55:28,681 DEBUG transport.py Transport is shutting down.
 2022-06-14 20:55:29,612 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
 2022-06-14 20:55:29,612 DEBUG transport.py Transport is shutting down.
+2023-11-01 10:55:48,193 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 10:55:48,314 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2023-11-01 10:55:49,186 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 10:55:49,308 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2023-11-01 11:05:10,438 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:05:10,558 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2023-11-01 11:05:11,319 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:05:11,437 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2023-11-01 11:06:04,875 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:06:29,705 DEBUG client.py Using USERNAME = user1, PASSWD = 123456.
+2023-11-01 11:06:29,705 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: user1
+2023-11-01 11:09:03,260 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:03,377 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2023-11-01 11:09:03,470 INFO transport.py Connection attempt №1
+2023-11-01 11:09:03,470 DEBUG transport.py Starting auth dialog.
+2023-11-01 11:09:03,482 DEBUG transport.py Passwd hash ready: b'49b70501d4d72ff5522a79cf779df86656a057282ac9ab564efb80fcba4fbc484bedcf52b3fb233d9b7b91337becc542ec3256a0269deddfedbce7275f44a781'
+2023-11-01 11:09:03,482 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1698826143.4829586, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:09:03,483 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:03,994 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:03,994 DEBUG transport.py Server response = {'response': 400, 'error': 'The user is not registered.'}.
+2023-11-01 11:09:04,268 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:04,388 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2023-11-01 11:09:04,482 INFO transport.py Connection attempt №1
+2023-11-01 11:09:04,482 DEBUG transport.py Starting auth dialog.
+2023-11-01 11:09:04,494 DEBUG transport.py Passwd hash ready: b'6c95daf460f03d00239959faac8387d157dafbe382cd684426a295cd37fbcb0e4d874cae7b07017717c8acaff862f6241d4eaeea2366f6a7b5076a8c72035cd6'
+2023-11-01 11:09:04,495 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1698826144.4952767, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuntqpMWdrOMa2e+A9Ljl\nziQgt1V/m2l0ycpIFCJbV2CJraO5xDG2gecBfJFdxVXCx2u3F7EhjIxQJHLdA2o2\nT/VNMtt4ttpAB5QUyXkc3TQa27mGmBkFm/lYtbosozJ8lqVe0+OJmEHXHaPKOy57\n3jzEYXu53mRunUmCI8bDEBmgwHGu4v1zN51Y/4ex5f292DuYdFGv01UGPZ/bHoA/\nBgBEiWDFDhLYyTMuKTLWevSmwhJ0UMReFqlG6suBpeFOT/HOdkT9Zk7qM7lCoA8O\nPCLyWSh8XwS60onZ19Xc7FT0Ic1DHnEdrcbKmnZuJ+ztFW8D4+rcnvmja4B0OiQR\n+wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:09:04,495 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:04,987 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:04,988 DEBUG transport.py Server response = {'response': 400, 'error': 'The user is not registered.'}.
+2023-11-01 11:09:18,025 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:25,802 DEBUG client.py Using USERNAME = user1, PASSWD = 123456.
+2023-11-01 11:09:25,802 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: user1
+2023-11-01 11:09:25,920 INFO transport.py Connection attempt №1
+2023-11-01 11:09:25,921 DEBUG transport.py Starting auth dialog.
+2023-11-01 11:09:25,934 DEBUG transport.py Passwd hash ready: b'188e1be67d44cd1aac694afe5b65d85b283e4d9ffae922e20706a0e19d2e4da024320ffca359a2e1ef47775288607e349d94bfa8c09baa1bd98902951f36c0fc'
+2023-11-01 11:09:25,934 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1698826165.9346323, 'type': 'status', 'user': {'account_name': 'user1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1VY7ub6ge0dkBaIyl2qE\nTqd7Y3xA+/ihEckm1hNjwK+T8YubWPv/ekk1o+bfbUR86joBAAZuY0pSKS11f8Lz\n3xWri/CZI+wxHJmgV0OzUWSY5ngQ3dvEnB2GwG/xWLcI23Ddi20uHSKSh7iACt1i\neKAMpIb9QVwkCXKMCL/WPHP0J3k04nXw4Q59AEtPVy3mfM2G6b4njm4G6bdkl60i\nxvi85lXt4zFiW+N0mhSROkjZhMbU046bqgtGP8P91nyOY143oZAm9ZV8006CalWb\nxtzy3YU4C5xwKMnyHGPPx2w6H1Zk5TQ/fvZVnUjEQJRTybHoJVQe+BVaD7vdZzN1\ntQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:09:25,935 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:26,426 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:26,426 DEBUG transport.py Server response = {'response': 400, 'error': 'The user is not registered.'}.
+2023-11-01 11:09:33,484 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:45,062 DEBUG client.py Using USERNAME = test1, PASSWD = 123456.
+2023-11-01 11:09:45,062 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2023-11-01 11:09:45,189 INFO transport.py Connection attempt №1
+2023-11-01 11:09:45,190 DEBUG transport.py Starting auth dialog.
+2023-11-01 11:09:45,203 DEBUG transport.py Passwd hash ready: b'49b70501d4d72ff5522a79cf779df86656a057282ac9ab564efb80fcba4fbc484bedcf52b3fb233d9b7b91337becc542ec3256a0269deddfedbce7275f44a781'
+2023-11-01 11:09:45,203 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1698826185.2039585, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:09:45,204 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:45,695 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:09:45,695 DEBUG transport.py Server response = {'response': 400, 'error': 'The user is not registered.'}.
+2023-11-01 11:11:02,368 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:17,673 DEBUG client.py Using USERNAME = test1, PASSWD = 123456.
+2023-11-01 11:11:17,673 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2023-11-01 11:11:17,830 INFO transport.py Connection attempt №1
+2023-11-01 11:11:17,830 DEBUG transport.py Starting auth dialog.
+2023-11-01 11:11:17,843 DEBUG transport.py Passwd hash ready: b'49b70501d4d72ff5522a79cf779df86656a057282ac9ab564efb80fcba4fbc484bedcf52b3fb233d9b7b91337becc542ec3256a0269deddfedbce7275f44a781'
+2023-11-01 11:11:17,844 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1698826277.8442292, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:11:17,844 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:18,338 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:18,338 DEBUG transport.py Server response = {'response': 511, 'bin': 'ae85105ef1779333c9c6adb123639e82ea8434b3a3c54d1fff9fd69b8e949a1a82da6a5ed98f0ced2176f7cf4327c28f72ca9cbe2e9388f83c2c3891f80c43d9'}.
+2023-11-01 11:11:18,339 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:18,339 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:18,340 DEBUG transport.py Parsing a message from the server: {'response': 200}
+2023-11-01 11:11:18,340 DEBUG transport.py Requesting a list of known users test1
+2023-11-01 11:11:18,340 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:18,869 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:18,890 DEBUG transport.py Request a contact sheet for the user test1
+2023-11-01 11:11:18,891 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1698826278.8910522, 'user': 'test1'}
+2023-11-01 11:11:18,891 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:19,377 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:19,377 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2023-11-01 11:11:19,377 DEBUG transport.py The process - receiver of messages from the server is started.
+2023-11-01 11:11:28,400 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:28,401 DEBUG transport.py Transport is shutting down.
+2023-11-01 11:11:34,517 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:45,908 DEBUG client.py Using USERNAME = test1, PASSWD = 123456.
+2023-11-01 11:11:45,908 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2023-11-01 11:11:46,037 INFO transport.py Connection attempt №1
+2023-11-01 11:11:46,038 DEBUG transport.py Starting auth dialog.
+2023-11-01 11:11:46,050 DEBUG transport.py Passwd hash ready: b'49b70501d4d72ff5522a79cf779df86656a057282ac9ab564efb80fcba4fbc484bedcf52b3fb233d9b7b91337becc542ec3256a0269deddfedbce7275f44a781'
+2023-11-01 11:11:46,051 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1698826306.051613, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:11:46,052 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:46,543 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:46,543 DEBUG transport.py Server response = {'response': 511, 'bin': 'c6aade52f60ff18c3ca7c6ba805543c224a677b42aa8c49932c90fff321ec269463c833d4017841d4f0cf7db72fc48826ddb143dd0d9d82abaaec340348c5ff2'}.
+2023-11-01 11:11:46,543 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:46,544 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:46,544 DEBUG transport.py Parsing a message from the server: {'response': 200}
+2023-11-01 11:11:46,544 DEBUG transport.py Requesting a list of known users test1
+2023-11-01 11:11:46,545 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:47,068 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:47,089 DEBUG transport.py Request a contact sheet for the user test1
+2023-11-01 11:11:47,090 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1698826307.0900714, 'user': 'test1'}
+2023-11-01 11:11:47,090 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:47,572 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:11:47,572 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2023-11-01 11:11:47,573 DEBUG transport.py The process - receiver of messages from the server is started.
+2023-11-01 11:12:19,637 DEBUG transport.py Creating a contact test2
+2023-11-01 11:12:19,638 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:12:20,170 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:12:20,170 DEBUG transport.py Parsing a message from the server: {'response': 200}
+2023-11-01 11:12:20,186 INFO main_window.py Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7f1dc832a440>
+2023-11-01 11:12:33,347 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1698826353.3473506, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'привет'}
+2023-11-01 11:12:33,348 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:12:33,694 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:12:33,694 DEBUG transport.py Parsing a message from the server: {'response': 400, 'error': 'The user is not registered on the server.'}
+2023-11-01 11:13:13,874 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:25,517 DEBUG client.py Using USERNAME = test2, PASSWD = 123456.
+2023-11-01 11:13:25,517 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2023-11-01 11:13:25,675 INFO transport.py Connection attempt №1
+2023-11-01 11:13:25,675 DEBUG transport.py Starting auth dialog.
+2023-11-01 11:13:25,689 DEBUG transport.py Passwd hash ready: b'6c95daf460f03d00239959faac8387d157dafbe382cd684426a295cd37fbcb0e4d874cae7b07017717c8acaff862f6241d4eaeea2366f6a7b5076a8c72035cd6'
+2023-11-01 11:13:25,689 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1698826405.68969, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuntqpMWdrOMa2e+A9Ljl\nziQgt1V/m2l0ycpIFCJbV2CJraO5xDG2gecBfJFdxVXCx2u3F7EhjIxQJHLdA2o2\nT/VNMtt4ttpAB5QUyXkc3TQa27mGmBkFm/lYtbosozJ8lqVe0+OJmEHXHaPKOy57\n3jzEYXu53mRunUmCI8bDEBmgwHGu4v1zN51Y/4ex5f292DuYdFGv01UGPZ/bHoA/\nBgBEiWDFDhLYyTMuKTLWevSmwhJ0UMReFqlG6suBpeFOT/HOdkT9Zk7qM7lCoA8O\nPCLyWSh8XwS60onZ19Xc7FT0Ic1DHnEdrcbKmnZuJ+ztFW8D4+rcnvmja4B0OiQR\n+wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:13:25,690 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:26,181 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:26,181 DEBUG transport.py Server response = {'response': 511, 'bin': '43b3fed3faf7e5110984f12acd2f55527fa50ae7b8834c0585a3f7f83ef06daa5e78ef3042168a025324b8747a3b049d9bf4c477d445311a87425a4e54ab3251'}.
+2023-11-01 11:13:26,182 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:26,182 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:26,182 DEBUG transport.py Parsing a message from the server: {'response': 200}
+2023-11-01 11:13:26,182 DEBUG transport.py Requesting a list of known users test2
+2023-11-01 11:13:26,183 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:26,706 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:26,728 DEBUG transport.py Request a contact sheet for the user test2
+2023-11-01 11:13:26,728 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1698826406.7282197, 'user': 'test2'}
+2023-11-01 11:13:26,728 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:27,210 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:27,210 DEBUG transport.py Response received {'response': 202, 'data_list': []}
+2023-11-01 11:13:27,211 DEBUG transport.py The process - receiver of messages from the server is started.
+2023-11-01 11:13:33,837 DEBUG transport.py Creating a contact test1
+2023-11-01 11:13:33,838 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:34,240 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:34,240 DEBUG transport.py Parsing a message from the server: {'response': 200}
+2023-11-01 11:13:34,253 INFO main_window.py Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7fde785ca440>
+2023-11-01 11:13:54,892 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1698826434.892805, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'привет'}
+2023-11-01 11:13:54,893 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:55,296 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:13:55,296 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1698826434.892805, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'привет'}
+2023-11-01 11:13:55,296 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:13:55,296 DEBUG transport.py Parsing a message from the server: {'action': 'msg', 'time': 1698826434.892805, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'привет'}
+2023-11-01 11:13:55,297 DEBUG transport.py Parsing a message from the server: {'response': 200}
+2023-11-01 11:13:55,297 DEBUG transport.py Received a message from the user test2:привет
+2023-11-01 11:13:55,297 INFO transport.py A message has been sent to the user test1
+2023-11-01 11:13:55,307 DEBUG main_window.py A message has been sent for test1: привет
+2023-11-01 11:14:02,768 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1698826442.7686622, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'привет'}
+2023-11-01 11:14:02,815 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:14:03,333 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:14:03,334 DEBUG transport.py Parsing a message from the server: {'response': 200}
+2023-11-01 11:14:03,334 INFO transport.py A message has been sent to the user test2
+2023-11-01 11:14:03,341 DEBUG main_window.py A message has been sent for test2: привет
+2023-11-01 11:14:04,311 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:04,311 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1698826442.7686622, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'привет'}
+2023-11-01 11:14:04,311 DEBUG transport.py Parsing a message from the server: {'action': 'msg', 'time': 1698826442.7686622, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'привет'}
+2023-11-01 11:14:04,311 DEBUG transport.py Received a message from the user test1:привет
+2023-11-01 11:14:13,111 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1698826453.1118896, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'как дела?'}
+2023-11-01 11:14:13,329 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:14:13,399 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:14:13,399 DEBUG transport.py Parsing a message from the server: {'response': 200}
+2023-11-01 11:14:13,399 INFO transport.py A message has been sent to the user test2
+2023-11-01 11:14:13,406 DEBUG main_window.py A message has been sent for test2: как дела?
+2023-11-01 11:14:14,342 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:14,342 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1698826453.1118896, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'как дела?'}
+2023-11-01 11:14:14,342 DEBUG transport.py Parsing a message from the server: {'action': 'msg', 'time': 1698826453.1118896, 'to': 'test2', 'from': 'test1', 'encoding': '', 'message': 'как дела?'}
+2023-11-01 11:14:14,343 DEBUG transport.py Received a message from the user test1:как дела?
+2023-11-01 11:14:21,952 DEBUG transport.py The message dictionary has been formed: {'action': 'msg', 'time': 1698826461.9521723, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'норм'}
+2023-11-01 11:14:21,953 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:14:22,463 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:14:22,464 DEBUG transport.py Parsing a message from the server: {'response': 200}
+2023-11-01 11:14:22,464 INFO transport.py A message has been sent to the user test1
+2023-11-01 11:14:22,470 DEBUG main_window.py A message has been sent for test1: норм
+2023-11-01 11:14:23,342 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function self._bootstrap_inner(). 
+2023-11-01 11:14:23,342 DEBUG transport.py Received a message from the server: {'action': 'msg', 'time': 1698826461.9521723, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'норм'}
+2023-11-01 11:14:23,343 DEBUG transport.py Parsing a message from the server: {'action': 'msg', 'time': 1698826461.9521723, 'to': 'test1', 'from': 'test2', 'encoding': '', 'message': 'норм'}
+2023-11-01 11:14:23,343 DEBUG transport.py Received a message from the user test2:норм
+2023-11-01 11:14:59,507 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:14:59,507 DEBUG transport.py Transport is shutting down.
+2023-11-01 11:15:00,421 DEBUG transport.py The connection to the server is lost.
+2023-11-01 11:15:04,267 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:04,267 DEBUG transport.py Transport is shutting down.
+2023-11-01 11:15:04,917 DEBUG transport.py The connection to the server is lost.
+2023-11-01 11:15:34,421 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:34,542 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test1
+2023-11-01 11:15:34,638 INFO transport.py Connection attempt №1
+2023-11-01 11:15:34,639 DEBUG transport.py Starting auth dialog.
+2023-11-01 11:15:34,651 DEBUG transport.py Passwd hash ready: b'49b70501d4d72ff5522a79cf779df86656a057282ac9ab564efb80fcba4fbc484bedcf52b3fb233d9b7b91337becc542ec3256a0269deddfedbce7275f44a781'
+2023-11-01 11:15:34,652 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1698826534.6519916, 'type': 'status', 'user': {'account_name': 'test1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqaTq2wZejq1hEmyU/zwi\nO7F7fP68XagUsTGnYBOzFRrmOVRveK6I/dYuTxCPSs1YVD+elrIGkjVw/av2OmCL\npVkZiAfqVtOWxny88Q9XH+p1olCLq4SRM6jMWQ5OEjXZt/K2cB7tyuz5ZaTMItDY\n0iq6IqPzGgTyTaoRVu6YjySVx15/3oZX1CcnrWLY8lu1fYAqrrbzB83U/FbRzBGe\nKY+unrBVHUBglwV3mID8qEsJv2bjMZIx2oRBZDY9/Ce4nngysx/p7KvjxUpOiPo+\n1X4aIM1RygkTzRfwc1QciPdDzb3UuqWtJnWmM2s98CKprUutLXhY1rDmY5jn6cxo\nNQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:15:34,652 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:35,155 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:35,155 DEBUG transport.py Server response = {'response': 511, 'bin': 'ec91ba27430e4469cfa01fa1529b4212fc261652e3a2e6d3aae59e0dedf499c3cf40db4421d853037ac70f6d01c35be90cb85cef738eb23ad9debe0a7cd55b7d'}.
+2023-11-01 11:15:35,156 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:35,156 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:35,156 DEBUG transport.py Parsing a message from the server: {'response': 200}
+2023-11-01 11:15:35,156 DEBUG transport.py Requesting a list of known users test1
+2023-11-01 11:15:35,157 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:35,473 DEBUG decorators.py Function: create_parser(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:35,592 INFO client.py The client is running with the following parameters: server address: localhost , port: 7777, user name: test2
+2023-11-01 11:15:35,688 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:35,691 INFO transport.py Connection attempt №1
+2023-11-01 11:15:35,692 DEBUG transport.py Starting auth dialog.
+2023-11-01 11:15:35,699 DEBUG transport.py Request a contact sheet for the user test1
+2023-11-01 11:15:35,700 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1698826535.7000837, 'user': 'test1'}
+2023-11-01 11:15:35,700 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:35,704 DEBUG transport.py Passwd hash ready: b'6c95daf460f03d00239959faac8387d157dafbe382cd684426a295cd37fbcb0e4d874cae7b07017717c8acaff862f6241d4eaeea2366f6a7b5076a8c72035cd6'
+2023-11-01 11:15:35,705 DEBUG transport.py Presense message = {'action': 'presence', 'time': 1698826535.705014, 'type': 'status', 'user': {'account_name': 'test2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuntqpMWdrOMa2e+A9Ljl\nziQgt1V/m2l0ycpIFCJbV2CJraO5xDG2gecBfJFdxVXCx2u3F7EhjIxQJHLdA2o2\nT/VNMtt4ttpAB5QUyXkc3TQa27mGmBkFm/lYtbosozJ8lqVe0+OJmEHXHaPKOy57\n3jzEYXu53mRunUmCI8bDEBmgwHGu4v1zN51Y/4ex5f292DuYdFGv01UGPZ/bHoA/\nBgBEiWDFDhLYyTMuKTLWevSmwhJ0UMReFqlG6suBpeFOT/HOdkT9Zk7qM7lCoA8O\nPCLyWSh8XwS60onZ19Xc7FT0Ic1DHnEdrcbKmnZuJ+ztFW8D4+rcnvmja4B0OiQR\n+wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-11-01 11:15:35,705 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:36,200 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:36,200 DEBUG transport.py Response received {'response': 202, 'data_list': ['test2']}
+2023-11-01 11:15:36,204 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:36,204 DEBUG transport.py Server response = {'response': 511, 'bin': 'b918038cbda56432993a5b63c50553b7393d84cf5102171e444a722a27803b284572382fc4cab28e71561705a4e5cff5cb40c6cc529593265a7acb3f41dc33d3'}.
+2023-11-01 11:15:36,205 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:36,205 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:36,206 DEBUG transport.py Parsing a message from the server: {'response': 200}
+2023-11-01 11:15:36,206 DEBUG transport.py Requesting a list of known users test2
+2023-11-01 11:15:36,206 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:36,227 DEBUG transport.py The process - receiver of messages from the server is started.
+2023-11-01 11:15:36,730 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:36,752 DEBUG transport.py Request a contact sheet for the user test2
+2023-11-01 11:15:36,752 DEBUG transport.py A request has been formed {'action': 'get_contacts', 'time': 1698826536.752919, 'user': 'test2'}
+2023-11-01 11:15:36,753 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:37,235 DEBUG decorators.py Function: get_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:15:37,235 DEBUG transport.py Response received {'response': 202, 'data_list': ['test1']}
+2023-11-01 11:15:37,263 DEBUG transport.py The process - receiver of messages from the server is started.
+2023-11-01 11:16:23,358 DEBUG transport.py The connection to the server is lost.
+2023-11-01 11:16:23,823 DEBUG transport.py The connection to the server is lost.
+2023-11-01 11:16:25,611 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:16:25,611 DEBUG transport.py Transport is shutting down.
+2023-11-01 11:16:27,151 DEBUG decorators.py Function: send_message(). Module: common.utils. Calling from a function main(). 
+2023-11-01 11:16:27,152 DEBUG transport.py Transport is shutting down.
